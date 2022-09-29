@@ -11,6 +11,16 @@ $middle-weight: 600;
 $bold-weight: 700;
 $Montenserrat-weight: 700;
 
+// Variablen für die Schriftgröße
+$size-small: 1.125rem;        //18px
+$size-smallLink: 1.5rem;      //24px
+$size-forDetail: 2.25rem;     //36px
+$size-bigLink: 3rem;          //48px
+$size-headerLeague: 5.25rem;  //84px
+$size-headerDetail: 6.125rem; //98px 
+$size-headerHome: 10.5rem;    //168px
+
+
 
 .App {
     background-color: $bg;
@@ -19,4 +29,5 @@ p {
     color: $red;
     font-family: $first-font;
     font-weight: $bold-weight;
+    font-size: $size-headerHome;
 }
