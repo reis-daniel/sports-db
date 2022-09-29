@@ -42,7 +42,7 @@ body{
 }
 .headerImg {
     position: relative;
-    z-index: 80;
+    z-index: 5;
     width: 1093px;
     height: 600px;
     // left: 1093px;
@@ -63,4 +63,10 @@ body{
 }
 .spanLeague {
     padding-left: 240px;
+}
+.scroll-up-arrow{
+    position: fixed;
+    right: 58.91px;
+    bottom: 58.91px;
+    z-index: 10;
 }
