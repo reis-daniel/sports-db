@@ -9,7 +9,7 @@ $next-font: 'Montserrat';
 $small-weight: 400;
 $middle-weight: 600;
 $bold-weight: 700;
-$Montenserrat-weight: 700;
+// $Montenserrat-weight: 700;
 
 // Variablen für die Schriftgröße
 $size-small: 1.125rem;        //18px
@@ -39,4 +39,28 @@ body{
     font-weight: $small-weight;
     font-size: $size-smallLink;
   
+}
+.headerImg {
+    position: relative;
+    z-index: 80;
+    width: 1093px;
+    height: 600px;
+    // left: 1093px;
+    // top: 177px;
+
+}
+.headerCaption {
+    position: absolute;
+    z-index: 100;
+    width: 1112px;
+    height: 336px;
+    left: 500px;
+    top: 10px;
+    color: $red;
+    font-family: $next-font;
+    font-weight: $bold-weight;
+    font-size: $size-headerHome;
+}
+.spanLeague {
+    padding-left: 240px;
 }
