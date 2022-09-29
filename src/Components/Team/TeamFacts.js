@@ -2,13 +2,12 @@ import axios from "axios";
 // React
 import { useEffect, useState } from "react";
 // Routing
-import { Link, useLocation, useParams, useNavigate } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 // Components
 import TeamCompetitions from "./TeamCompetitions";
 
 export default function TeamFacts() {
   const [team, setTeam] = useState({});
-  const navigate = useNavigate();
   const location = useLocation();
   const params = useParams();
   const league = location.pathname.split("/")[1].replaceAll("%20", " ");
@@ -25,14 +24,7 @@ export default function TeamFacts() {
     });
   }, []);
   return (
-    <div>
-      <button
-        onClick={() => {
-          navigate(-1);
-        }}
-      >
-        GO BACK
-      </button>
+    <section className="team-facts">
       <h2 className="linkLeague">{team.strTeam}</h2>
       <img src={team.strStadiumThumb} alt="" />
       <div>
@@ -52,6 +44,6 @@ export default function TeamFacts() {
         <p>Sport</p>
       </div>
       <TeamCompetitions team={team} />
-    </div>
+    </section>
   );
 }

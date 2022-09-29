@@ -10,16 +10,15 @@ export default function TeamCompetitions({ team }) {
     team.strLeague6,
     team.strLeague7,
   ];
-  competitions.push();
 
   return (
-    <div>
+    <section className="team-competitions">
       <p>Competitions:</p>
       <div>
         {competitions.map((comp, index) => {
           return <h3 key={index}>{comp}</h3>;
         })}
       </div>
-    </div>
+    </section>
   );
 }

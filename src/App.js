@@ -9,7 +9,7 @@ import { Route, Routes } from "react-router-dom";
 
 // COMPONENTS
 import Navbar from "./Components/Navbar";
-import ScrollUpArrow from "./Components/ScrollUpArrow";
+import ScrollUpArrow from "./components/Util/ScrollUpArrow";
 // React
 import { useEffect, useState } from "react";
 
@@ -29,6 +29,7 @@ function App() {
     <>
       <header>
         <Navbar />
+        <ScrollUpArrow />
       </header>
       <main>
         <Routes>
