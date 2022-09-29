@@ -1,11 +1,15 @@
 import './Scss/style.scss';
+import Leagues from './Pages/Home';
 import Navbar from "./Components/Navbar";
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <div>
-<div className="App">Navbar</div>
-<p>Test</p>
+<Routes>
+  <Route path="/" element={<Leagues />} />
+  </Routes>
+
     </div>
 
   ) ;
