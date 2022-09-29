@@ -1,0 +1,42 @@
+//Variablen für die Farben
+$red: #E83539;
+$white:#FFFFFF;
+$bg: #100f0f;
+
+//Variablen für die Schriften
+$first-font: 'Open Sans';
+$next-font: 'Montserrat';
+$small-weight: 400;
+$middle-weight: 600;
+$bold-weight: 700;
+$Montenserrat-weight: 700;
+
+// Variablen für die Schriftgröße
+$size-small: 1.125rem;        //18px
+$size-smallLink: 1.5rem;      //24px
+$size-forDetail: 2.25rem;     //36px
+$size-bigLink: 3rem;          //48px
+$size-headerLeague: 5.25rem;  //84px
+$size-headerDetail: 6.125rem; //98px 
+$size-headerHome: 10.5rem;    //168px
+
+
+
+body{
+    background-color: $bg;
+    
+}
+.linkLeague {
+    color: $white;
+    font-family: $next-font;
+    font-weight: $bold-weight;
+    font-size: $size-bigLink;
+    text-decoration: none;
+}
+.league {
+    color: $white;
+    font-family: $first-font;
+    font-weight: $small-weight;
+    font-size: $size-smallLink;
+  
+}
