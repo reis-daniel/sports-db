@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import TeamsList from "../components/Team/TeamsList";
 
 export default function League() {
-  const [teams, setTeams] = useState([]);
-
-  useEffect(() => {}, []);
-
-  return <div>Overview of all Leagues</div>;
+  return (
+    <div>
+      <TeamsList />
+    </div>
+  );
 }

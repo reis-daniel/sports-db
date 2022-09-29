@@ -1,5 +1,11 @@
 import React from "react";
+// Components
+import TeamFacts from "../components/Team/TeamFacts";
 
 export default function Team() {
-  return <div>Detailpage of a specific Team</div>;
+  return (
+    <div>
+      <TeamFacts />
+    </div>
+  );
 }
