@@ -1,5 +1,7 @@
 import React from "react";
 
-export default function Filterdropdown() {
-  return <section className="filter"></section>;
-}
+const Filter = () => {
+  return <div className="filter-options"></div>;
+};
+
+export default Filter;
