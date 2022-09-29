@@ -16,7 +16,7 @@ return (
   <div className="homeLeagues">
     {leagues.map((l) => (
       <div className="leagueRow">
-        <Link to={`/${l.idLeague}`} key={l.idLeague} className="linkLeague">{l.strLeague} {l.strSport}</Link> 
+        <Link to={`/${l.idLeague}`} key={l.idLeague} className="linkLeague">{l.strLeague} <span className="league">{l.strSport}</span></Link> 
         </div>
     ))}
   </div>

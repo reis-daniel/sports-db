@@ -1,7 +1,7 @@
 //Variablen für die Farben
 $red: #E83539;
 $white:#FFFFFF;
-$bg: #E5E5E5;
+$bg: #100f0f;
 
 //Variablen für die Schriften
 $first-font: 'Open Sans';
@@ -22,12 +22,21 @@ $size-headerHome: 10.5rem;    //168px
 
 
 
-.App {
+body{
     background-color: $bg;
+    
 }
-p {
-    color: $red;
-    font-family: $first-font;
+.linkLeague {
+    color: $white;
+    font-family: $next-font;
     font-weight: $bold-weight;
-    font-size: $size-headerHome;
+    font-size: $size-bigLink;
+    text-decoration: none;
+}
+.league {
+    color: $white;
+    font-family: $first-font;
+    font-weight: $small-weight;
+    font-size: $size-smallLink;
+  
 }
