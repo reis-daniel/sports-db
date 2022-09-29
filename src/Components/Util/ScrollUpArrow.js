@@ -1,5 +1,5 @@
 import React from "react";
-import IconArrow from "../Icons/Icon_Arrow.svg";
+import IconArrow from "../../assets/Icons/Icon_Arrow.svg";
 import { useState, useEffect } from "react";
 
 const ScrollUpArrow = () => {

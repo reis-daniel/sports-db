@@ -4,11 +4,10 @@ import axios from "axios";
 import Home from "./pages/Home";
 import League from "./pages/League";
 import Team from "./pages/Team";
-import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 
 // COMPONENTS
-import Navbar from "./Components/Navbar";
+import Navbar from "./components/Navbar";
 import ScrollUpArrow from "./components/Util/ScrollUpArrow";
 // React
 import { useEffect, useState } from "react";
