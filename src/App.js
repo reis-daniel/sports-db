@@ -1,14 +1,8 @@
-import './Scss/style.scss';
+import "./SCSS/style.scss";
 import Navbar from "./Components/Navbar";
 
 function App() {
-  return (
-    <div>
-<div className="App">Navbar</div>
-<p>Test</p>
-    </div>
-
-  ) ;
+  return <div className="App">Navbar</div>;
 }
 
 export default App;
