@@ -58,7 +58,7 @@ blablabla ...
 
 ### Useful resources
 
-<!-- - [W3Schools | How TO - Collapsibles/Accordion](https://www.w3schools.com/howto/howto_js_accordion.asp) - This helped me to build up a structure for the accordions. -->
+- [stackabuse.com | How to Scroll to Top, Bottom or Any Section in React with a Button Component](https://stackabuse.com/how-to-scroll-to-top-in-react-with-a-button-component/) - Perfect solution for our Scroll to top Button.
 
 blablabla ...
 
