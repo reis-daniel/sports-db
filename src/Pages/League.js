@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import TeamsList from "../components/Team/TeamsList";
+import TeamsList from "../Components/Team/TeamsList";
 
 export default function League() {
   return (

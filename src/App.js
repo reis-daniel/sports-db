@@ -1,14 +1,14 @@
 import "./Scss/style.scss";
 import axios from "axios";
 // Pages
-import Home from "./pages/Home";
-import League from "./pages/League";
-import Team from "./pages/Team";
+import Home from "./Pages/Home";
+import League from "./Pages/League";
+import Team from "./Pages/Team";
 import { Route, Routes } from "react-router-dom";
 
 // COMPONENTS
-import Navbar from "./components/Navbar";
-import ScrollUpArrow from "./components/Util/ScrollUpArrow";
+import Navbar from "./Components/Navbar";
+import ScrollUpArrow from "./Components/Util/ScrollUpArrow";
 // React
 import { useEffect, useState } from "react";
 

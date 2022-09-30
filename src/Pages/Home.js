@@ -1,5 +1,5 @@
 // Components
-import LeagueList from "../components/League/LeagueList";
+import LeagueList from "../Components/League/LeagueList";
 
 export default function Home({ leagues }) {
   return (

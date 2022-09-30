@@ -1,6 +1,6 @@
 import React from "react";
 // Components
-import TeamFacts from "../components/Team/TeamFacts";
+import TeamFacts from "../Components/Team/TeamFacts";
 
 export default function Team() {
   return (
