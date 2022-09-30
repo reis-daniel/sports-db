@@ -1,5 +1,6 @@
 import React from "react";
 import IconArrow from "../../assets/Icons/Icon_Arrow.svg";
+import IconArrowFilled from "../../assets/Icons/Icon_Arrow_filled.png";
 import { useState, useEffect } from "react";
 
 const ScrollUpArrow = () => {
@@ -23,7 +24,21 @@ const ScrollUpArrow = () => {
     <div className="scroll-up-arrow">
       {" "}
       {showTopBtn && (
-        <img src={IconArrow} alt="Icon arrow up" onClick={goToTop} />
+        <img
+          src={IconArrow}
+          alt="Icon arrow up"
+          onClick={goToTop}
+          className="scroll-up-arrow-desktop"
+        />
+      )}{" "}
+      ||{" "}
+      {showTopBtn && (
+        <img
+          src={IconArrowFilled}
+          alt="Icon arrow up"
+          onClick={goToTop}
+          className="scroll-up-arrow-mobile"
+        />
       )}{" "}
     </div>
   );

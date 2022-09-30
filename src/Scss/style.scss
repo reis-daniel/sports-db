@@ -51,7 +51,7 @@ body{
 }
 .headerCaption {
     position: absolute;
-    z-index: 100;
+    z-index: 10;
     width: 1112px;
     height: 336px;
     left: 500px;
@@ -64,12 +64,34 @@ body{
 .spanLeague {
     padding-left: 240px;
 }
+
 .scroll-up-arrow{
+    height: 96px;
     position: fixed;
-    right: 58.91px;
-    bottom: 58.91px;
-    z-index: 10;
+    right: 51.04px;
+    bottom: 51.04px;
+    z-index: 100;
     &:hover{
         cursor: pointer;
+    }
+}
+
+/* smartphones, touchscreens */
+@media (hover: none) and (pointer: coarse) {
+    .scroll-up-arrow-desktop{
+        display: none;
+    }
+    .scroll-up-arrow-mobile{
+        display: block;
+    }
+}
+
+/* mouse, touch pad */
+@media (hover: hover) and (pointer: fine) {
+    .scroll-up-arrow-desktop{
+        display: block;
+    }
+    .scroll-up-arrow-mobile{
+        display: none;
     }
 }
