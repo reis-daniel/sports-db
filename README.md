@@ -59,8 +59,7 @@ blablabla ...
 ### Useful resources
 
 - [stackabuse.com | How to Scroll to Top, Bottom or Any Section in React with a Button Component](https://stackabuse.com/how-to-scroll-to-top-in-react-with-a-button-component/) - Perfect solution for our Scroll to top Button.
-
-blablabla ...
+- [medium.com | Detect a touch device with only CSS](https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134) - As we'll have many animated elements we're looking for a good solution to render some of this elements in a mobile version without animations. Here it is.
 
 ## Authors
 
