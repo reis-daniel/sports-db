@@ -31,7 +31,6 @@ const ScrollUpArrow = () => {
           className="scroll-up-arrow-desktop"
         />
       )}{" "}
-      ||{" "}
       {showTopBtn && (
         <img
           src={IconArrowFilled}
