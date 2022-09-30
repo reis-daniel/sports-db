@@ -71,6 +71,9 @@ body{
     right: 51.04px;
     bottom: 51.04px;
     z-index: 100;
+    img{
+        height: 100%;
+    }
     &:hover{
         cursor: pointer;
     }
@@ -94,4 +97,13 @@ body{
     .scroll-up-arrow-mobile{
         display: none;
     }
+    #rect {
+        transform: translateY(100%);
+        fill: orange;
+        transition: transform .3s ease-in-out;
+      }
+      
+      #svg:hover #rect {
+        transform: translateY(0);
+      }
 }
