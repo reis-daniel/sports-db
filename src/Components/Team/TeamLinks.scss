@@ -22,7 +22,6 @@ $size-headerHome: 10.5rem;    //168px
 
 .team-links{
     width: 100%;
-    background-color: aqua;
     display: flex;
     justify-content: end;
     font-weight: 700;
@@ -32,6 +31,7 @@ $size-headerHome: 10.5rem;    //168px
     ul{
         li{
             list-style: none;
+            margin-bottom: 36px;
             a{
                 text-decoration: none;
                 color: $white;
@@ -40,6 +40,16 @@ $size-headerHome: 10.5rem;    //168px
     }
     &-details{
         width: 50%;
-        background-color: red;
     }
 }
+
+// MEDIA QUERIES
+
+@media (min-width: 576px) { 
+    .team-links{
+        &-details{
+            text-align: center;
+            width: 100%;
+        }
+    }
+ }

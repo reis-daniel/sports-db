@@ -1,6 +1,5 @@
 .team-links {
   width: 100%;
-  background-color: aqua;
   display: flex;
   justify-content: end;
   font-weight: 700;
@@ -10,6 +9,7 @@
 }
 .team-links ul li {
   list-style: none;
+  margin-bottom: 36px;
 }
 .team-links ul li a {
   text-decoration: none;
@@ -17,5 +17,11 @@
 }
 .team-links-details {
   width: 50%;
-  background-color: red;
+}
+
+@media (min-width: 576px) {
+  .team-links-details {
+    text-align: center;
+    width: 100%;
+  }
 }/*# sourceMappingURL=TEamLinks.css.map */

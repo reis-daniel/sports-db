@@ -23,25 +23,60 @@ const TeamLinks = () => {
       )[0];
       setTeam(filteredTeam);
     });
-  }, []);
+  }, [params.team, url_teams]);
   return (
     <section className="team-links">
       <article className="team-links-details">
         <ul>
           <li>
-            <a href={team.strWebsite}>Website</a>
+            <a
+              href={team.strWebsite}
+              target="_blank"
+              alt="Link to Website"
+              rel="noreferrer"
+            >
+              Website
+            </a>
           </li>
           <li>
-            <a href={team.strFacebook}>Facebook</a>
+            <a
+              href={team.strFacebook}
+              target="_blank"
+              alt="Link to Facebook"
+              rel="noreferrer"
+            >
+              Facebook
+            </a>
           </li>
           <li>
-            <a href={team.strTwitter}>Twitter</a>
+            <a
+              href={team.strTwitter}
+              target="_blank"
+              alt="Link to TWitter"
+              rel="noreferrer"
+            >
+              Twitter
+            </a>
           </li>
           <li>
-            <a href={team.strInstagram}>Instagram</a>
+            <a
+              href={team.strInstagram}
+              target="_blank"
+              alt="Link to Instagram"
+              rel="noreferrer"
+            >
+              Instagram
+            </a>
           </li>
           <li>
-            <a href={team.strYoutube}>Youtube</a>
+            <a
+              href={team.strYoutube}
+              target="_blank"
+              alt="Link to YouTube"
+              rel="noreferrer"
+            >
+              Youtube
+            </a>
           </li>
         </ul>
       </article>
