@@ -1,4 +1,5 @@
 import React from "react";
+import "./TeamCompetitions.scss";
 
 export default function TeamCompetitions({ team }) {
   const competitions = [
