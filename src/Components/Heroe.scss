@@ -1,0 +1,44 @@
+//Variablen für die Farben
+$red: #E83539;
+$white:#FFFFFF;
+$bg: #100f0f;
+
+//Variablen für die Schriften
+$first-font: 'Open Sans';
+$next-font: 'Montserrat';
+$small-weight: 400;
+$middle-weight: 600;
+$bold-weight: 700;
+// $Montenserrat-weight: 700;
+
+// Variablen für die Schriftgröße
+$size-small: 1.125rem;        //18px
+$size-smallLink: 1.5rem;      //24px
+$size-forDetail: 2.25rem;     //36px
+$size-bigLink: 3rem;          //48px
+$size-headerLeague: 5.25rem;  //84px
+$size-headerDetail: 6.125rem; //98px 
+$size-headerHome: 10.5rem;    //168px
+
+.heroe{
+    .headerCaption {
+        position: absolute;
+        z-index: 10;
+        width: 1112px;
+        height: 336px;
+        left: 500px;
+        top: 10px;
+        color: $red;
+        font-family: $next-font;
+        font-weight: $bold-weight;
+        font-size: $size-headerHome;
+    }
+    .headerImg {
+        position: relative;
+        z-index: 5;
+        width: 1093px;
+        height: 600px;
+        // left: 1093px;
+        // top: 177px;
+    }
+}

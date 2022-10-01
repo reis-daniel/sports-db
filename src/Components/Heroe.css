@@ -1,0 +1,18 @@
+.heroe .headerCaption {
+  position: absolute;
+  z-index: 10;
+  width: 1112px;
+  height: 336px;
+  left: 500px;
+  top: 10px;
+  color: #E83539;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 10.5rem;
+}
+.heroe .headerImg {
+  position: relative;
+  z-index: 5;
+  width: 1093px;
+  height: 600px;
+}/*# sourceMappingURL=Heroe.css.map */

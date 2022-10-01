@@ -1,0 +1,40 @@
+.scroll-up-arrow {
+  height: 96px;
+  position: fixed;
+  right: 51.04px;
+  bottom: 51.04px;
+  z-index: 100;
+}
+.scroll-up-arrow img {
+  height: 100%;
+}
+.scroll-up-arrow:hover {
+  cursor: pointer;
+}
+
+/* smartphones, touchscreens */
+@media (hover: none) and (pointer: coarse) {
+  .scroll-up-arrow-desktop {
+    display: none;
+  }
+  .scroll-up-arrow-mobile {
+    display: block;
+  }
+}
+/* mouse, touch pad */
+@media (hover: hover) and (pointer: fine) {
+  .scroll-up-arrow-desktop {
+    display: block;
+  }
+  .scroll-up-arrow-mobile {
+    display: none;
+  }
+  #rect {
+    transform: translateY(100%);
+    fill: orange;
+    transition: transform 0.3s ease-in-out;
+  }
+  #svg:hover #rect {
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=ScrollUpArrow.css.map */
