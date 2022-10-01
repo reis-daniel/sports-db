@@ -24,7 +24,6 @@ const TeamLinks = () => {
       setTeam(filteredTeam);
     });
   }, []);
-  console.log(team);
   return (
     <section className="team-links">
       <article className="team-links-details">
