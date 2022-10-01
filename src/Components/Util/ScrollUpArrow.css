@@ -1,12 +1,10 @@
 .scroll-up-arrow {
   height: 96px;
+  width: 63.96px;
   position: fixed;
   right: 51.04px;
   bottom: 51.04px;
   z-index: 100;
-}
-.scroll-up-arrow img {
-  height: 100%;
 }
 .scroll-up-arrow:hover {
   cursor: pointer;
