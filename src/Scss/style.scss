@@ -27,10 +27,12 @@ header{
     z-index: 101;
     }
 
-body{
-    background-color: $bg;
-    
-}
+    body{
+        background-color: $bg;
+        color: $white;
+        font-family: $first-font;
+        font-size: 16px;
+    }
 
 // COMPONENT TRANSFERED TO NAVBAR.SCSS
 // nav{
