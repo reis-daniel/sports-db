@@ -27,8 +27,8 @@ export default function TeamsList() {
      <h1>{params.liga}</h1>
     
      
-     
-     
+     {/* Codesnippet aus der Wetter-App zur weiteren Bearbeitung */}
+        {/* document.body.style.backgroundImage=`url('http://source.unsplash.com/1600x900/?${name}')` */}
  
       <img className="headerImg" src={HeaderImage} alt="Sports Player"  />
       <p className="headerCaption">

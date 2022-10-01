@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 // Routing
 import { Link, useNavigate, useParams } from "react-router-dom";
 
+import "./LeagueList.scss";
+
 export default function LeagueList({ leagues, sport, setSport }) {
 
 
@@ -16,8 +18,7 @@ export default function LeagueList({ leagues, sport, setSport }) {
               key={league.idLeague}
               className="linkLeague"
             >
-              {league.strLeague}
-              <span className="league">{league.strSport}</span>
+             <p>{league.strLeague} <span className="league">{league.strSport}</span></p>  
             </Link>
           </div>
         ))}
