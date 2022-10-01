@@ -31,7 +31,7 @@
   }
   #rect {
     transform: translateY(100%);
-    fill: orange;
+    fill: rgb(232, 53, 57);
     transition: transform 0.3s ease-in-out;
   }
   #svg:hover #rect {

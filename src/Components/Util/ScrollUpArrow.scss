@@ -20,6 +20,7 @@ $size-headerLeague: 5.25rem;  //84px
 $size-headerDetail: 6.125rem; //98px 
 $size-headerHome: 10.5rem;    //168px
 
+// COMPONENT STYLES FOR SCROLL UP ARROW
 .scroll-up-arrow{
     height: 96px;
     position: fixed;
@@ -54,7 +55,7 @@ $size-headerHome: 10.5rem;    //168px
     }
     #rect {
         transform: translateY(100%);
-        fill: orange;
+        fill: rgb(232, 53, 57);
         transition: transform .3s ease-in-out;
       }
       
