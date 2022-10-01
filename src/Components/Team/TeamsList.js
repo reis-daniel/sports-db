@@ -20,14 +20,25 @@ export default function TeamsList() {
   }, []);
 
   return (
+    
     <div>
-      <img className="headerImg" src={HeaderImage} alt="Sports Player" />
+      
+
+     <h1>{params.liga}</h1>
+    
+     
+     
+     
+ 
+      <img className="headerImg" src={HeaderImage} alt="Sports Player"  />
       <p className="headerCaption">
         Find your <span className="spanLeague">League</span>
       </p>
       <div className="homeLeagues">
         {teams.map((team) => (
           <div className="leagueRow" key={team.idTeam}>
+           
+           
             <Link
               to={`/${params.liga}/${team.strTeam}`}
               key={team.idTeam}

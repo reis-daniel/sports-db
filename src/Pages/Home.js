@@ -5,7 +5,7 @@ import { useEffect } from "react";
 // Components
 import LeagueList from "../Components/League/LeagueList";
 
-export default function Home({ leagues }) {
+export default function Home({ leagues, sport, setSport}) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -15,7 +15,7 @@ export default function Home({ leagues }) {
   return (
     <div>
       <Heroe />
-      <LeagueList leagues={leagues} />
+      <LeagueList leagues={leagues} sport={sport} setSport={setSport} />
     </div>
   );
 }

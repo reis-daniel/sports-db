@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [leagues, setLeagues] = useState([]);
+  const [sport, setSport] = useState("");
 
   const url_leagues =
     "https://www.thesportsdb.com/api/v1/json/2/all_leagues.php";
@@ -32,7 +33,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<Home leagues={leagues} />} />
+          <Route path="/" element={<Home leagues={leagues} sport={sport} setSport={setSport} />} />
           <Route path="/:liga" element={<League />} />
           <Route path="/:liga/:team" element={<Team />} />
         </Routes>

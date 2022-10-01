@@ -1,15 +1,17 @@
 // React
 import { useEffect, useState } from "react";
 // Routing
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
-export default function LeagueList({ leagues }) {
+export default function LeagueList({ leagues, sport, setSport }) {
+
+
   return (
     <div>
       <div className="homeLeagues">
         {leagues.map((league) => (
           <div className="leagueRow" key={league.idLeague}>
-            <Link
+            <Link 
               to={`/${league.strLeague}`}
               key={league.idLeague}
               className="linkLeague"

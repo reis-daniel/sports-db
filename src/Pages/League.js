@@ -1,19 +1,22 @@
 import "./League.scss";
 import { useState, useEffect } from "react";
 import TeamsList from "../Components/Team/TeamsList";
-import Heroe from "../Components/Heroe";
+
 
 export default function League() {
+  const [leagues, setLeagues] = useState([]);
+  const[sport, setSport] = useState("");
+
+
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+ 
   return (
     <div>
-      <Heroe />
-      <TeamsList />
+
+      <TeamsList sport={sport} setSport={setSport} />
     </div>
   );
 }
