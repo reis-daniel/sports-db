@@ -2,6 +2,7 @@ import React from "react";
 import IconArrow from "../../assets/Icons/Icon_Arrow.svg";
 import IconArrowFilled from "../../assets/Icons/Icon_Arrow_filled.png";
 import { useState, useEffect } from "react";
+import "./ScrollUpArrow.scss";
 
 const ScrollUpArrow = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);

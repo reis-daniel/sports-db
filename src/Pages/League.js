@@ -1,3 +1,4 @@
+import "./League.scss";
 import { useState, useEffect } from "react";
 import TeamsList from "../Components/Team/TeamsList";
 

@@ -1,3 +1,4 @@
+import "./Team.scss";
 import React from "react";
 // Components
 import TeamFacts from "../Components/Team/TeamFacts";
