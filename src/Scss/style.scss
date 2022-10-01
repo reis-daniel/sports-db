@@ -20,7 +20,24 @@ $size-headerLeague: 5.25rem;  //84px
 $size-headerDetail: 6.125rem; //98px 
 $size-headerHome: 10.5rem;    //168px
 
-
+#inputSearch{
+    width: 60px;
+    height: 39px;
+    border: 4px solid #FFFFFF;
+    background-color: $bg;
+    background: url(../assets/Icons/Icon_Lupe.png)no-repeat left;
+    background-size: 19px 19px;
+    background-position: 7px center;
+    padding: 0 0 0 35px;
+}
+#inputSearch:hover{
+    width: 300px;
+    height: 39px;
+    color: $white;
+    font-size: $size-smallLink;
+    transition: width 1s;
+    transition-timing-function: ease;
+}
 
 body{
     background-color: $bg;
