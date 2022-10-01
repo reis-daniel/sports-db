@@ -1,12 +1,10 @@
 .scroll-up-arrow {
   height: 96px;
+  width: 63.96px;
   position: fixed;
   right: 51.04px;
   bottom: 51.04px;
   z-index: 100;
-}
-.scroll-up-arrow img {
-  height: 100%;
 }
 .scroll-up-arrow:hover {
   cursor: pointer;
@@ -31,7 +29,7 @@
   }
   #rect {
     transform: translateY(100%);
-    fill: orange;
+    fill: rgb(232, 53, 57);
     transition: transform 0.3s ease-in-out;
   }
   #svg:hover #rect {

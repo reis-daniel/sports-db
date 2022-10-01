@@ -1,0 +1,27 @@
+.team-links {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  text-transform: uppercase;
+}
+.team-links ul li {
+  list-style: none;
+  margin-bottom: 36px;
+}
+.team-links ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.team-links-details {
+  width: 50%;
+}
+
+@media (min-width: 576px) {
+  .team-links-details {
+    text-align: center;
+    width: 100%;
+  }
+}/*# sourceMappingURL=TEamLinks.css.map */

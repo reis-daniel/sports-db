@@ -20,6 +20,12 @@ $size-headerLeague: 5.25rem;  //84px
 $size-headerDetail: 6.125rem; //98px 
 $size-headerHome: 10.5rem;    //168px
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 header{
     position: -webkit-sticky;
     position: sticky;
@@ -27,10 +33,12 @@ header{
     z-index: 101;
     }
 
-body{
-    background-color: $bg;
-    
-}
+    body{
+        background-color: $bg;
+        color: $white;
+        font-family: $first-font;
+        font-size: 16px;
+    }
 
 // COMPONENT TRANSFERED TO NAVBAR.SCSS
 // nav{
