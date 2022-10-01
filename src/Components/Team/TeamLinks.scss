@@ -45,7 +45,7 @@ $size-headerHome: 10.5rem;    //168px
 
 // MEDIA QUERIES
 
-@media (min-width: 576px) { 
+@media (max-width: 575px) { 
     .team-links{
         &-details{
             text-align: center;

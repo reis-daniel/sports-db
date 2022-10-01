@@ -19,7 +19,7 @@
   width: 50%;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 575px) {
   .team-links-details {
     text-align: center;
     width: 100%;

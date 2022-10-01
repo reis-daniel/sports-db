@@ -1,0 +1,74 @@
+//Variablen für die Farben
+$red: #E83539;
+$white:#FFFFFF;
+$bg: #100f0f;
+
+//Variablen für die Schriften
+$first-font: 'Open Sans';
+$next-font: 'Montserrat';
+$small-weight: 400;
+$middle-weight: 600;
+$bold-weight: 700;
+// $Montenserrat-weight: 700;
+
+// Variablen für die Schriftgröße
+$size-small: 1.125rem;        //18px
+$size-smallLink: 1.5rem;      //24px
+$size-forDetail: 2.25rem;     //36px
+$size-bigLink: 3rem;          //48px
+$size-headerLeague: 5.25rem;  //84px
+$size-headerDetail: 6.125rem; //98px 
+$size-headerHome: 10.5rem;    //168px
+
+.team-facts{
+    margin: $size-smallLink 0;
+    article{
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        gap: 9rem;
+        align-items: stretch;
+        justify-content: space-around;
+        .imgLeague{
+            width: 50%;
+            img{
+                width:100%;
+                height: 100%;
+                flex: 50%;
+                object-fit: cover;
+                position: relative;
+            }
+            h2{
+                font-size: 96px;
+                color: $red;
+                font-weight: $bold-weight;
+                text-transform: uppercase;
+                font-family: $next-font;
+                position: absolute;
+                top: 20px;
+                left: 25%;
+            }
+        }
+        .country{
+            width: 25%;
+            text-align: center;
+            margin-top: 150px;
+            .countryLeague{
+                h3{
+                    font-size: $size-forDetail;
+                    font-family: $first-font;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    margin:0;
+                }
+                p{
+                    color: $white;
+                    font-size: $size-small;
+                    font-family: $first-font;
+                    font-weight: $small-weight;
+                    margin: 0 0 40px 0;
+                }
+            }
+        }
+    }
+}

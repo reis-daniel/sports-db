@@ -23,7 +23,7 @@ $size-headerHome: 10.5rem;    //168px
 .team-description{
     width: 100%;
     display: flex;
-    padding: 144px 164px 144px 0;
+    padding: 144px 164px 144px 20px;
     h3{
         writing-mode: vertical-rl;
         text-orientation: mixed;
@@ -56,14 +56,24 @@ $size-headerHome: 10.5rem;    //168px
 
 // MEDIA QUERIES
 
-@media (min-width: 576px) { 
-    h3{
-        width: 100%;
-        writing-mode: unset;
-        text-orientation: unset;
-    }
+@media (max-width: 575px) { 
     .team-description{
-        &-details{
+        flex-wrap: wrap;
+        padding: 144px 10% 144px 10%;
+        h3{
+            font-size: 11vw;
+            width: 100%;
+            writing-mode: unset;
+            text-orientation: unset;
+            margin-bottom: 2rem;
         }
+        p{
+            column-count: 1;
+            margin-left: 0;
+        }
+
+    &-details{
+        width: 100%;
     }
  }
+}

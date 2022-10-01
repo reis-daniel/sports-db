@@ -1,8 +1,10 @@
+import "./TeamFacts.scss";
+
 import axios from "axios";
 // React
 import { useEffect, useState } from "react";
 // Routing
-import { Link, useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 // Components
 import TeamCompetitions from "./TeamCompetitions";
 
@@ -25,29 +27,29 @@ export default function TeamFacts() {
   }, []);
   return (
     <section className="team-facts">
-        <article>
+      <article>
         <div className="imgLeague">
-      <img src={team.strStadiumThumb} alt="" />
-      <h2 className="linkLeague">{team.strTeam}</h2>
+          <img src={team.strStadiumThumb} alt="" />
+          <h2 className="linkLeague">{team.strTeam}</h2>
         </div>
         <div className="country">
-      <div className="countryLeague">
-        <h3>{team.strCountry}</h3>
-        <p>Country</p>
-      </div>
-      <div className="countryLeague">
-        <h3>{team.strStadiumLocation}</h3>
-        <p>Location</p>
-      </div>
-      <div className="countryLeague">
-        <h3>{team.intFormedYear}</h3>
-        <p>Established</p>
-      </div>
-      <div className="countryLeague">
-        <h3>{team.strSport}</h3>
-        <p>Sport</p>
-      </div>
-      </div>
+          <div className="countryLeague">
+            <h3>{team.strCountry}</h3>
+            <p>Country</p>
+          </div>
+          <div className="countryLeague">
+            <h3>{team.strStadiumLocation}</h3>
+            <p>Location</p>
+          </div>
+          <div className="countryLeague">
+            <h3>{team.intFormedYear}</h3>
+            <p>Established</p>
+          </div>
+          <div className="countryLeague">
+            <h3>{team.strSport}</h3>
+            <p>Sport</p>
+          </div>
+        </div>
       </article>
       <TeamCompetitions team={team} />
     </section>
