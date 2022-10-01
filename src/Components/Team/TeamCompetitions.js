@@ -16,7 +16,9 @@ export default function TeamCompetitions({ team }) {
       <p>Competitions:</p>
       <div>
         {competitions.map((comp, index) => {
-          return <h3 key={index}>{comp}</h3>;
+          return (
+          <h3 key={index}>{comp}</h3>
+          );
         })}
       </div>
     </section>

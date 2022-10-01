@@ -25,24 +25,30 @@ export default function TeamFacts() {
   }, []);
   return (
     <section className="team-facts">
-      <h2 className="linkLeague">{team.strTeam}</h2>
+        <article>
+        <div className="imgLeague">
       <img src={team.strStadiumThumb} alt="" />
-      <div>
+      <h2 className="linkLeague">{team.strTeam}</h2>
+        </div>
+        <div className="country">
+      <div className="countryLeague">
         <h3>{team.strCountry}</h3>
         <p>Country</p>
       </div>
-      <div>
+      <div className="countryLeague">
         <h3>{team.strStadiumLocation}</h3>
         <p>Location</p>
       </div>
-      <div>
+      <div className="countryLeague">
         <h3>{team.intFormedYear}</h3>
         <p>Established</p>
       </div>
-      <div>
+      <div className="countryLeague">
         <h3>{team.strSport}</h3>
         <p>Sport</p>
       </div>
+      </div>
+      </article>
       <TeamCompetitions team={team} />
     </section>
   );
