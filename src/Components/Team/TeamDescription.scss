@@ -1,0 +1,69 @@
+//Variablen für die Farben
+$red: #E83539;
+$white:#FFFFFF;
+$bg: #100f0f;
+
+//Variablen für die Schriften
+$first-font: 'Open Sans';
+$next-font: 'Montserrat';
+$small-weight: 400;
+$middle-weight: 600;
+$bold-weight: 700;
+// $Montenserrat-weight: 700;
+
+// Variablen für die Schriftgröße
+$size-small: 1.125rem;        //18px
+$size-smallLink: 1.5rem;      //24px
+$size-forDetail: 2.25rem;     //36px
+$size-bigLink: 3rem;          //48px
+$size-headerLeague: 5.25rem;  //84px
+$size-headerDetail: 6.125rem; //98px 
+$size-headerHome: 10.5rem;    //168px
+
+.team-description{
+    width: 100%;
+    display: flex;
+    padding: 144px 164px 144px 0;
+    h3{
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        width: 25%;
+        font-weight: 700;
+        font-size: 96px;
+        text-transform: uppercase;
+        color: $bg;
+        text-shadow: -1px 0 #E83539, 0 1px #E83539, 1px 0 #E83539, 0 -1px #E83539;
+    }
+    &-details{
+        width: 75%;
+        // height: min-content;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        p{
+            width: 100%;
+            column-count: 2;
+            margin-left: 48px;
+        }
+        img{
+            width: auto;
+            height: 184px;
+            margin-top: 96px;
+        }
+    }
+}
+
+// MEDIA QUERIES
+
+@media (min-width: 576px) { 
+    h3{
+        width: 100%;
+        writing-mode: unset;
+        text-orientation: unset;
+    }
+    .team-description{
+        &-details{
+        }
+    }
+ }

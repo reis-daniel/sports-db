@@ -1,0 +1,43 @@
+.team-description {
+  width: 100%;
+  display: flex;
+  padding: 144px 164px 144px 0;
+}
+.team-description h3 {
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  text-orientation: mixed;
+  width: 25%;
+  font-weight: 700;
+  font-size: 96px;
+  text-transform: uppercase;
+  color: #100f0f;
+  text-shadow: -1px 0 #E83539, 0 1px #E83539, 1px 0 #E83539, 0 -1px #E83539;
+}
+.team-description-details {
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.team-description-details p {
+  width: 100%;
+  -moz-column-count: 2;
+       column-count: 2;
+  margin-left: 48px;
+}
+.team-description-details img {
+  width: auto;
+  height: 184px;
+  margin-top: 96px;
+}
+
+@media (min-width: 576px) {
+  h3 {
+    width: 100%;
+    -ms-writing-mode: unset;
+        writing-mode: unset;
+    text-orientation: unset;
+  }
+}/*# sourceMappingURL=TeamDescription.css.map */
