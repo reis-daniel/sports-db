@@ -1,3 +1,28 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 3rem;
+}
+nav #inputSearch {
+  width: 60px;
+  height: 39px;
+  border: 4px solid #FFFFFF;
+  background-color: #100f0f;
+  background: url(../assets/Icons/Icon_Lupe.png) no-repeat left;
+  background-size: 19px 19px;
+  background-position: 7px center;
+  padding: 0 0 0 35px;
+}
+nav #inputSearch:hover {
+  width: 300px;
+  height: 39px;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  transition: width 1s;
+  transition-timing-function: ease;
+}
+
 body {
   background-color: #100f0f;
 }
