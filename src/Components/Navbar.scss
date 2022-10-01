@@ -52,6 +52,7 @@ nav{
     background-size: 19px 19px;
     background-position: 7px center;
     padding: 0 0 0 35px;
+    transition: width .6s linear;
     }
     #inputSearch:hover{
     width: 300px;
@@ -59,6 +60,5 @@ nav{
     color: $white;
     font-size: $size-smallLink;
     transition: width 1s;
-    transition-timing-function: ease;
     }
 }
