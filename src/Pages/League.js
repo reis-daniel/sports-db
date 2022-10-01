@@ -1,6 +1,7 @@
 import "./League.scss";
 import { useState, useEffect } from "react";
 import TeamsList from "../Components/Team/TeamsList";
+import Heroe from "../Components/Heroe";
 
 export default function League() {
   useEffect(() => {
@@ -11,6 +12,7 @@ export default function League() {
   }, []);
   return (
     <div>
+      <Heroe />
       <TeamsList />
     </div>
   );
