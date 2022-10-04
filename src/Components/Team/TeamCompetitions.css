@@ -1,0 +1,31 @@
+.team-competitions {
+  justify-content: center;
+  display: flex;
+  margin-top: 144px;
+  margin-bottom: 144px;
+  margin-left: 230px;
+}
+.team-competitions h3 {
+  margin-left: 54px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2.25rem;
+}
+.team-competitions h3:not(:first-child) {
+  padding-top: 36px;
+}
+.team-competitions p {
+  margin-top: 19px;
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 575px) {
+  .team-competitions {
+    display: block;
+    margin: 0;
+  }
+  p {
+    margin: 0 0 12px 48px;
+  }
+}/*# sourceMappingURL=TeamCompetitions.css.map */

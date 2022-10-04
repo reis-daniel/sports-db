@@ -24,10 +24,10 @@ export default function TeamFacts() {
       )[0];
       setTeam(filteredTeam);
     });
-  }, []);
+  }, []);console.log(team)
   return (
     <section className="team-facts">
-      <article>
+      <article className='team-fc'>
         <div className="imgLeague">
           <img src={team.strStadiumThumb} alt="" />
           <h2 className="linkLeague">{team.strTeam}</h2>

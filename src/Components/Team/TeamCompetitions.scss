@@ -23,23 +23,13 @@ $size-headerHome: 10.5rem;    //168px
 .team-competitions {
     justify-content: center;
     display: flex;
-    justify-content: center;
     margin-top: 144px;
-    margin-bottom: 144px;
     margin-left: 230px;
-   
-
-
      h3{
-        
         margin-left: 54px;
         font-weight:$bold-weight;
         text-transform: uppercase;
         font-size:$size-forDetail;
-       
-
-
-      
      }
      h3:not(:first-child) {
         padding-top: 36px;
@@ -48,8 +38,15 @@ $size-headerHome: 10.5rem;    //168px
         margin-top: 19px;
         font-weight: $small-weight;
         font-size: $size-small;
-       
-       
      }
    
+}
+@media (max-width: 575px){
+        .team-competitions {
+                display: block;
+                margin: 0;
+        }
+        p{
+                margin: 0 0 12px 48px ;
+        }
 }

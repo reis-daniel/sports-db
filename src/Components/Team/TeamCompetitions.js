@@ -13,7 +13,7 @@ export default function TeamCompetitions({ team }) {
   ];
 
   return (
-    <section className="team-competitions">
+    <article className="team-competitions">
       <p>Competitions:</p>
       <div>
         {competitions.map((comp, index) => {
@@ -22,6 +22,6 @@ export default function TeamCompetitions({ team }) {
           );
         })}
       </div>
-    </section>
+    </article>
   );
 }

@@ -2,7 +2,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 10px 3rem;
+  margin: 0 48px;
 }
 nav .logo {
   display: flex;
@@ -31,12 +31,11 @@ nav #inputSearch {
   background-size: 19px 19px;
   background-position: 7px center;
   padding: 0 0 0 35px;
+  transition: width 0.6s linear;
 }
 nav #inputSearch:hover {
   width: 300px;
   height: 39px;
   color: #FFFFFF;
   font-size: 1.5rem;
-  transition: width 1s;
-  transition-timing-function: ease;
 }/*# sourceMappingURL=Navbar.css.map */

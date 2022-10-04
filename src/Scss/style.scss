@@ -27,9 +27,9 @@ $size-headerHome: 10.5rem;    //168px
 }
 
 header{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+    position: -webkit-fixed;
+    position:sticky;
+    top: $size-bigLink;
     z-index: 101;
     }
 

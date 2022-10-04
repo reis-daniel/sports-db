@@ -1,7 +1,7 @@
 .team-facts {
-  margin: 1.5rem 0;
+  margin: 6.125rem 0 1.5rem 0;
 }
-.team-facts article {
+.team-facts .team-fc {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
@@ -9,43 +9,57 @@
   align-items: stretch;
   justify-content: space-around;
 }
-.team-facts article .imgLeague {
+.team-facts .team-fc .imgLeague {
   width: 50%;
 }
-.team-facts article .imgLeague img {
+.team-facts .team-fc .imgLeague img {
   width: 100%;
   height: 100%;
-  flex: 50%;
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
 }
-.team-facts article .imgLeague h2 {
+.team-facts .team-fc .imgLeague h2 {
   font-size: 96px;
   color: #E83539;
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Montserrat";
   position: absolute;
-  top: 20px;
+  top: 180px;
   left: 25%;
 }
-.team-facts article .country {
+.team-facts .team-fc .country {
   width: 25%;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 200px;
 }
-.team-facts article .country .countryLeague h3 {
+.team-facts .team-fc .country .countryLeague h3 {
   font-size: 2.25rem;
   font-family: "Open Sans";
   text-transform: uppercase;
   color: #FFFFFF;
   margin: 0;
 }
-.team-facts article .country .countryLeague p {
+.team-facts .team-fc .country .countryLeague p {
   color: #FFFFFF;
   font-size: 1.125rem;
   font-family: "Open Sans";
   font-weight: 400;
   margin: 0 0 40px 0;
+}
+
+@media (max-width: 575px) {
+  .team-facts .team-fc .imgLeague {
+    width: 100%;
+  }
+  .team-facts .team-fc .imgLeague h2 {
+    font-size: 2.25rem;
+    position: static;
+    text-align: center;
+  }
+  .team-facts .team-fc .country {
+    margin-top: 0;
+    width: 50%;
+  }
 }/*# sourceMappingURL=TeamFacts.css.map */

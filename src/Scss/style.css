@@ -5,9 +5,10 @@
 }
 
 header {
+  position: -webkit-fixed;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 3rem;
   z-index: 101;
 }
 
