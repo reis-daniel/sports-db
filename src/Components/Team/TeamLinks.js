@@ -51,7 +51,7 @@ const TeamLinks = () => {
       <article className="team-links-details">
         <ul>
           {TeamLinks.map((TeamLinksElement, index) =>
-            TeamLinksElement.url.length === 0 ? (
+            TeamLinksElement.url === 0 ? (
               ""
             ) : (
               <li key={index}>
