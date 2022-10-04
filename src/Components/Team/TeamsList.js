@@ -6,10 +6,13 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 // Assets
 import HeaderImage from "../../assets/Images/BG_Home.png";
 
+
 export default function TeamsList() {
   const [teams, setTeams] = useState([]);
   const navigate = useNavigate();
   const params = useParams();
+
+  
 
   const url_teams = `https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?l=${params.liga}`;
 
@@ -20,17 +23,17 @@ export default function TeamsList() {
   }, []);
 
   return (
-    
+ 
     <div>
-      
-
+     
      <h1>{params.liga}</h1>
     
      
      {/* Codesnippet aus der Wetter-App zur weiteren Bearbeitung */}
         {/* document.body.style.backgroundImage=`url('http://source.unsplash.com/1600x900/?${name}')` */}
- 
-      <img className="headerImg" src={HeaderImage} alt="Sports Player"  />
+        {/* <img /> */}
+     
+     <img src={`https://unsplash.com/s/photos/?${params.liga}`} />
       <p className="headerCaption">
         Find your <span className="spanLeague">League</span>
       </p>
