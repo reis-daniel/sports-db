@@ -5,7 +5,7 @@ import axios from "axios";
 // React
 import { useEffect, useState } from "react";
 // Routing
-import { Link, useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 const TeamLinks = () => {
   const [team, setTeam] = useState({});
@@ -50,23 +50,22 @@ const TeamLinks = () => {
     <section className="team-links">
       <article className="team-links-details">
         <ul>
-          {TeamLinks.map((TeamLinksElement, index) =>
-            Object.keys(TeamLinksElement.url).length === 0 ? (
-              ""
-            ) : (
-              <li key={index}>
-                <a
-                  href={TeamLinksElement.url}
-                  target="_blank"
-                  alt={"Link to " + TeamLinksElement.name}
-                  rel="noreferrer"
-                  className="underline"
-                >
-                  {TeamLinksElement.name}
-                </a>
-              </li>
-            )
-          )}
+          {TeamLinks.map((TeamLinksElement, index) => (
+            // Object.keys(TeamLinksElement.url).length === 0 ? (
+            //   <p>nothing to show</p>
+            // ) :
+            <li key={index}>
+              <a
+                href={TeamLinksElement.url}
+                target="_blank"
+                alt={"Link to " + TeamLinksElement.name}
+                rel="noreferrer"
+                className="underline"
+              >
+                {TeamLinksElement.name}
+              </a>
+            </li>
+          ))}
         </ul>
       </article>
     </section>
