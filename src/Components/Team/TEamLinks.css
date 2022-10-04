@@ -19,6 +19,29 @@
   width: 50%;
 }
 
+.underline {
+  position: relative;
+}
+
+.underline::before {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 30%;
+  background-color: #E83539;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before {
+    left: -5%;
+    right: auto;
+    width: 110%;
+  }
+}
 @media (max-width: 575px) {
   .team-links-details {
     text-align: center;

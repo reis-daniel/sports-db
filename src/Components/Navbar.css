@@ -31,6 +31,7 @@ nav #inputSearch {
   background-size: 19px 19px;
   background-position: 7px center;
   padding: 0 0 0 35px;
+  transition: width 0.6s linear;
 }
 nav #inputSearch:hover {
   width: 300px;
@@ -38,5 +39,4 @@ nav #inputSearch:hover {
   color: #FFFFFF;
   font-size: 1.5rem;
   transition: width 1s;
-  transition-timing-function: ease;
 }/*# sourceMappingURL=Navbar.css.map */

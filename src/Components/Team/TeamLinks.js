@@ -34,6 +34,7 @@ const TeamLinks = () => {
               target="_blank"
               alt="Link to Website"
               rel="noreferrer"
+              className="underline"
             >
               Website
             </a>
@@ -44,6 +45,7 @@ const TeamLinks = () => {
               target="_blank"
               alt="Link to Facebook"
               rel="noreferrer"
+              className="underline"
             >
               Facebook
             </a>
@@ -52,8 +54,9 @@ const TeamLinks = () => {
             <a
               href={team.strTwitter}
               target="_blank"
-              alt="Link to TWitter"
+              alt="Link to Twitter"
               rel="noreferrer"
+              className="underline"
             >
               Twitter
             </a>
@@ -64,6 +67,7 @@ const TeamLinks = () => {
               target="_blank"
               alt="Link to Instagram"
               rel="noreferrer"
+              className="underline"
             >
               Instagram
             </a>
@@ -74,6 +78,7 @@ const TeamLinks = () => {
               target="_blank"
               alt="Link to YouTube"
               rel="noreferrer"
+              className="underline"
             >
               Youtube
             </a>
