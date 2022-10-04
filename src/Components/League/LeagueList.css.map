@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"sources":["LeagueList.scss","LeagueList.css"],"names":[],"mappings":"AAsBA;EACI,iBAAA;EACA,mBAAA;ACrBJ","file":"LeagueList.css"}
+=======
+{"version":3,"sources":["LeagueList.scss","LeagueList.css"],"names":[],"mappings":"AAyBA;EACI,iBAAA;EACA,mBAAA;ACxBJ","file":"LeagueList.css"}
+>>>>>>> 36cc32071e723ea16fb19dbb0cb506c1d109144e

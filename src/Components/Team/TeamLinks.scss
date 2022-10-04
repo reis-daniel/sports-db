@@ -43,6 +43,34 @@ $size-headerHome: 10.5rem;    //168px
     }
 }
 
+// HOVER FOR LINKS WITH CLASS "UNDERLINE"
+
+.underline{
+    position: relative;
+}
+
+.underline::before{
+    content: '';
+    position: absolute;
+    z-index: -10;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 30%;
+    background-color: #E83539;
+    transition: width 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+//   @media (hover: hover) and (pointer: fine) {
+    .underline:hover::before{
+      left: -5%;
+      right: auto;
+      width: 110%;
+    }
+//   }
+  
+
 // MEDIA QUERIES
 
 @media (max-width: 575px) { 

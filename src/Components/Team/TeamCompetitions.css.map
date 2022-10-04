@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"sources":["TeamCompetitions.scss","TeamCompetitions.css"],"names":[],"mappings":"AAsBA;EACI,uBAAA;EACA,aAAA;EACA,iBAAA;EACA,oBAAA;EACA,kBAAA;ACrBJ;ADsBK;EACG,iBAAA;EACA,gBApBM;EAqBN,yBAAA;EACA,kBAhBS;ACJjB;ADsBK;EACG,iBAAA;ACpBR;ADsBK;EACG,gBAAA;EACA,gBA/BO;EAgCP,mBA1BK;ACMb;;ADwBA;EACQ;IACQ,cAAA;IACA,SAAA;ECrBd;EDuBM;IACQ,qBAAA;ECrBd;AACF","file":"TeamCompetitions.css"}
+=======
+{"version":3,"sources":["TeamCompetitions.scss","TeamCompetitions.css"],"names":[],"mappings":"AAsBA;EACI,uBAAA;EACA,aAAA;EACA,uBAAA;EACA,iBAAA;EACA,oBAAA;EACA,kBAAA;ACrBJ;ADyBK;EAEG,iBAAA;EACA,gBAzBM;EA0BN,yBAAA;EACA,kBArBS;ACHjB;AD8BK;EACG,iBAAA;AC5BR;AD8BK;EACG,gBAAA;EACA,gBAxCO;EAyCP,mBAnCK;ACOb","file":"TeamCompetitions.css"}
+>>>>>>> 36cc32071e723ea16fb19dbb0cb506c1d109144e

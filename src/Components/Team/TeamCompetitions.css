@@ -1,6 +1,10 @@
 .team-competitions {
   justify-content: center;
   display: flex;
+<<<<<<< HEAD
+=======
+  justify-content: center;
+>>>>>>> 36cc32071e723ea16fb19dbb0cb506c1d109144e
   margin-top: 144px;
   margin-bottom: 144px;
   margin-left: 230px;
@@ -18,6 +22,7 @@
   margin-top: 19px;
   font-weight: 400;
   font-size: 1.125rem;
+<<<<<<< HEAD
 }
 
 @media (max-width: 575px) {
@@ -28,4 +33,6 @@
   p {
     margin: 0 0 12px 48px;
   }
+=======
+>>>>>>> 36cc32071e723ea16fb19dbb0cb506c1d109144e
 }/*# sourceMappingURL=TeamCompetitions.css.map */

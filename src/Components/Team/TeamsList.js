@@ -17,28 +17,33 @@ export default function TeamsList() {
     axios.get(url_teams).then((response) => {
       setTeams(response.data.teams);
     });
-  }, []);
-
+  }, [url_teams]);
+  // console.log("http://source.unsplash.com/1600x900/?" + teams[0].strSport);
   return (
-    
     <div>
-      
+      <h1>{params.liga}</h1>
 
-     <h1>{params.liga}</h1>
-    
-     
-     {/* Codesnippet aus der Wetter-App zur weiteren Bearbeitung */}
-        {/* document.body.style.backgroundImage=`url('http://source.unsplash.com/1600x900/?${name}')` */}
- 
-      <img className="headerImg" src={HeaderImage} alt="Sports Player"  />
-      <p className="headerCaption">
+      {/* Codesnippet aus der Wetter-App zur weiteren Bearbeitung */}
+      {/* document.body.style.backgroundImage=`url('http://source.unsplash.com/1600x900/?${name}')` */}
+
+      {/* DIESES IMG-TAG FUNKTIONIERT EIGENTLICH. DA DIE DATEN ABER SO LANGSAM GELADEN WERDEN, ERHÄLT DIE ABFRAGE NICHT RECHTZEITIG DAS BENÖTIGTE KEYWORD. VIELLEICHT KANN MAN DIE REIHENFOLGE IRGENDWIE ERZWINGEN? */}
+      {/* ----- */}
+      {/* <img
+        src={`http://source.unsplash.com/1600x900/?${teams[0].strSport}`}
+        alt=""
+      /> */}
+      {/* ----- */}
+
+      {/* DIESER BAUSTEIN HAT AUF DIESER SEITE NICHTS ZU SUCHEN, ODER? */}
+      {/* ----- */}
+      {/* <p className="headerCaption">
         Find your <span className="spanLeague">League</span>
-      </p>
+      </p> */}
+      {/* ----- */}
+
       <div className="homeLeagues">
         {teams.map((team) => (
           <div className="leagueRow" key={team.idTeam}>
-           
-           
             <Link
               to={`/${params.liga}/${team.strTeam}`}
               key={team.idTeam}

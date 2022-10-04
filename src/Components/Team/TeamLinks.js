@@ -24,60 +24,49 @@ const TeamLinks = () => {
       setTeam(filteredTeam);
     });
   }, [params.team, url_teams]);
+  let teamLinks = [
+    {
+      url: team.strWebsite,
+      name: "Website",
+    },
+    {
+      url: team.strTwitter,
+      name: "Twitter",
+    },
+    {
+      url: team.strFacebook,
+      name: "Facebook",
+    },
+    {
+      url: team.strYoutube,
+      name: "YouTube",
+    },
+    {
+      url: team.strInstagram,
+      name: "Instagram",
+    },
+  ];
   return (
     <section className="team-links">
       <article className="team-links-details">
         <ul>
-          <li>
-            <a
-              href={team.strWebsite}
-              target="_blank"
-              alt="Link to Website"
-              rel="noreferrer"
-            >
-              Website
-            </a>
-          </li>
-          <li>
-            <a
-              href={team.strFacebook}
-              target="_blank"
-              alt="Link to Facebook"
-              rel="noreferrer"
-            >
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a
-              href={team.strTwitter}
-              target="_blank"
-              alt="Link to TWitter"
-              rel="noreferrer"
-            >
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a
-              href={team.strInstagram}
-              target="_blank"
-              alt="Link to Instagram"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a
-              href={team.strYoutube}
-              target="_blank"
-              alt="Link to YouTube"
-              rel="noreferrer"
-            >
-              Youtube
-            </a>
-          </li>
+          {teamLinks.map((teamLinksElement, index) =>
+            teamLinksElement.url === "" ? (
+              ""
+            ) : (
+              <li key={index}>
+                <a
+                  href={teamLinksElement.url}
+                  target="_blank"
+                  alt={"Link to " + teamLinksElement.name}
+                  rel="noreferrer"
+                  className="underline"
+                >
+                  {teamLinksElement.name}
+                </a>
+              </li>
+            )
+          )}
         </ul>
       </article>
     </section>
