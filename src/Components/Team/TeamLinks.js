@@ -24,7 +24,7 @@ const TeamLinks = () => {
       setTeam(filteredTeam);
     });
   }, [params.team, url_teams]);
-  let TeamLinks = [
+  let teamLinks = [
     {
       url: team.strWebsite,
       name: "Website",
@@ -50,22 +50,23 @@ const TeamLinks = () => {
     <section className="team-links">
       <article className="team-links-details">
         <ul>
-          {TeamLinks.map((TeamLinksElement, index) => (
-            // Object.keys(TeamLinksElement.url).length === 0 ? (
-            //   <p>nothing to show</p>
-            // ) :
-            <li key={index}>
-              <a
-                href={TeamLinksElement.url}
-                target="_blank"
-                alt={"Link to " + TeamLinksElement.name}
-                rel="noreferrer"
-                className="underline"
-              >
-                {TeamLinksElement.name}
-              </a>
-            </li>
-          ))}
+          {teamLinks.map((teamLinksElement, index) =>
+            teamLinksElement.url === "" ? (
+              ""
+            ) : (
+              <li key={index}>
+                <a
+                  href={teamLinksElement.url}
+                  target="_blank"
+                  alt={"Link to " + teamLinksElement.name}
+                  rel="noreferrer"
+                  className="underline"
+                >
+                  {teamLinksElement.name}
+                </a>
+              </li>
+            )
+          )}
         </ul>
       </article>
     </section>
