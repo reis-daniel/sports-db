@@ -5,7 +5,7 @@ import axios from "axios";
 // React
 import { useEffect, useState } from "react";
 // Routing
-import { useLocation, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 const TeamLinks = () => {
   const [team, setTeam] = useState({});
@@ -24,65 +24,49 @@ const TeamLinks = () => {
       setTeam(filteredTeam);
     });
   }, [params.team, url_teams]);
+  let TeamLinks = [
+    {
+      url: team.strWebsite,
+      name: "Website",
+    },
+    {
+      url: team.strTwitter,
+      name: "Twitter",
+    },
+    {
+      url: team.strFacebook,
+      name: "Facebook",
+    },
+    {
+      url: team.strYoutube,
+      name: "YouTube",
+    },
+    {
+      url: team.strInstagram,
+      name: "Instagram",
+    },
+  ];
   return (
     <section className="team-links">
       <article className="team-links-details">
         <ul>
-          <li>
-            <a
-              href={team.strWebsite}
-              target="_blank"
-              alt="Link to Website"
-              rel="noreferrer"
-              className="underline"
-            >
-              Website
-            </a>
-          </li>
-          <li>
-            <a
-              href={team.strFacebook}
-              target="_blank"
-              alt="Link to Facebook"
-              rel="noreferrer"
-              className="underline"
-            >
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a
-              href={team.strTwitter}
-              target="_blank"
-              alt="Link to Twitter"
-              rel="noreferrer"
-              className="underline"
-            >
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a
-              href={team.strInstagram}
-              target="_blank"
-              alt="Link to Instagram"
-              rel="noreferrer"
-              className="underline"
-            >
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a
-              href={team.strYoutube}
-              target="_blank"
-              alt="Link to YouTube"
-              rel="noreferrer"
-              className="underline"
-            >
-              Youtube
-            </a>
-          </li>
+          {TeamLinks.map((TeamLinksElement, index) =>
+            TeamLinksElement.url.length === 0 ? (
+              ""
+            ) : (
+              <li key={index}>
+                <a
+                  href={TeamLinksElement.url}
+                  target="_blank"
+                  alt={"Link to " + TeamLinksElement.name}
+                  rel="noreferrer"
+                  className="underline"
+                >
+                  {TeamLinksElement.name}
+                </a>
+              </li>
+            )
+          )}
         </ul>
       </article>
     </section>
