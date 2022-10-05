@@ -18,6 +18,7 @@ export default function TeamsList() {
       setTeams(response.data.teams);
     });
   }, [url_teams]);
+  
   // console.log("http://source.unsplash.com/1600x900/?" + teams[0].strSport);
   return (
     <div>
