@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 // Routing
 import { Link, useParams, useNavigate } from "react-router-dom";
 // Assets
-import HeaderImage from "../../assets/Images/BG_Home.png";
+import "./TeamsList.scss";
 
 export default function TeamsList() {
   const [teams, setTeams] = useState([]);
@@ -27,29 +27,18 @@ export default function TeamsList() {
 
   return (
     <div>
-      <h1>{params.liga}</h1>
-      <img
+      <article className="TeamsList_firstArticle">
+      <img className="TeamsList_img"
         src={`http://source.unsplash.com/1600x900/?${teams[0].strSport}`}
         alt=""
       />
-
-      {/* Codesnippet aus der Wetter-App zur weiteren Bearbeitung */}
-      {/* document.body.style.backgroundImage=`url('http://source.unsplash.com/1600x900/?${name}')` */}
-
-      {/* DIESES IMG-TAG FUNKTIONIERT EIGENTLICH. DA DIE DATEN ABER SO LANGSAM GELADEN WERDEN, ERHÄLT DIE ABFRAGE NICHT RECHTZEITIG DAS BENÖTIGTE KEYWORD. VIELLEICHT KANN MAN DIE REIHENFOLGE IRGENDWIE ERZWINGEN? */}
-      {/* ----- */}
-      {/* <img
-        src={`http://source.unsplash.com/1600x900/?${teams[0].strSport}`}
-        alt=""
-      /> */}
-      {/* ----- */}
-
-      {/* DIESER BAUSTEIN HAT AUF DIESER SEITE NICHTS ZU SUCHEN, ODER? */}
-      {/* ----- */}
-      {/* <p className="headerCaption">
-        Find your <span className="spanLeague">League</span>
-      </p> */}
-      {/* ----- */}
+      
+      <h1 className="TeamsList_headline">{params.liga}</h1>
+      <p className="TeamsList_Sportart">{teams[0].strSport}</p>
+     
+     
+      </article>
+     
 
       <div className="homeLeagues">
         {teams.map((team) => (
