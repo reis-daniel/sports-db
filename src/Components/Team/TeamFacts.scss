@@ -36,6 +36,10 @@ $size-headerHome: 10.5rem;    //168px
                 height: 100%;
                 object-fit: cover;
                 position: relative;
+                filter: grayscale(100%);
+                &:hover{
+                    filter: none;
+                }
             }
             h2{
                 font-size: 96px;
@@ -46,6 +50,8 @@ $size-headerHome: 10.5rem;    //168px
                 position: absolute;
                 top: 180px;
                 left: 25%;
+                z-index: 10;
+                word-break: break-all;
             }
         }
         .country{
@@ -53,6 +59,7 @@ $size-headerHome: 10.5rem;    //168px
             text-align: center;
             margin-top: 200px;
             .countryLeague{
+                margin-left: 10%;
                 h3{
                     font-size: $size-forDetail;
                     font-family: $first-font;
@@ -76,16 +83,22 @@ $size-headerHome: 10.5rem;    //168px
 @media (max-width: 575px){
         .team-facts{
                 .team-fc{
+                    gap: 0;
+                    align-items: unset;
                     .imgLeague{
                         width: 100%;
                         h2{
-                                font-size: $size-forDetail;
+                                font-size: 4rem;
                                 position: static;
                                 text-align: center;
+                                margin-bottom: 1rem;
+                        }
+                        img{
+                            height: 50vh;
                         }
                     }
                     .country{
-                        margin-top: 0;
+                        margin-top: 4rem;
                         width: 50%;
                 }
             }

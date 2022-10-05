@@ -24,14 +24,25 @@ export default function TeamFacts() {
       )[0];
       setTeam(filteredTeam);
     });
-  }, []);console.log(team)
+  }, [params.team, url_teams]);
+  console.log(team);
   return (
     <section className="team-facts">
-      <article className='team-fc'>
-        <div className="imgLeague">
-          <img src={team.strStadiumThumb} alt="" />
-          <h2 className="linkLeague">{team.strTeam}</h2>
-        </div>
+      <article className="team-fc">
+        {team.strStadiumThumb === null ? (
+          <div className="imgLeague">
+            <h2 className="linkLeague">{team.strTeam}</h2>
+            <img
+              src={`http://source.unsplash.com/1600x900/?${team.strSport}`}
+              alt=""
+            />
+          </div>
+        ) : (
+          <div className="imgLeague">
+            <h2 className="linkLeague">{team.strTeam}</h2>
+            <img src={team.strStadiumThumb} alt="" />
+          </div>
+        )}
         <div className="country">
           <div className="countryLeague">
             <h3>{team.strCountry}</h3>
