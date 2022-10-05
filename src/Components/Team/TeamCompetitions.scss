@@ -21,48 +21,44 @@ $size-headerDetail: 6.125rem; //98px
 $size-headerHome: 10.5rem;    //168px
 
 .team-competitions {
-    display: flex;
-    margin-top: 144px;
-    width: 100%;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 49px;
-    text-transform: uppercase;
-//      h3{
-//         margin-left: 54px;
-//         font-weight:$bold-weight;
-//         text-transform: uppercase;
-//         font-size:$size-forDetail;
-//      }
-//      h3:not(:first-child) {
-//         padding-top: 36px;
-//      }
-     p {
-        width: 50%;
-        text-align: right;
-        margin-right: 40px;
-        // margin-top: 19px;
-        font-weight: $small-weight;
-        font-size: $size-small;
-     }
-     ul{
-        li{
-            list-style: none;
-            margin-bottom: 36px;
-            a{
-                text-decoration: none;
-                color: $white;
-            }
+        display: flex;
+        margin-top: 144px;
+        width: 100%;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 49px;
+        text-transform: uppercase;
+        p {
+                width: 50%;
+                text-align: right;
+                margin-right: 40px;
+                font-weight: $small-weight;
+                font-size: $size-small;
         }
-    }
-   
+        ul{
+                li{
+                        list-style: none;
+                        margin-bottom: 36px;
+                        a{
+                                text-decoration: none;
+                                color: $white;
+                        }
+                }
+        }
 }
 @media (max-width: 575px){
         .team-competitions {
                 display: block;
                 margin: 0;
-        }
-        p{
-                margin: 0 0 12px 48px ;
+                padding: 144px 10% 0 10%;
+                p{
+                        margin-right: 0;
+                        margin-bottom: 1rem;
+                        text-align: center;
+                        width: unset;
+                }
+                ul{
+                        text-align: center;
+                }
         }
 }
