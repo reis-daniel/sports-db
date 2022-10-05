@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 // Routing
 import { useLocation, useParams } from "react-router-dom";
 
-const TeamStadium= () => {
+const TeamStadium = () => {
   const [team, setTeam] = useState({});
   const location = useLocation();
   const params = useParams();
@@ -23,20 +23,81 @@ const TeamStadium= () => {
       )[0];
       setTeam(filteredTeam);
     });
-  }, []);
+  }, [params.team, url_teams]);
   return (
     <section className="team-stadium">
-      <article className="team-stadium-description">
+      {/* CHECK FOR STADIUM INFORMATIONS AND AVOID H3 IF THERES NOTHING TO SHOW */}
+      {(team.strStadiumDescription === "" ||
+        team.strStadiumDescription === "null" ||
+        team.strStadiumDescription === null ||
+        team.strStadiumDescription === 0 ||
+        team.strStadiumDescription === "0") &&
+      (team.strStadium === "" ||
+        team.strStadium === "null" ||
+        team.strStadium === null ||
+        team.strStadium === 0 ||
+        team.strStadium === "0") &&
+      (team.intStadiumCapacity === "" ||
+        team.intStadiumCapacity === "null" ||
+        team.intStadiumCapacity === null ||
+        team.intStadiumCapacity === 0 ||
+        team.intStadiumCapacity === "0") ? (
+        ""
+      ) : (
         <h3>Stadium</h3>
-        <p>{team.strStadiumDescription}</p>
+      )}
+      {/* CHECK FOR STADIUM DESCRIPTION AND AVOID ARTICLE IF STRSTADIUMDESCRIPTION IS NULL */}
+      {team.strStadiumDescription === "" ||
+      team.strStadiumDescription === "null" ||
+      team.strStadiumDescription === null ||
+      team.strStadiumDescription === 0 ||
+      team.strStadiumDescription === "0" ? (
+        ""
+      ) : (
+        <article className="team-stadium-description">
+          <p>{team.strStadiumDescription}</p>
         </article>
+      )}
+      {/* CHECK FOR STADIUM FACTS AND AVOID ARTICLE IF ARTICLE IS EMPTY */}
+      {(team.strStadium === "" ||
+        team.strStadium === "null" ||
+        team.strStadium === null ||
+        team.strStadium === 0 ||
+        team.strStadium === "0") &&
+      (team.intStadiumCapacity === "" ||
+        team.intStadiumCapacity === "null" ||
+        team.intStadiumCapacity === null ||
+        team.intStadiumCapacity === 0 ||
+        team.intStadiumCapacity === "0") ? (
+        ""
+      ) : (
         <article className="stadiumHome">
-            <h3>{team.strStadium}</h3>
-            <p>Home</p>
-            <h3>{team.intStadiumCapacity}</h3>
-            <p>Capacity</p>
+          {team.strStadium === "" ||
+          team.strStadium === "null" ||
+          team.strStadium === null ||
+          team.strStadium === 0 ||
+          team.strStadium === "0" ? (
+            ""
+          ) : (
+            <>
+              <h3>{team.strStadium}</h3>
+              <p>Home</p>
+            </>
+          )}
+          {team.intStadiumCapacity === "" ||
+          team.intStadiumCapacity === "null" ||
+          team.intStadiumCapacity === null ||
+          team.intStadiumCapacity === 0 ||
+          team.intStadiumCapacity === "0" ? (
+            ""
+          ) : (
+            <>
+              <h3>{team.intStadiumCapacity}</h3>
+              <p>Capacity</p>
+            </>
+          )}
         </article>
-      
+      )}
     </section>
   );
 };
