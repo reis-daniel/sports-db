@@ -40,6 +40,11 @@ header{
         font-size: 16px;
     }
 
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+
 // COMPONENT TRANSFERED TO NAVBAR.SCSS
 // nav{
 //     display: flex;

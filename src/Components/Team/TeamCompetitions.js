@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./TeamCompetitions.scss";
 
 export default function TeamCompetitions({ team }) {
@@ -11,17 +12,22 @@ export default function TeamCompetitions({ team }) {
     team.strLeague6,
     team.strLeague7,
   ];
+  console.log(competitions.length);
 
   return (
     <article className="team-competitions">
       <p>Competitions:</p>
-      <div>
+      <ul>
         {competitions.map((comp, index) => {
           return (
-          <h3 key={index}>{comp}</h3>
+            <li>
+              <Link to={`../${comp}`} key={index} className="underline">
+                {comp}
+              </Link>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </article>
   );
 }

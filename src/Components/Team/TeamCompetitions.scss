@@ -21,24 +21,40 @@ $size-headerDetail: 6.125rem; //98px
 $size-headerHome: 10.5rem;    //168px
 
 .team-competitions {
-    justify-content: center;
     display: flex;
     margin-top: 144px;
-    margin-left: 230px;
-     h3{
-        margin-left: 54px;
-        font-weight:$bold-weight;
-        text-transform: uppercase;
-        font-size:$size-forDetail;
-     }
-     h3:not(:first-child) {
-        padding-top: 36px;
-     }
+    width: 100%;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    text-transform: uppercase;
+//      h3{
+//         margin-left: 54px;
+//         font-weight:$bold-weight;
+//         text-transform: uppercase;
+//         font-size:$size-forDetail;
+//      }
+//      h3:not(:first-child) {
+//         padding-top: 36px;
+//      }
      p {
-        margin-top: 19px;
+        width: 50%;
+        text-align: right;
+        margin-right: 40px;
+        // margin-top: 19px;
         font-weight: $small-weight;
         font-size: $size-small;
      }
+     ul{
+        li{
+            list-style: none;
+            margin-bottom: 36px;
+            a{
+                text-decoration: none;
+                color: $white;
+            }
+        }
+    }
    
 }
 @media (max-width: 575px){
