@@ -46,58 +46,60 @@ const TeamStadium = () => {
       ) : (
         <h3>Stadium</h3>
       )}
-      {/* CHECK FOR STADIUM DESCRIPTION AND AVOID ARTICLE IF STRSTADIUMDESCRIPTION IS NULL */}
-      {team.strStadiumDescription === "" ||
-      team.strStadiumDescription === "null" ||
-      team.strStadiumDescription === null ||
-      team.strStadiumDescription === 0 ||
-      team.strStadiumDescription === "0" ? (
-        ""
-      ) : (
-        <article className="team-stadium-description">
+      <article className="team-stadium-details">
+        {/* CHECK FOR STADIUM DESCRIPTION AND AVOID ARTICLE IF STRSTADIUMDESCRIPTION IS NULL */}
+        {team.strStadiumDescription === "" ||
+        team.strStadiumDescription === "null" ||
+        team.strStadiumDescription === null ||
+        team.strStadiumDescription === 0 ||
+        team.strStadiumDescription === "0" ? (
+          ""
+        ) : (
+          // <article className="team-stadium-description">
           <p>{team.strStadiumDescription}</p>
-        </article>
-      )}
-      {/* CHECK FOR STADIUM FACTS AND AVOID ARTICLE IF ARTICLE IS EMPTY */}
-      {(team.strStadium === "" ||
-        team.strStadium === "null" ||
-        team.strStadium === null ||
-        team.strStadium === 0 ||
-        team.strStadium === "0") &&
-      (team.intStadiumCapacity === "" ||
-        team.intStadiumCapacity === "null" ||
-        team.intStadiumCapacity === null ||
-        team.intStadiumCapacity === 0 ||
-        team.intStadiumCapacity === "0") ? (
-        ""
-      ) : (
-        <article className="stadiumHome">
-          {team.strStadium === "" ||
+          // </article>
+        )}
+        {/* CHECK FOR STADIUM FACTS AND AVOID ARTICLE IF ARTICLE IS EMPTY */}
+        {(team.strStadium === "" ||
           team.strStadium === "null" ||
           team.strStadium === null ||
           team.strStadium === 0 ||
-          team.strStadium === "0" ? (
-            ""
-          ) : (
-            <>
-              <h3>{team.strStadium}</h3>
-              <p>Home</p>
-            </>
-          )}
-          {team.intStadiumCapacity === "" ||
+          team.strStadium === "0") &&
+        (team.intStadiumCapacity === "" ||
           team.intStadiumCapacity === "null" ||
           team.intStadiumCapacity === null ||
           team.intStadiumCapacity === 0 ||
-          team.intStadiumCapacity === "0" ? (
-            ""
-          ) : (
-            <>
-              <h3>{team.intStadiumCapacity}</h3>
-              <p>Capacity</p>
-            </>
-          )}
-        </article>
-      )}
+          team.intStadiumCapacity === "0") ? (
+          ""
+        ) : (
+          <div className="team-stadium-details-shortfacts">
+            {team.strStadium === "" ||
+            team.strStadium === "null" ||
+            team.strStadium === null ||
+            team.strStadium === 0 ||
+            team.strStadium === "0" ? (
+              ""
+            ) : (
+              <>
+                <h3>{team.strStadium}</h3>
+                <p>Home</p>
+              </>
+            )}
+            {team.intStadiumCapacity === "" ||
+            team.intStadiumCapacity === "null" ||
+            team.intStadiumCapacity === null ||
+            team.intStadiumCapacity === 0 ||
+            team.intStadiumCapacity === "0" ? (
+              ""
+            ) : (
+              <>
+                <h3>{team.intStadiumCapacity}</h3>
+                <p>Capacity</p>
+              </>
+            )}
+          </div>
+        )}
+      </article>
     </section>
   );
 };
