@@ -46,7 +46,11 @@ export default function TeamFacts() {
         )}
         <div className="country">
           {/* CHECK FOR COUNTRY AND AVOID DIV IF STRCOUNTRY IS NULL */}
-          {team.strCountry === "" ? (
+          {team.strCountry === "" ||
+          team.strCountry === "null" ||
+          team.strCountry === null ||
+          team.strCountry === "0" ||
+          team.strCountry === 0 ? (
             ""
           ) : (
             <div className="countryLeague">
@@ -55,7 +59,11 @@ export default function TeamFacts() {
             </div>
           )}
           {/* CHECK FOR LOCATION AND AVOID DIV IF STRSTADIUMLOCATION IS NULL */}
-          {team.strStadiumLocation === "" ? (
+          {team.strStadiumLocation === "" ||
+          team.strStadiumLocation === "null" ||
+          team.strStadiumLocation === null ||
+          team.strStadiumLocation === "0" ||
+          team.strStadiumLocation === 0 ? (
             ""
           ) : (
             <div className="countryLeague">
@@ -65,6 +73,8 @@ export default function TeamFacts() {
           )}
           {/* CHECK FOR ESTABLISHED YEAR AND AVOID DIV IF INTFORMEDYEAR IS NULL */}
           {team.intFormedYear === "" ||
+          team.intFormedYear === "null" ||
+          team.intFormedYear === null ||
           team.intFormedYear === 0 ||
           team.intFormedYear === "0" ? (
             ""
