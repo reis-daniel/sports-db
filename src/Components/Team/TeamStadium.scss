@@ -22,23 +22,23 @@ $size-headerHome: 10.5rem;    //168px
 
 .team-stadium{
        display: flex;
+       flex-wrap: wrap;
        justify-content: space-between;
        align-items: center;
        margin: 0 0 80px $size-bigLink;
        font-family: $first-font;
+       h3{
+        font-weight:$bold-weight;
+        font-size: 60px;
+        margin-bottom: 48px;
+        }
        .team-stadium-description{
         width: 60%;
-        h3{
-                font-weight:$bold-weight;
-                font-size: 60px;
-                margin-bottom: 48px;
-        }
         p{
                 column-count: 2;
                 column-gap: 48px;
-                font-weight:$small-weight ;
-                font-size: $size-small;
                 line-height: 180%;
+                white-space: break-spaces;
         }
        }
        .stadiumHome{
