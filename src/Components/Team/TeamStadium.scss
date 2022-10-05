@@ -39,6 +39,7 @@ $size-headerHome: 10.5rem;    //168px
                 justify-content: center;
                 align-items: center;
                 gap: 15vw;
+                width: 100%;
                 > p{      
                         width: 75%;
                         column-count: 2;
@@ -47,7 +48,7 @@ $size-headerHome: 10.5rem;    //168px
                         white-space: break-spaces;
                 }
                 &-shortfacts{
-                        width: 25%;
+                        min-width: 25%;
                         text-align: center;
                         h3{
                                 font-weight: 700;
