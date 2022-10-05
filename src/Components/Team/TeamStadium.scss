@@ -28,36 +28,37 @@ $size-headerHome: 10.5rem;    //168px
        margin: 0 48px 80px $size-bigLink;
        font-family: $first-font;
        h3{
-        width: 100%;
-        font-weight:$bold-weight;
-        font-size: 60px;
-        margin-bottom: 48px;
+                width: 100%;
+                font-weight:$bold-weight;
+                font-size: 60px;
+                margin-bottom: 48px;
         }
-       .team-stadium-description{
+        .team-stadium-description{
         width: 60%;
-        p{
-                column-count: 2;
-                column-gap: 48px;
-                line-height: 180%;
-                white-space: break-spaces;
+                p{
+                        column-count: 2;
+                        column-gap: 48px;
+                        line-height: 180%;
+                        white-space: break-spaces;
+                }
         }
-       }
-       .stadiumHome{
-        text-align: center;
-        width: 20%;
-        h3{
-                font-weight: 700;
-                font-size: 36px;
-                line-height: 49px;
-                text-transform: uppercase;
+        .stadiumHome{
+                text-align: center;
+                width: 20%;
+                h3{
+                        font-weight: 700;
+                        font-size: 36px;
+                        line-height: 49px;
+                        text-transform: uppercase;
+                        margin-bottom: 6px;
+                }
+                p{
+                        font-weight:$small-weight;
+                        font-size: $size-small;
+                        line-height: 25px;
+                        margin-bottom: $size-bigLink;
+                }
         }
-        p{
-                font-weight:$small-weight;
-                font-size: $size-small;
-                line-height: 25px;
-                margin-bottom: $size-bigLink;
-        }
-       }
 }
 
 @media (max-width: 575px){
