@@ -8,6 +8,7 @@ import HeaderImage from "../../assets/Images/BG_Home.png";
 
 export default function TeamsList() {
   const [teams, setTeams] = useState([]);
+  const [isLoading, setLoading] = useState(true);
   const navigate = useNavigate();
   const params = useParams();
 
@@ -16,13 +17,21 @@ export default function TeamsList() {
   useEffect(() => {
     axios.get(url_teams).then((response) => {
       setTeams(response.data.teams);
+      setLoading(false);
     });
   }, [url_teams]);
-  
-  // console.log("http://source.unsplash.com/1600x900/?" + teams[0].strSport);
+
+  if (isLoading) {
+    return <div className="TeamsList_onload">Loading...</div>;
+  }
+
   return (
     <div>
       <h1>{params.liga}</h1>
+      <img
+        src={`http://source.unsplash.com/1600x900/?${teams[0].strSport}`}
+        alt=""
+      />
 
       {/* Codesnippet aus der Wetter-App zur weiteren Bearbeitung */}
       {/* document.body.style.backgroundImage=`url('http://source.unsplash.com/1600x900/?${name}')` */}
@@ -56,13 +65,8 @@ export default function TeamsList() {
           </div>
         ))}
       </div>
-      <button
-        onClick={() => {
-          navigate(-1);
-        }}
-      >
-        GO BACK
-      </button>
     </div>
   );
 }
+
+
