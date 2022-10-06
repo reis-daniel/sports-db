@@ -24,7 +24,9 @@ const TeamStadium = () => {
       setTeam(filteredTeam);
     });
   }, [params.team, url_teams]);
-  console.log(team.strStadiumDescription);
+  // console.log();
+  // console.log(Object.keys(params.url).length);
+  // console.log(params);
   return (
     <section className="team-stadium">
       {/* CHECK FOR STADIUM INFORMATIONS AND AVOID H3 IF THERES NOTHING TO SHOW */}
@@ -46,9 +48,7 @@ const TeamStadium = () => {
         team.strStadiumDescription === "0" ? (
           ""
         ) : (
-          // <article className="team-stadium-description">
           <p>{team.strStadiumDescription}</p>
-          // </article>
         )}
         {/* CHECK FOR STADIUM FACTS AND AVOID ARTICLE IF ARTICLE IS EMPTY */}
         {(team.strStadium === "" ||

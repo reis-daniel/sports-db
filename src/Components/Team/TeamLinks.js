@@ -46,29 +46,40 @@ const TeamLinks = () => {
       name: "Instagram",
     },
   ];
+  // let teamLinksLength =
+  //   Object.keys(teamLinks[0].url).length +
+  //   Object.keys(teamLinks[1].url).length +
+  //   Object.keys(teamLinks[2].url).length +
+  //   Object.keys(teamLinks[3].url).length +
+  //   Object.keys(teamLinks[4].url).length;
+
   return (
     <section className="team-links">
-      <article className="team-links-details">
-        <ul>
-          {teamLinks.map((teamLinksElement, index) =>
-            teamLinksElement.url === "" ? (
-              ""
-            ) : (
-              <li key={index}>
-                <a
-                  href={`https://${teamLinksElement.url}`}
-                  target="_blank"
-                  alt={`Link to ${teamLinksElement.name}`}
-                  rel="noreferrer"
-                  className="underline"
-                >
-                  {teamLinksElement.name}
-                </a>
-              </li>
-            )
-          )}
-        </ul>
-      </article>
+      {teamLinks === 0 ? (
+        ""
+      ) : (
+        <article className="team-links-details">
+          <ul>
+            {teamLinks.map((teamLinksElement, index) =>
+              teamLinksElement.url === "" ? (
+                ""
+              ) : (
+                <li key={index}>
+                  <a
+                    href={`https://${teamLinksElement.url}`}
+                    target="_blank"
+                    alt={`Link to ${teamLinksElement.name}`}
+                    rel="noreferrer"
+                    className="underline"
+                  >
+                    {teamLinksElement.name}
+                  </a>
+                </li>
+              )
+            )}
+          </ul>
+        </article>
+      )}
     </section>
   );
 };
