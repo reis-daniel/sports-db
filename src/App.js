@@ -14,11 +14,9 @@ import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 
 // Zustand
-import {
-  useLeaguesStore,
-  useCountriesStore,
-  useSportsStore,
-} from "./store/store";
+import useLeaguesStore from "./Stores/useLeaguesStore";
+import useCountriesStore from "./Stores/useCountriesStore";
+import useSportsStore from "./Stores/useSportsStore";
 
 function App() {
   const { fetchLeagues } = useLeaguesStore((state) => ({

@@ -6,7 +6,8 @@ import { Link, useParams } from "react-router-dom";
 import "./TeamsList.scss";
 
 // Zustand
-import { useLeaguesStore, useTeamsStore } from "../../store/store";
+import useLeaguesStore from "../../Stores/useLeaguesStore";
+import useTeamsStore from "../../Stores/useTeamsStore";
 
 export default function TeamsList() {
   const { sportOfLeague, setSportOfLeague } = useLeaguesStore((state) => ({

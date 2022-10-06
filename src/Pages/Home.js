@@ -5,9 +5,11 @@ import { useEffect } from "react";
 // Components
 import LeagueList from "../Components/League/LeagueList";
 
-import { useLeaguesStore, useSportsStore } from "../store/store";
+// Zustand
+import useLeaguesStore from "../Stores/useLeaguesStore";
+import useSportsStore from "../Stores/useSportsStore";
 
-export default function Home({}) {
+export default function Home() {
   const { leagues } = useLeaguesStore((state) => ({
     leagues: state.leagues,
   }));
