@@ -37,23 +37,23 @@ export default function TeamsList() {
   }
 
   return (
-    <div>
+    <section>
       <article className="TeamsList_firstArticle">
         <img
           className="TeamsList_img"
           src={`http://source.unsplash.com/1600x900/?${sportOfLeague}`}
           alt=""
         />
-    <div className="divTeamslist">
+    <article className="articleTeamslist">
         <h1 className="TeamsList_headline">{params.liga}</h1>
         <p className="TeamsList_Sportart">{sportOfLeague}</p>
-    </div>
+    </article>
         
       </article>
 
-      <div className="homeLeagues">
+      <section className="homeLeagues">
         {teams.map((team) => (
-          <div className="leagueRow" key={team.idTeam}>
+          <article className="leagueRow" key={team.idTeam}>
             <Link
               to={`/${params.liga}/${team.strTeam}`}
               key={team.idTeam}
@@ -62,9 +62,9 @@ export default function TeamsList() {
               <p className="TeamsList_hover">{team.strTeam}<span className="league">{team.strStadiumLocation}</span></p>
               
             </Link>
-          </div>
+          </article>
         ))}
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }
