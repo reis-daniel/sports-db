@@ -46,7 +46,6 @@ const TeamLinks = () => {
       name: "Instagram",
     },
   ];
-  console.log(teamLinks);
   return (
     <section className="team-links">
       <article className="team-links-details">

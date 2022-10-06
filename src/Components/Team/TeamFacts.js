@@ -25,7 +25,6 @@ export default function TeamFacts() {
       setTeam(filteredTeam);
     });
   }, [params.team, url_teams]);
-  console.log(team);
   return (
     <>
       <section className="team-facts">
