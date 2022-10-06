@@ -73,12 +73,12 @@ $size-headerHome: 10.5rem;    //168px
         text-align: end;
        
     }
-    .TeamsList_hover:hover {
-        font-size: $size-headerLeague;
-        transition: 0.7s ease-in-out;
-     }
+   
 }
-
+.TeamsList_hover:hover {
+    font-size: $size-headerLeague;
+    transition: 0.7s ease-in-out;
+ }
 @media (max-width: 1100px) {
     .articleTeamslist {
     margin-top: 15%;
