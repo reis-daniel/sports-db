@@ -44,9 +44,11 @@ export default function TeamsList() {
           src={`http://source.unsplash.com/1600x900/?${sportOfLeague}`}
           alt=""
         />
-
+    <div className="divTeamslist">
         <h1 className="TeamsList_headline">{params.liga}</h1>
         <p className="TeamsList_Sportart">{sportOfLeague}</p>
+    </div>
+        
       </article>
 
       <div className="homeLeagues">
@@ -57,8 +59,8 @@ export default function TeamsList() {
               key={team.idTeam}
               className="linkLeague"
             >
-              {team.strTeam}
-              <span className="league">{team.strStadiumLocation}</span>
+              <p className="TeamsList_hover">{team.strTeam}<span className="league">{team.strStadiumLocation}</span></p>
+              
             </Link>
           </div>
         ))}

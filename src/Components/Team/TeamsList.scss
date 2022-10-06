@@ -20,34 +20,46 @@ $size-headerLeague: 5.25rem;  //84px
 $size-headerDetail: 6.125rem; //98px 
 $size-headerHome: 10.5rem;    //168px
 
+.TeamsList_onload {
+    text-align: center;
+    font-size: $size-forDetail;
+    font-weight: $bold-weight;
+    margin-top: 20%;
+}
 .TeamsList_firstArticle {
     display: flex;
+    margin-bottom: 7%;
+    margin-top: 7%;
 
     .TeamsList_img {
         width: 50%;
-        height: 700px;
-        margin-left: 15%;
-        z-index: 9;
+        // height: 700px;
+        height: auto;
+        margin-left: 10%;
         margin-top: 7%;
     }
     .TeamsList_headline {
         font-family: $next-font;
         font-weight: $bold-weight;
-        font-size: $size-headerHome;
+        font-size: calc(35px + (168 - 35) * ((100vw - 320px) / (1600 - 320)));
         color: $red;
-        z-index: 10;
-        margin-left: -10%;
-        margin-top: 15%;
+        margin-left: -30%;
+        margin-top: 20%;
         
     
     }
     .TeamsList_Sportart {
         font-family: $first-font;
         font-weight: $bold-weight;
-        font-size: $size-headerLeague;
         color: $white;
-        z-index: 10;
+        font-size: calc(30px + (84 - 35) * ((100vw - 320px) / (1600 - 320)));
+        text-align: center;
         margin-left: -10%;
-        margin-top: 15%;
+        
+      
     }
+}
+.TeamsList_hover:hover {
+   font-size: $size-headerLeague;
+   transition: 0.7s ease-in-out;
 }
