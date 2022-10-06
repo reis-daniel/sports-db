@@ -55,31 +55,27 @@ const TeamLinks = () => {
 
   return (
     <section className="team-links">
-      {teamLinks === 0 ? (
-        ""
-      ) : (
-        <article className="team-links-details">
-          <ul>
-            {teamLinks.map((teamLinksElement, index) =>
-              teamLinksElement.url === "" ? (
-                ""
-              ) : (
-                <li key={index}>
-                  <a
-                    href={`https://${teamLinksElement.url}`}
-                    target="_blank"
-                    alt={`Link to ${teamLinksElement.name}`}
-                    rel="noreferrer"
-                    className="underline"
-                  >
-                    {teamLinksElement.name}
-                  </a>
-                </li>
-              )
-            )}
-          </ul>
-        </article>
-      )}
+      <article className="team-links-details">
+        <ul>
+          {teamLinks.map((teamLinksElement, index) =>
+            teamLinksElement.url === "" ? (
+              ""
+            ) : (
+              <li key={index}>
+                <a
+                  href={`https://${teamLinksElement.url}`}
+                  target="_blank"
+                  alt={`Link to ${teamLinksElement.name}`}
+                  rel="noreferrer"
+                  className="underline"
+                >
+                  {teamLinksElement.name}
+                </a>
+              </li>
+            )
+          )}
+        </ul>
+      </article>
     </section>
   );
 };
