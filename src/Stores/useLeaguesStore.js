@@ -1,5 +1,6 @@
 import create from "zustand";
 import axios from "axios";
+import { devtools } from "zustand/middleware";
 
 // Creating a hook for our Leagues-Store, which contains the state of all leagues.
 const useLeaguesStore = create((set) => ({

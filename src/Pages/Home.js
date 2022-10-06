@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 // Components
 import LeagueList from "../Components/League/LeagueList";
+import Filter from "../Components/Util/Filter";
 
 // Zustand
 import useLeaguesStore from "../Stores/useLeaguesStore";
@@ -24,6 +25,7 @@ export default function Home() {
   return (
     <div>
       <Heroe />
+      <Filter />
       <LeagueList leagues={leagues} sports={sports} />
     </div>
   );
