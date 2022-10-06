@@ -30,12 +30,13 @@ $size-headerHome: 10.5rem;    //168px
         text-transform: uppercase;
         p {
                 width: 50%;
+                padding-right: 48px;
                 text-align: right;
-                margin-right: 40px;
                 font-weight: $small-weight;
                 font-size: $size-small;
         }
         ul{
+                width: 50%;
                 li{
                         list-style: none;
                         margin-bottom: 36px;

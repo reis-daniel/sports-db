@@ -46,6 +46,7 @@ const TeamLinks = () => {
       name: "Instagram",
     },
   ];
+  console.log(teamLinks);
   return (
     <section className="team-links">
       <article className="team-links-details">
@@ -56,9 +57,9 @@ const TeamLinks = () => {
             ) : (
               <li key={index}>
                 <a
-                  href={teamLinksElement.url}
+                  href={`https://${teamLinksElement.url}`}
                   target="_blank"
-                  alt={"Link to " + teamLinksElement.name}
+                  alt={`Link to ${teamLinksElement.name}`}
                   rel="noreferrer"
                   className="underline"
                 >
