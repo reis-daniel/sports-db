@@ -17,17 +17,15 @@
   flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
-  gap: 15vw;
   width: 100%;
 }
 .team-stadium-details > p {
-  width: 75%;
+  width: 100%;
   -moz-column-count: 2;
        column-count: 2;
-  -moz-column-gap: 48px;
-       column-gap: 48px;
-  line-height: 180%;
+  margin-right: 48px;
   white-space: break-spaces;
+  line-height: 180%;
 }
 .team-stadium-details-shortfacts {
   min-width: 25%;

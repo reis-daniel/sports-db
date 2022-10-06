@@ -38,14 +38,13 @@ $size-headerHome: 10.5rem;    //168px
                 flex-wrap: nowrap;
                 justify-content: center;
                 align-items: flex-start;
-                gap: 15vw;
                 width: 100%;
                 > p{      
-                        width: 75%;
+                        width: 100%;
                         column-count: 2;
-                        column-gap: 48px;
-                        line-height: 180%;
+                        margin-right: 48px;
                         white-space: break-spaces;
+                        line-height: 180%;
                 }
                 &-shortfacts{
                         min-width: 25%;

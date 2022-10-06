@@ -24,24 +24,15 @@ const TeamStadium = () => {
       setTeam(filteredTeam);
     });
   }, [params.team, url_teams]);
+  console.log(team.strStadiumDescription);
   return (
     <section className="team-stadium">
       {/* CHECK FOR STADIUM INFORMATIONS AND AVOID H3 IF THERES NOTHING TO SHOW */}
-      {(team.strStadiumDescription === "" ||
-        team.strStadiumDescription === "null" ||
-        team.strStadiumDescription === null ||
-        team.strStadiumDescription === 0 ||
-        team.strStadiumDescription === "0") &&
-      (team.strStadium === "" ||
-        team.strStadium === "null" ||
-        team.strStadium === null ||
-        team.strStadium === 0 ||
-        team.strStadium === "0") &&
-      (team.intStadiumCapacity === "" ||
-        team.intStadiumCapacity === "null" ||
-        team.intStadiumCapacity === null ||
-        team.intStadiumCapacity === 0 ||
-        team.intStadiumCapacity === "0") ? (
+      {team.strStadiumDescription === "" ||
+      team.strStadiumDescription === "null" ||
+      team.strStadiumDescription === null ||
+      team.strStadiumDescription === 0 ||
+      team.strStadiumDescription === "0" ? (
         ""
       ) : (
         <h3>Stadium</h3>

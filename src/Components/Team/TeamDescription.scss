@@ -35,6 +35,11 @@ $size-headerHome: 10.5rem;    //168px
         color: $bg;
         text-shadow: -1px 0 #E83539, 0 1px #E83539, 1px 0 #E83539, 0 -1px #E83539;
     }
+    > img{
+        width: auto;
+        height: 184px;
+        margin-top: 96px;
+    }
     &-details{
         width: 75%;
         display: flex;
