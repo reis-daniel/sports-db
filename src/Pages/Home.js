@@ -5,14 +5,24 @@ import { useEffect } from "react";
 // Components
 import LeagueList from "../Components/League/LeagueList";
 
-export default function Home({ leagues, sport, setSport}) {
+import { useLeaguesStore, useSportsStore } from "../store/store";
+
+export default function Home({}) {
+  const { leagues } = useLeaguesStore((state) => ({
+    leagues: state.leagues,
+  }));
+  const { sports } = useSportsStore((state) => ({
+    sports: state.sports,
+  }));
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div>
       <Heroe />
-      <LeagueList leagues={leagues} sport={sport} setSport={setSport} />
+      <LeagueList leagues={leagues} sports={sports} />
     </div>
   );
 }

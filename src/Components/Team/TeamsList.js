@@ -1,24 +1,34 @@
 // React
-import axios from "axios";
 import { useEffect, useState } from "react";
 // Routing
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 // Assets
 import "./TeamsList.scss";
 
+// Zustand
+import { useLeaguesStore, useTeamsStore } from "../../store/store";
+
 export default function TeamsList() {
-  const [teams, setTeams] = useState([]);
+  const { sportOfLeague, setSportOfLeague } = useLeaguesStore((state) => ({
+    sportOfLeague: state.sportOfLeague,
+    setSportOfLeague: state.setSportOfLeague,
+  }));
+  const { teams, fetchTeams } = useTeamsStore((state) => ({
+    teams: state.teams,
+    fetchTeams: state.fetchTeams,
+  }));
   const [isLoading, setLoading] = useState(true);
-  const navigate = useNavigate();
   const params = useParams();
 
   const url_teams = `https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?l=${params.liga}`;
 
   useEffect(() => {
-    axios.get(url_teams).then((response) => {
-      setTeams(response.data.teams);
+    const getTeamsData = async () => {
+      setSportOfLeague(params.liga);
+      await fetchTeams(url_teams);
       setLoading(false);
-    });
+    };
+    getTeamsData();
   }, [url_teams]);
 
   if (isLoading) {
@@ -28,17 +38,15 @@ export default function TeamsList() {
   return (
     <div>
       <article className="TeamsList_firstArticle">
-      <img className="TeamsList_img"
-        src={`http://source.unsplash.com/1600x900/?${teams[0].strSport}`}
-        alt=""
-      />
-      
-      <h1 className="TeamsList_headline">{params.liga}</h1>
-      <p className="TeamsList_Sportart">{teams[0].strSport}</p>
-     
-     
+        <img
+          className="TeamsList_img"
+          src={`http://source.unsplash.com/1600x900/?${sportOfLeague}`}
+          alt=""
+        />
+
+        <h1 className="TeamsList_headline">{params.liga}</h1>
+        <p className="TeamsList_Sportart">{sportOfLeague}</p>
       </article>
-     
 
       <div className="homeLeagues">
         {teams.map((team) => (
@@ -57,5 +65,3 @@ export default function TeamsList() {
     </div>
   );
 }
-
-

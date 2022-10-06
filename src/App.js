@@ -1,28 +1,46 @@
 import "./Scss/style.scss";
-import axios from "axios";
 // Pages
 import Home from "./Pages/Home";
 import League from "./Pages/League";
 import Team from "./Pages/Team";
-import { Route, Routes } from "react-router-dom";
 
 // COMPONENTS
 import Navbar from "./Components/Navbar";
 import ScrollUpArrow from "./Components/Util/ScrollUpArrow";
+
 // React
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+// React Router
+import { Route, Routes } from "react-router-dom";
+
+// Zustand
+import {
+  useLeaguesStore,
+  useCountriesStore,
+  useSportsStore,
+} from "./store/store";
 
 function App() {
-  const [leagues, setLeagues] = useState([]);
-  const [sport, setSport] = useState("");
+  const { fetchLeagues } = useLeaguesStore((state) => ({
+    fetchLeagues: state.fetchLeagues,
+  }));
+  const { fetchCountries } = useCountriesStore((state) => ({
+    fetchCountries: state.fetchCountries,
+  }));
+  const { fetchSports } = useSportsStore((state) => ({
+    fetchSports: state.fetchSports,
+  }));
 
+  const url_countries =
+    "https://www.thesportsdb.com/api/v1/json/2/all_countries.php";
+  const url_sports = "https://www.thesportsdb.com/api/v1/json/2/all_sports.php";
   const url_leagues =
     "https://www.thesportsdb.com/api/v1/json/2/all_leagues.php";
 
   useEffect(() => {
-    axios.get(url_leagues).then((response) => {
-      setLeagues(response.data.leagues);
-    });
+    fetchLeagues(url_leagues);
+    fetchCountries(url_countries);
+    fetchSports(url_sports);
   }, []);
 
   return (
@@ -33,7 +51,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<Home leagues={leagues} sport={sport} setSport={setSport} />} />
+          <Route path="/" element={<Home />} />
           <Route path="/:liga" element={<League />} />
           <Route path="/:liga/:team" element={<Team />} />
         </Routes>
