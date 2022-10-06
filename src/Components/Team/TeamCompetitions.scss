@@ -28,37 +28,37 @@ $size-headerHome: 10.5rem;    //168px
         font-size: 36px;
         line-height: 49px;
         text-transform: uppercase;
-        p {
+        > p {
                 width: 50%;
                 padding-right: 48px;
                 text-align: right;
                 font-weight: $small-weight;
                 font-size: $size-small;
         }
-        ul{
+        > ul{
                 width: 50%;
-                li{
+                > li{
                         list-style: none;
                         margin-bottom: 36px;
-                        a{
-                                text-decoration: none;
-                                color: $white;
-                        }
                 }
         }
 }
-@media (max-width: 575px){
+@media (max-width: 767px){
         .team-competitions {
-                display: block;
+                flex-wrap: wrap;
+                justify-content: center;
                 margin: 0;
                 padding: 144px 10% 0 10%;
-                p{
+                > p{
+                        width: 100%;
                         margin-right: 0;
                         margin-bottom: 1rem;
+                        padding: 0;
                         text-align: center;
                         width: unset;
                 }
-                ul{
+                > ul{
+                        width: 80%;
                         text-align: center;
                 }
         }

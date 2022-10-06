@@ -16,7 +16,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 15vw;
   width: 100%;
 }
@@ -32,22 +32,23 @@
 .team-stadium-details-shortfacts {
   min-width: 25%;
   text-align: center;
+  align-self: center;
 }
-.team-stadium-details-shortfacts h3 {
+.team-stadium-details-shortfacts > h3 {
   font-weight: 700;
   font-size: 36px;
   line-height: 49px;
   text-transform: uppercase;
   margin-bottom: 6px;
 }
-.team-stadium-details-shortfacts p {
+.team-stadium-details-shortfacts > p {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 180%;
   margin-bottom: 3rem;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .team-stadium {
     display: inline-block;
     margin-right: 3rem;
@@ -59,7 +60,7 @@
   .team-stadium-details {
     flex-wrap: wrap;
   }
-  .team-stadium-details p {
+  .team-stadium-details > p {
     -moz-column-count: 1;
          column-count: 1;
     width: 100%;

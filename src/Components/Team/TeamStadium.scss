@@ -51,14 +51,14 @@ $size-headerHome: 10.5rem;    //168px
                         min-width: 25%;
                         text-align: center;
                         align-self: center;
-                        h3{
+                        > h3{
                                 font-weight: 700;
                                 font-size: 36px;
                                 line-height: 49px;
                                 text-transform: uppercase;
                                 margin-bottom: 6px;
                         }
-                        p{
+                        > p{
                                 font-weight:$small-weight;
                                 font-size: $size-small;
                                 line-height: 180%;
@@ -69,7 +69,7 @@ $size-headerHome: 10.5rem;    //168px
 }
 
 // MEDIA QUERIES
-@media (max-width: 575px){
+@media (max-width: 767px){
         .team-stadium{
                 display: inline-block;
                 margin-right: $size-bigLink;
@@ -79,7 +79,7 @@ $size-headerHome: 10.5rem;    //168px
                         }
                 &-details{
                         flex-wrap: wrap;
-                        p{
+                        > p{
                                 column-count: 1;
                                 width: 100%;
                         }

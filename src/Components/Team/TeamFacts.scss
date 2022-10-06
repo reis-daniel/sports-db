@@ -66,7 +66,7 @@ $size-headerHome: 10.5rem;    //168px
                 width: 100%;
                 margin-bottom: 48px;
                 text-align: center;
-                h3{
+                > h3{
                     margin-bottom: 6px;
                     font-size: $size-forDetail;
                     font-family: $first-font;
@@ -79,7 +79,7 @@ $size-headerHome: 10.5rem;    //168px
 }
 
 // MEDIA QUERIES
-@media (max-width: 575px){
+@media (max-width: 767px){
     .team-facts{
         > img{
             position: unset;

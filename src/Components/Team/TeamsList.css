@@ -1,28 +1,39 @@
+.TeamsList_onload {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-top: 20%;
+}
+
 .TeamsList_firstArticle {
   display: flex;
+  margin-bottom: 7%;
+  margin-top: 7%;
 }
 .TeamsList_firstArticle .TeamsList_img {
   width: 50%;
-  height: 700px;
-  margin-left: 15%;
-  z-index: 9;
+  height: auto;
+  margin-left: 10%;
   margin-top: 7%;
 }
 .TeamsList_firstArticle .TeamsList_headline {
   font-family: "Montserrat";
   font-weight: 700;
-  font-size: 10.5rem;
+  font-size: calc(35px + 133 * (100vw - 320px) / 1280);
   color: #E83539;
-  z-index: 10;
-  margin-left: -10%;
-  margin-top: 15%;
+  margin-left: -30%;
+  margin-top: 20%;
 }
 .TeamsList_firstArticle .TeamsList_Sportart {
   font-family: "Open Sans";
   font-weight: 700;
-  font-size: 5.25rem;
   color: #FFFFFF;
-  z-index: 10;
+  font-size: calc(30px + 49 * (100vw - 320px) / 1280);
+  text-align: center;
   margin-left: -10%;
-  margin-top: 15%;
+}
+
+.TeamsList_hover:hover {
+  font-size: 5.25rem;
+  transition: 0.7s ease-in-out;
 }/*# sourceMappingURL=TeamsList.css.map */

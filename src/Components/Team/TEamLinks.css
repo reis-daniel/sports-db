@@ -7,42 +7,15 @@
   line-height: 49px;
   text-transform: uppercase;
 }
-.team-links ul li {
-  list-style: none;
-  margin-bottom: 36px;
-}
-.team-links ul li a {
-  text-decoration: none;
-  color: #FFFFFF;
-}
 .team-links-details {
   width: 50%;
 }
-
-.underline {
-  position: relative;
+.team-links-details ul li {
+  list-style: none;
+  margin-bottom: 36px;
 }
 
-.underline::before {
-  content: "";
-  position: absolute;
-  z-index: -10;
-  bottom: 0;
-  right: 0;
-  width: 0;
-  height: 30%;
-  background-color: #E83539;
-  transition: width 0.3s;
-  transition-timing-function: ease-in-out;
-}
-
-.underline:hover::before {
-  left: -5%;
-  right: auto;
-  width: 110%;
-}
-
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .team-links-details {
     text-align: center;
     width: 100%;

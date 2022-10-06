@@ -4,7 +4,7 @@
   justify-content: center;
   padding: 0 164px 144px 20px;
 }
-.team-description h3 {
+.team-description > h3 {
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -22,7 +22,7 @@
   justify-content: center;
   align-items: flex-start;
 }
-.team-description-details p {
+.team-description-details > p {
   width: 100%;
   -moz-column-count: 2;
        column-count: 2;
@@ -30,18 +30,18 @@
   white-space: break-spaces;
   line-height: 180%;
 }
-.team-description-details img {
+.team-description-details > img {
   width: auto;
   height: 184px;
   margin-top: 96px;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .team-description {
     flex-wrap: wrap;
     padding: 144px 10% 144px 10%;
   }
-  .team-description h3 {
+  .team-description > h3 {
     font-size: 11vw;
     width: 100%;
     -ms-writing-mode: unset;
@@ -49,12 +49,12 @@
     text-orientation: unset;
     margin-bottom: 2rem;
   }
-  .team-description p {
+  .team-description-details {
+    width: 100%;
+  }
+  .team-description-details > p {
     -moz-column-count: 1;
          column-count: 1;
     margin-left: 0;
-  }
-  .team-description-details {
-    width: 100%;
   }
 }/*# sourceMappingURL=TeamDescription.css.map */

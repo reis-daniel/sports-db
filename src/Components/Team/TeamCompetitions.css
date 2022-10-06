@@ -7,35 +7,38 @@
   line-height: 49px;
   text-transform: uppercase;
 }
-.team-competitions p {
+.team-competitions > p {
   width: 50%;
+  padding-right: 48px;
   text-align: right;
-  margin-right: 40px;
   font-weight: 400;
   font-size: 1.125rem;
 }
-.team-competitions ul li {
+.team-competitions > ul {
+  width: 50%;
+}
+.team-competitions > ul > li {
   list-style: none;
   margin-bottom: 36px;
 }
-.team-competitions ul li a {
-  text-decoration: none;
-  color: #FFFFFF;
-}
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .team-competitions {
-    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 0;
     padding: 144px 10% 0 10%;
   }
-  .team-competitions p {
+  .team-competitions > p {
+    width: 100%;
     margin-right: 0;
     margin-bottom: 1rem;
+    padding: 0;
     text-align: center;
     width: unset;
   }
-  .team-competitions ul {
+  .team-competitions > ul {
+    width: 80%;
     text-align: center;
   }
 }/*# sourceMappingURL=TeamCompetitions.css.map */

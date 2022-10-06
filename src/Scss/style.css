@@ -23,4 +23,25 @@ body {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.underline {
+  position: relative;
+}
+.underline::before {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 30%;
+  background-color: #E83539;
+  transition: width 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.underline:hover::before {
+  left: -5%;
+  right: auto;
+  width: 110%;
 }/*# sourceMappingURL=style.css.map */
