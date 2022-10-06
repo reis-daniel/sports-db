@@ -1,7 +1,8 @@
 .team-description {
   width: 100%;
   display: flex;
-  padding: 144px 164px 144px 20px;
+  justify-content: center;
+  padding: 0 164px 144px 20px;
 }
 .team-description h3 {
   -ms-writing-mode: tb-rl;
@@ -27,6 +28,7 @@
        column-count: 2;
   margin-left: 48px;
   white-space: break-spaces;
+  line-height: 180%;
 }
 .team-description-details img {
   width: auto;

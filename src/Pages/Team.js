@@ -18,7 +18,6 @@ export default function Team() {
   return (
     <>
       <TeamFacts />
-      {/* <TeamCompetitions /> */}
       <TeamDescription />
       <TeamStadium />
       <TeamLinks />

@@ -1,65 +1,78 @@
 .team-facts {
-  margin: 6.125rem 0 1.5rem 0;
-}
-.team-facts .team-fc {
   display: flex;
-  flex-direction: row-reverse;
   flex-wrap: wrap;
-  gap: 9rem;
-  align-items: stretch;
-  justify-content: space-around;
+  justify-content: center;
 }
-.team-facts .team-fc .imgLeague {
+.team-facts > img {
+  position: absolute;
+  z-index: -10;
+  left: 0;
   width: 50%;
-}
-.team-facts .team-fc .imgLeague img {
-  width: 100%;
-  height: 100%;
+  height: 100vh;
+  margin: 6rem 0 0 50%;
   -o-object-fit: cover;
      object-fit: cover;
-  position: relative;
+  filter: grayscale(100%);
 }
-.team-facts .team-fc .imgLeague h2 {
-  font-size: 96px;
+.team-facts > img:hover {
+  filter: none;
+}
+.team-facts-details {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 9rem 0 0 0;
+}
+.team-facts-details > h2 {
+  width: 100%;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 6.125rem;
   color: #E83539;
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Montserrat";
-  position: absolute;
-  top: 180px;
-  left: 25%;
+  word-break: break-word;
 }
-.team-facts .team-fc .country {
-  width: 25%;
+.team-facts-details-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 30%;
+}
+.team-facts-details-wrapper-item {
+  width: 100%;
+  margin-bottom: 48px;
   text-align: center;
-  margin-top: 200px;
 }
-.team-facts .team-fc .country .countryLeague h3 {
+.team-facts-details-wrapper-item h3 {
+  margin-bottom: 6px;
   font-size: 2.25rem;
   font-family: "Open Sans";
   text-transform: uppercase;
   color: #FFFFFF;
-  margin: 0;
-}
-.team-facts .team-fc .country .countryLeague p {
-  color: #FFFFFF;
-  font-size: 1.125rem;
-  font-family: "Open Sans";
-  font-weight: 400;
-  margin: 0 0 40px 0;
 }
 
 @media (max-width: 575px) {
-  .team-facts .team-fc .imgLeague {
+  .team-facts > img {
+    position: unset;
     width: 100%;
+    height: 60vh;
+    margin-left: 0;
   }
-  .team-facts .team-fc .imgLeague h2 {
-    font-size: 2.25rem;
-    position: static;
-    text-align: center;
+  .team-facts > img:hover {
+    filter: grayscale(100%);
   }
-  .team-facts .team-fc .country {
-    margin-top: 0;
-    width: 50%;
+  .team-facts-details {
+    position: unset;
+    margin: 3rem 0 0 0;
+    width: 90%;
+    justify-content: center;
+  }
+  .team-facts-details > h2 {
+    font-size: 3.5rem;
+  }
+  .team-facts-details-wrapper {
+    width: 100%;
   }
 }/*# sourceMappingURL=TeamFacts.css.map */

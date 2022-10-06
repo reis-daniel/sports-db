@@ -1,3 +1,71 @@
-.teamStadium {
-  background-color: red;
+.team-stadium {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 48px 144px 3rem;
+  font-family: "Open Sans";
+}
+.team-stadium > h3 {
+  width: 100%;
+  font-weight: 700;
+  font-size: 60px;
+  margin-bottom: 48px;
+}
+.team-stadium-details {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15vw;
+  width: 100%;
+}
+.team-stadium-details > p {
+  width: 75%;
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 48px;
+       column-gap: 48px;
+  line-height: 180%;
+  white-space: break-spaces;
+}
+.team-stadium-details-shortfacts {
+  min-width: 25%;
+  text-align: center;
+}
+.team-stadium-details-shortfacts h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.team-stadium-details-shortfacts p {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 180%;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 575px) {
+  .team-stadium {
+    display: inline-block;
+    margin-right: 3rem;
+  }
+  .team-stadium > h3 {
+    font-size: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  .team-stadium-details {
+    flex-wrap: wrap;
+  }
+  .team-stadium-details p {
+    -moz-column-count: 1;
+         column-count: 1;
+    width: 100%;
+  }
+  .team-stadium-details-shortfacts {
+    width: 100%;
+    margin-top: 2.25rem;
+  }
 }/*# sourceMappingURL=TeamStadium.css.map */

@@ -27,70 +27,80 @@ export default function TeamFacts() {
   }, [params.team, url_teams]);
   console.log(team);
   return (
-    <section className="team-facts">
-      <article className="team-fc">
+    <>
+      <section className="team-facts">
         {/* CHECK FOR THUMB AND TAKE FALLBACK IF IMG IS NULL */}
         {team.strStadiumThumb === null ? (
-          <div className="imgLeague">
-            <h2 className="linkLeague">{team.strTeam}</h2>
-            <img
-              src={`http://source.unsplash.com/1600x900/?${team.strSport}`}
-              alt=""
-            />
-          </div>
+          <img
+            src={`http://source.unsplash.com/1600x900/?${team.strSport}`}
+            alt=""
+          />
         ) : (
-          <div className="imgLeague">
-            <h2 className="linkLeague">{team.strTeam}</h2>
-            <img src={team.strStadiumThumb} alt="" />
-          </div>
+          <img src={team.strStadiumThumb} alt="" />
         )}
-        <div className="country">
-          {/* CHECK FOR COUNTRY AND AVOID DIV IF STRCOUNTRY IS NULL */}
-          {team.strCountry === "" ||
-          team.strCountry === "null" ||
-          team.strCountry === null ||
-          team.strCountry === "0" ||
-          team.strCountry === 0 ? (
-            ""
-          ) : (
-            <div className="countryLeague">
+        {/* <img src={team.strStadiumThumb} alt="" /> */}
+        <article className="team-facts-details">
+          <h2 className="linkLeague">{team.strTeam}</h2>
+          <div className="team-facts-details-wrapper">
+            {/* CHECK FOR COUNTRY AND AVOID DIV IF STRCOUNTRY IS NULL */}
+            {team.strCountry === "" ||
+            team.strCountry === "null" ||
+            team.strCountry === null ||
+            team.strCountry === "0" ||
+            team.strCountry === 0 ? (
+              ""
+            ) : (
+              <div className="team-facts-details-wrapper-item">
+                <h3>{team.strCountry}</h3>
+                <p>Country</p>
+              </div>
+            )}
+            {/* <div className="team-facts-details-wrapper-item">
               <h3>{team.strCountry}</h3>
               <p>Country</p>
+            </div> */}
+            {/* CHECK FOR LOCATION AND AVOID DIV IF STRSTADIUMLOCATION IS NULL */}
+            {team.strStadiumLocation === "" ||
+            team.strStadiumLocation === "null" ||
+            team.strStadiumLocation === null ||
+            team.strStadiumLocation === "0" ||
+            team.strStadiumLocation === 0 ? (
+              ""
+            ) : (
+              <div className="team-facts-details-wrapper-item">
+                <h3>{team.strStadiumLocation}</h3>
+                <p>Location</p>
+              </div>
+            )}
+            {/* <div className="team-facts-details-wrapper-item">
+              <h3>{team.strCountry}</h3>
+              <p>Country</p>
+            </div> */}
+            {/* CHECK FOR ESTABLISHED YEAR AND AVOID DIV IF INTFORMEDYEAR IS NULL */}
+            {team.intFormedYear === "" ||
+            team.intFormedYear === "null" ||
+            team.intFormedYear === null ||
+            team.intFormedYear === 0 ||
+            team.intFormedYear === "0" ? (
+              ""
+            ) : (
+              <div className="team-facts-details-wrapper-item">
+                <h3>{team.intFormedYear}</h3>
+                <p>Established</p>
+              </div>
+            )}
+            {/* <div className="team-facts-details-wrapper-item">
+              <h3>{team.strCountry}</h3>
+              <p>Country</p>
+            </div> */}
+            <div className="team-facts-details-wrapper-item">
+              <h3>{team.strSport}</h3>
+              <p>Sport</p>
             </div>
-          )}
-          {/* CHECK FOR LOCATION AND AVOID DIV IF STRSTADIUMLOCATION IS NULL */}
-          {team.strStadiumLocation === "" ||
-          team.strStadiumLocation === "null" ||
-          team.strStadiumLocation === null ||
-          team.strStadiumLocation === "0" ||
-          team.strStadiumLocation === 0 ? (
-            ""
-          ) : (
-            <div className="countryLeague">
-              <h3>{team.strStadiumLocation}</h3>
-              <p>Location</p>
-            </div>
-          )}
-          {/* CHECK FOR ESTABLISHED YEAR AND AVOID DIV IF INTFORMEDYEAR IS NULL */}
-          {team.intFormedYear === "" ||
-          team.intFormedYear === "null" ||
-          team.intFormedYear === null ||
-          team.intFormedYear === 0 ||
-          team.intFormedYear === "0" ? (
-            ""
-          ) : (
-            <div className="countryLeague">
-              <h3>{team.intFormedYear}</h3>
-              <p>Established</p>
-            </div>
-          )}
-          <div className="countryLeague">
-            <h3>{team.strSport}</h3>
-            <p>Sport</p>
           </div>
-        </div>
-      </article>
+        </article>
+      </section>
       <TeamCompetitions team={team} />
-    </section>
+    </>
   );
 }

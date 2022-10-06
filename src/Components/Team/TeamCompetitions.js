@@ -12,22 +12,21 @@ export default function TeamCompetitions({ team }) {
     team.strLeague6,
     team.strLeague7,
   ];
-  console.log(competitions.length);
 
   return (
-    <article className="team-competitions">
+    <section className="team-competitions">
       <p>Competitions:</p>
       <ul>
         {competitions.map((comp, index) => {
           return (
-            <li>
-              <Link to={`../${comp}`} key={index} className="underline">
+            <li key={index}>
+              <Link to={`../${comp}`} className="underline">
                 {comp}
               </Link>
             </li>
           );
         })}
       </ul>
-    </article>
+    </section>
   );
 }

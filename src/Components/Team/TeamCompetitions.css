@@ -1,38 +1,41 @@
 .team-competitions {
-  justify-content: center;
   display: flex;
-<<<<<<< HEAD
-=======
-  justify-content: center;
->>>>>>> 36cc32071e723ea16fb19dbb0cb506c1d109144e
-  margin-top: 144px;
-  margin-bottom: 144px;
-  margin-left: 230px;
-}
-.team-competitions h3 {
-  margin-left: 54px;
+  margin: 144px 0;
+  width: 100%;
   font-weight: 700;
+  font-size: 36px;
+  line-height: 49px;
   text-transform: uppercase;
-  font-size: 2.25rem;
-}
-.team-competitions h3:not(:first-child) {
-  padding-top: 36px;
 }
 .team-competitions p {
-  margin-top: 19px;
+  width: 50%;
+  text-align: right;
+  margin-right: 40px;
   font-weight: 400;
   font-size: 1.125rem;
-<<<<<<< HEAD
+}
+.team-competitions ul li {
+  list-style: none;
+  margin-bottom: 36px;
+}
+.team-competitions ul li a {
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 @media (max-width: 575px) {
   .team-competitions {
     display: block;
     margin: 0;
+    padding: 144px 10% 0 10%;
   }
-  p {
-    margin: 0 0 12px 48px;
+  .team-competitions p {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: unset;
   }
-=======
->>>>>>> 36cc32071e723ea16fb19dbb0cb506c1d109144e
+  .team-competitions ul {
+    text-align: center;
+  }
 }/*# sourceMappingURL=TeamCompetitions.css.map */
