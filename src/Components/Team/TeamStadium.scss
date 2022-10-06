@@ -37,7 +37,7 @@ $size-headerHome: 10.5rem;    //168px
                 display: flex;
                 flex-wrap: nowrap;
                 justify-content: center;
-                align-items: center;
+                align-items: flex-start;
                 gap: 15vw;
                 width: 100%;
                 > p{      
@@ -50,6 +50,7 @@ $size-headerHome: 10.5rem;    //168px
                 &-shortfacts{
                         min-width: 25%;
                         text-align: center;
+                        align-self: center;
                         h3{
                                 font-weight: 700;
                                 font-size: 36px;
