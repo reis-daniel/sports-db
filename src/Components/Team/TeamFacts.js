@@ -38,9 +38,8 @@ export default function TeamFacts() {
         ) : (
           <img src={team.strStadiumThumb} alt="" />
         )}
-        {/* <img src={team.strStadiumThumb} alt="" /> */}
         <article className="team-facts-details">
-          <h2 className="linkLeague">{team.strTeam}</h2>
+          <h2>{team.strTeam}</h2>
           <div className="team-facts-details-wrapper">
             {/* CHECK FOR COUNTRY AND AVOID DIV IF STRCOUNTRY IS NULL */}
             {team.strCountry === "" ||
@@ -55,10 +54,6 @@ export default function TeamFacts() {
                 <p>Country</p>
               </div>
             )}
-            {/* <div className="team-facts-details-wrapper-item">
-              <h3>{team.strCountry}</h3>
-              <p>Country</p>
-            </div> */}
             {/* CHECK FOR LOCATION AND AVOID DIV IF STRSTADIUMLOCATION IS NULL */}
             {team.strStadiumLocation === "" ||
             team.strStadiumLocation === "null" ||
@@ -72,10 +67,6 @@ export default function TeamFacts() {
                 <p>Location</p>
               </div>
             )}
-            {/* <div className="team-facts-details-wrapper-item">
-              <h3>{team.strCountry}</h3>
-              <p>Country</p>
-            </div> */}
             {/* CHECK FOR ESTABLISHED YEAR AND AVOID DIV IF INTFORMEDYEAR IS NULL */}
             {team.intFormedYear === "" ||
             team.intFormedYear === "null" ||
@@ -89,10 +80,6 @@ export default function TeamFacts() {
                 <p>Established</p>
               </div>
             )}
-            {/* <div className="team-facts-details-wrapper-item">
-              <h3>{team.strCountry}</h3>
-              <p>Country</p>
-            </div> */}
             <div className="team-facts-details-wrapper-item">
               <h3>{team.strSport}</h3>
               <p>Sport</p>
