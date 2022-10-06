@@ -46,6 +46,44 @@ header{
         color: inherit;
     }
 
+// HOVER FOR LINKS WITH CLASS "UNDERLINE"
+
+.underline{
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        z-index: -10;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 30%;
+        background-color: #E83539;
+        transition: width 0.3s;
+        transition-timing-function: ease-in-out;
+    }
+    &:hover::before{
+        left: -5%;
+        right: auto;
+        width: 110%;
+      }
+}
+
+@media (max-width: 575px){
+    .team-links{
+        ul{
+            li{
+                a{
+                    text-decoration: underline;
+                    &::after{
+                        content: "U+27F6";
+                    }
+                }
+            }
+        }
+    }
+}
+
 // COMPONENT TRANSFERED TO NAVBAR.SCSS
 // nav{
 //     display: flex;
