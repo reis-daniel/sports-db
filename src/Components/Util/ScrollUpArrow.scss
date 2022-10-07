@@ -56,9 +56,19 @@ $size-headerHome: 10.5rem;    //168px
         transform: translateY(100%);
         fill: rgb(232, 53, 57);
         transition: transform .3s ease-in-out;
-      }
-      
-      #svg:hover #rect {
+    }
+
+    #svg:hover #rect {
         transform: translateY(0);
-      }
+    }
+}
+
+// MEDIA QUERIES
+@media (max-width: 767px){
+    .scroll-up-arrow{
+        height: 80px;
+        width: auto;
+        right: 20px;
+        bottom: 20px;
+    }
 }

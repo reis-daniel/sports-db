@@ -28,7 +28,7 @@ a {
 .underline {
   --s: 0.5em; /* the thickness of the line */
   --c: #E83539; /* the color of the line */
-  color: #FFFFFF;
+  color: #FFFFFF; /* the color of the a-link */
   padding-bottom: -1.5rem; /* the position of the line */
   background: linear-gradient(90deg, var(--c) 50%, #100f0f 0) calc(100% - var(--_p, 0%))/200% 100%, linear-gradient(var(--c) 0 0) 0% 100%/var(--_p, 0%) var(--s) no-repeat;
   -webkit-background-clip: text, padding-box;

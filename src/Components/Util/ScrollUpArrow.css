@@ -35,4 +35,12 @@
   #svg:hover #rect {
     transform: translateY(0);
   }
+}
+@media (max-width: 767px) {
+  .scroll-up-arrow {
+    height: 80px;
+    width: auto;
+    right: 20px;
+    bottom: 20px;
+  }
 }/*# sourceMappingURL=ScrollUpArrow.css.map */
