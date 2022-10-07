@@ -14,7 +14,7 @@ export default function LeagueList({ leagues }) {
               key={league.idLeague}
               className="linkLeague"
             >
-              <p>
+              <p className="hoverLeague">
                 {league.strLeague}
                 <span className="league">{league.strSport}</span>
               </p>
