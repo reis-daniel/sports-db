@@ -4,4 +4,8 @@
 }
 .leagueRow .league {
   padding-left: 20px;
+}
+
+.linkLeague p {
+  display: inline-block;
 }/*# sourceMappingURL=LeagueList.css.map */

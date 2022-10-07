@@ -61,6 +61,7 @@ blablabla ...
 - [stackabuse.com | How to Scroll to Top, Bottom or Any Section in React with a Button Component](https://stackabuse.com/how-to-scroll-to-top-in-react-with-a-button-component/) - Perfect solution for our Scroll to top Button.
 - [medium.com | Detect a touch device with only CSS](https://ferie.medium.com/detect-a-touch-device-with-only-css-9f8e30fa1134) - As we'll have many animated elements we're looking for a good solution to render some of this elements in a mobile version without animations. Here it is.
 - [codepen.io | svg fill animation by Clément SCHMOUKER](https://codepen.io/clementschmouker/pen/PoZVmod) - This solution was helpfull for styling our scroll up arrow.
+- [2 different background clip by Temani Afif](https://codepen.io/t_afif/pen/NWyNGVM) - Our solution for animated underlined hover effect.
 
 ## Authors
 

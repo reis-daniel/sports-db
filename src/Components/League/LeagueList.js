@@ -12,7 +12,7 @@ export default function LeagueList({ leagues }) {
             <Link
               to={`/${league.strLeague}`}
               key={league.idLeague}
-              className="linkLeague"
+              className="linkLeague underline"
             >
               <p className="hoverLeague">
                 {league.strLeague}
