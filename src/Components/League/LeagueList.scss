@@ -20,21 +20,55 @@ $size-headerLeague: 5.25rem;  //84px
 $size-headerDetail: 6.125rem; //98px 
 $size-headerHome: 10.5rem;    //168px
 
-
-
-
-.leagueRow {
-    margin-left: 54px;
+.leagues-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  div{
     margin-bottom: 36px;
-
-    .league {
-    padding-left: 20px;
+  }
+  &-items{
+    width: 90%;
+    a{
+      margin-bottom: 36px;
+      line-height: 59px;
+      span{
+        margin-left: 1rem;
+      }
     }
+  }
+
 }
-.linkLeague {
+
+// MEDIA QUERIES
+
+@media (max-width: 767px) {
+  .leagues-list{
+    word-break: break-word;
+    hyphens: auto;
+      a{
+        // display: flex;
+        // flex-wrap: wrap;
+        span{
+          word-break: keep-all;
+        }
+      }
+  }
+}
+
+// .leagueRow {
+//     margin-left: 54px;
+//     margin-bottom: 36px;
+//     .league {
+//     padding-left: 20px;
+//     }
+// }
+// .linkLeague {
     // position: relative;
-    p {
-        display: inline-block;
+    // p {
+    //     display: inline-block;
         // &:after {
         //     content: "";
         //     display: block;
@@ -49,7 +83,7 @@ $size-headerHome: 10.5rem;    //168px
         //     margin-top: -1.3rem;
         
         // }
-      }
+      // }
   
       // &:hover {
       //   p {
@@ -59,4 +93,4 @@ $size-headerHome: 10.5rem;    //168px
           // }
         // }
     // }
-}
+// }

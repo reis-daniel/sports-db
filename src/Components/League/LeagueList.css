@@ -1,11 +1,32 @@
-.leagueRow {
-  margin-left: 54px;
+.leagues-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+.leagues-list div {
   margin-bottom: 36px;
 }
-.leagueRow .league {
-  padding-left: 20px;
+.leagues-list-items {
+  width: 90%;
+}
+.leagues-list-items a {
+  margin-bottom: 36px;
+  line-height: 59px;
+}
+.leagues-list-items a span {
+  margin-left: 1rem;
 }
 
-.linkLeague p {
-  display: inline-block;
+@media (max-width: 767px) {
+  .leagues-list {
+    word-break: break-word;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+  }
+  .leagues-list a span {
+    word-break: keep-all;
+  }
 }/*# sourceMappingURL=LeagueList.css.map */
