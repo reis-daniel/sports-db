@@ -48,26 +48,52 @@ header{
 
 // HOVER FOR LINKS WITH CLASS "UNDERLINE"
 
-.underline{
-    position: relative;
-    &::before{
-        content: '';
-        position: absolute;
-        z-index: -10;
-        bottom: 0;
-        right: 0;
-        width: 0;
-        height: 30%;
-        background-color: #E83539;
-        transition: width 0.3s;
-        transition-timing-function: ease-in-out;
-    }
-    &:hover::before{
-        left: -5%;
-        right: auto;
-        width: 110%;
-      }
-}
+.underline {
+    --s: 0.5em;   /* the thickness of the line */
+    --c: #E83539; /* the color of the line */
+    
+    color: #FFFFFF;
+    padding-bottom: -1.5rem; /* the position of the line */
+    background: 
+      linear-gradient(90deg,var(--c) 50%,#100f0f 0) calc(100% - var(--_p,0%))/200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+    -webkit-background-clip: text,padding-box;
+            background-clip: text,padding-box;
+    transition: 0.5s;
+  }
+  .underline:hover {
+    --_p: 100%
+  }
+
+ a.hover {
+    font-family: system-ui, sans-serif;
+    font-size: 3rem;
+    margin:0;
+    cursor: pointer;
+    padding: 0 .1em;
+  }
+
+// old solution:
+// .underline{
+//     position: relative;
+//     &::before{
+//         content: '';
+//         position: absolute;
+//         z-index: -10;
+//         bottom: 0;
+//         right: 0;
+//         width: 0;
+//         height: 30%;
+//         background-color: #E83539;
+//         transition: width 0.3s;
+//         transition-timing-function: ease-in-out;
+//     }
+//     &:hover::before{
+//         left: -5%;
+//         right: auto;
+//         width: 110%;
+//       }
+// }
 
 // COMPONENT TRANSFERED TO NAVBAR.SCSS
 // nav{

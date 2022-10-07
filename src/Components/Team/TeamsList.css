@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .TeamsList_onload {
   text-align: center;
   font-size: 2.25rem;
@@ -9,31 +13,47 @@
   display: flex;
   margin-bottom: 7%;
   margin-top: 7%;
+  max-width: 100%;
 }
 .TeamsList_firstArticle .TeamsList_img {
-  width: 50%;
-  height: auto;
+  width: 60%;
+  height: 70vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 780px;
   margin-left: 10%;
   margin-top: 7%;
+  margin-bottom: 4%;
+}
+.TeamsList_firstArticle .articleTeamslist {
+  position: absolute;
+  margin-left: 40%;
+  width: 50%;
 }
 .TeamsList_firstArticle .TeamsList_headline {
   font-family: "Montserrat";
   font-weight: 700;
-  font-size: calc(35px + 133 * (100vw - 320px) / 1280);
+  font-size: calc(35px + 115 * (100vw - 320px) / 1280);
   color: #E83539;
-  margin-left: -30%;
-  margin-top: 20%;
+  margin-top: 10%;
+  text-align: end;
+  overflow-wrap: break-word;
 }
 .TeamsList_firstArticle .TeamsList_Sportart {
   font-family: "Open Sans";
   font-weight: 700;
   color: #FFFFFF;
   font-size: calc(30px + 49 * (100vw - 320px) / 1280);
-  text-align: center;
-  margin-left: -10%;
+  text-align: end;
 }
 
 .TeamsList_hover:hover {
   font-size: 5.25rem;
   transition: 0.7s ease-in-out;
+}
+
+@media (max-width: 1100px) {
+  .articleTeamslist {
+    margin-top: 15%;
+  }
 }/*# sourceMappingURL=TeamsList.css.map */

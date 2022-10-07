@@ -1,0 +1,47 @@
+.filterdropdown-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.dropdown {
+  width: 15rem;
+}
+
+.dropdown-title {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 0.5rem;
+  border: 0.2rem solid white;
+}
+
+.dropdown-optionlist {
+  position: absolute;
+  border: 0.2rem solid white;
+  border-top: none;
+  width: inherit;
+  z-index: 20;
+  background-color: #100f0f;
+  list-style-type: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.dropdown-optionlist.open {
+  height: 15rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.dropdown-optionlist.open::-webkit-scrollbar {
+  display: none;
+}
+.dropdown-optionlist .dropdown-option {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.25rem 0.5rem;
+  border-top: 0.2rem solid white;
+}
+.dropdown-optionlist .dropdown-option:first-of-type {
+  border-top: none;
+}/*# sourceMappingURL=Filterdropdown.css.map */

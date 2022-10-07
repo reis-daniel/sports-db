@@ -56,21 +56,28 @@ const TeamLinks = () => {
   return (
     <section className="team-links">
       <article className="team-links-details">
+        {/* <div>
+          <a className="underline" href="www.google.com">
+            Hover Me
+          </a>
+        </div> */}
         <ul>
           {teamLinks.map((teamLinksElement, index) =>
-            teamLinksElement.url === "" ? (
+            teamLinksElement.url === "" || teamLinksElement.url === null ? (
               ""
             ) : (
               <li key={index}>
-                <a
-                  href={`https://${teamLinksElement.url}`}
-                  target="_blank"
-                  alt={`Link to ${teamLinksElement.name}`}
-                  rel="noreferrer"
-                  className="underline"
-                >
-                  {teamLinksElement.name}
-                </a>
+                <div key={index}>
+                  <a
+                    href={`https://${teamLinksElement.url}`}
+                    target="_blank"
+                    alt={`Link to ${teamLinksElement.name}`}
+                    rel="noreferrer"
+                    className="underline"
+                  >
+                    {teamLinksElement.name}
+                  </a>
+                </div>
               </li>
             )
           )}
