@@ -22,7 +22,6 @@ const ScrollUpArrow = () => {
   };
   return (
     <div className="scroll-up-arrow">
-      {" "}
       {showTopBtn && (
         <svg
           id="svg"
@@ -58,7 +57,7 @@ const ScrollUpArrow = () => {
             ></rect>
           </g>
         </svg>
-      )}{" "}
+      )}
       {showTopBtn && (
         <img
           src={IconArrowFilled}
@@ -66,7 +65,7 @@ const ScrollUpArrow = () => {
           onClick={goToTop}
           className="scroll-up-arrow-mobile"
         />
-      )}{" "}
+      )}
     </div>
   );
 };
