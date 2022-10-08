@@ -58,25 +58,6 @@ $size-headerHome: 10.5rem;    //168px
     }
 }
 
-/* mouse, touch pad */
-// @media (hover: hover) and (pointer: fine) {
-    // .scroll-up-arrow-desktop{
-    //     display: block;
-    // }
-    // .scroll-up-arrow-mobile{
-    //     display: none;
-    // }
-    // #rect {
-    //     transform: translateY(100%);
-    //     fill: rgb(232, 53, 57);
-    //     transition: transform .3s ease-in-out;
-    // }
-
-    // #svg:hover #rect {
-    //     transform: translateY(0);
-    // }
-// }
-
 // MEDIA QUERIES
 @media (max-width: 767px){
     .scroll-up-arrow{

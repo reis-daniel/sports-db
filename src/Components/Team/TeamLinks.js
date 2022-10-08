@@ -24,6 +24,7 @@ const TeamLinks = () => {
       setTeam(filteredTeam);
     });
   }, [params.team, url_teams]);
+
   let teamLinks = [
     {
       url: team.strWebsite,
@@ -46,44 +47,46 @@ const TeamLinks = () => {
       name: "Instagram",
     },
   ];
-  // let teamLinksLength =
-  //   Object.keys(teamLinks[0].url).length +
-  //   Object.keys(teamLinks[1].url).length +
-  //   Object.keys(teamLinks[2].url).length +
-  //   Object.keys(teamLinks[3].url).length +
-  //   Object.keys(teamLinks[4].url).length;
-
+  console.log(teamLinks[0].url);
   return (
-    <section className="team-links">
-      <article className="team-links-details">
-        {/* <div>
-          <a className="underline" href="www.google.com">
-            Hover Me
-          </a>
-        </div> */}
-        <ul>
-          {teamLinks.map((teamLinksElement, index) =>
-            teamLinksElement.url === "" || teamLinksElement.url === null ? (
-              ""
-            ) : (
-              <li key={index}>
-                <div key={index}>
-                  <a
-                    href={`https://${teamLinksElement.url}`}
-                    target="_blank"
-                    alt={`Link to ${teamLinksElement.name}`}
-                    rel="noreferrer"
-                    className="underline"
-                  >
-                    {teamLinksElement.name}
-                  </a>
-                </div>
-              </li>
-            )
-          )}
-        </ul>
-      </article>
-    </section>
+    <>
+      {teamLinks[0].url === "" &&
+      teamLinks[1].url === "" &&
+      teamLinks[2].url === "" &&
+      teamLinks[3].url === "" &&
+      teamLinks[4].url === "" ? (
+        ""
+      ) : (
+        <>
+          <section className="team-links">
+            <article className="team-links-details">
+              <ul>
+                {teamLinks.map((teamLinksElement, index) =>
+                  teamLinksElement.url === "" ||
+                  teamLinksElement.url === null ? (
+                    ""
+                  ) : (
+                    <li key={index}>
+                      <div key={index}>
+                        <a
+                          href={`https://${teamLinksElement.url}`}
+                          target="_blank"
+                          alt={`Link to ${teamLinksElement.name}`}
+                          rel="noreferrer"
+                          className="underline"
+                        >
+                          {teamLinksElement.name}
+                        </a>
+                      </div>
+                    </li>
+                  )
+                )}
+              </ul>
+            </article>
+          </section>
+        </>
+      )}
+    </>
   );
 };
 
