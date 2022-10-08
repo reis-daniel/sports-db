@@ -61,3 +61,12 @@ nav{
     font-size: $size-smallLink;
     }
 }
+
+@media(max-width:575px){
+        nav{
+        align-items: flex-start;
+        nav #inputSearch:hover{
+               width: 220px;
+        }
+}
+}

@@ -32,8 +32,7 @@ function App() {
   const url_countries =
     "https://www.thesportsdb.com/api/v1/json/2/all_countries.php";
   const url_sports = "https://www.thesportsdb.com/api/v1/json/2/all_sports.php";
-  const url_leagues =
-    "https://www.thesportsdb.com/api/v1/json/2/all_leagues.php";
+  const url_leagues ="https://www.thesportsdb.com/api/v1/json/2/all_leagues.php";
 
   useEffect(() => {
     fetchLeagues(url_leagues);
