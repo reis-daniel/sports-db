@@ -77,7 +77,7 @@ $size-headerHome: 10.5rem;    //168px
         font-weight: $bold-weight;
         color: $white;
         font-size: 5vw;
-        // font-size: calc(30px + (80 - 35) * ((100vw - 320px) / (1600 - 320)));
+        text-transform: uppercase;
         text-align: end;
        
     }
