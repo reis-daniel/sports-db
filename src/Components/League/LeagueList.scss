@@ -34,11 +34,16 @@ $size-headerHome: 10.5rem;    //168px
     a{
       margin-bottom: 36px;
       line-height: 59px;
+      color: $white;
+      font-family: $next-font;
+      font-weight: $bold-weight;
+      font-size: $size-bigLink;
+      text-decoration: none;
+      }
       span{
         margin-left: 1rem;
       }
     }
-  }
 }
 
 // MEDIA QUERIES
