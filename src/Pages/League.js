@@ -8,8 +8,8 @@ export default function League() {
   }, []);
 
   return (
-    <div>
+    <>
       <TeamsList />
-    </div>
+    </>
   );
 }
