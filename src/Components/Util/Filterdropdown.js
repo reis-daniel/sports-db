@@ -12,15 +12,11 @@ import useLeaguesStore from "../../Stores/useLeaguesStore";
 export default function Filterdropdown() {
   const [showCountriesOptions, setShowCountriesOptions] = useState(false);
   const [showSportsOptions, setShowSportsOptions] = useState(false);
-  const [selectedItem, setSelectedItem] = useState();
 
   // Zustande
-  const { leaguesOfCountry, fetchLeaguesOfCountry } = useLeaguesStore(
-    (state) => ({
-      leaguesOfCountry: state.leaguesOfCountry,
-      fetchLeaguesOfCountry: state.fetchLeaguesOfCountry,
-    })
-  );
+  const { fetchLeaguesOfCountry } = useLeaguesStore((state) => ({
+    fetchLeaguesOfCountry: state.fetchLeaguesOfCountry,
+  }));
   const { countries } = useCountriesStore((state) => ({
     countries: state.countries,
   }));
@@ -28,23 +24,26 @@ export default function Filterdropdown() {
     sports: state.sports,
   }));
   const {
-    shouldFilter,
     setShouldFilter,
     filteredCountries,
     addFilteredCountry,
     removeFilteredCountry,
+    clearFilteredCountries,
     filteredSports,
     addFilteredSport,
     removeFilteredSport,
+    clearFilteredSports,
   } = useFilterStore((state) => ({
     shouldFilter: state.shouldFilter,
     setShouldFilter: state.setShouldFilter,
     filteredCountries: state.filteredCountries,
     addFilteredCountry: state.addFilteredCountry,
     removeFilteredCountry: state.removeFilteredCountry,
+    clearFilteredCountries: state.clearFilteredCountries,
     filteredSports: state.filteredSports,
     addFilteredSport: state.addFilteredSport,
     removeFilteredSport: state.removeFilteredSport,
+    clearFilteredSports: state.clearFilteredSports,
   }));
 
   // Handler
@@ -68,6 +67,15 @@ export default function Filterdropdown() {
       setShouldFilter(false);
   };
 
+  const clearFilteredItemsHandler = (store) => {
+    if (store === "countries") {
+      clearFilteredCountries();
+      setShowCountriesOptions(false);
+    } else {
+      clearFilteredSports();
+      setShowSportsOptions(false);
+    }
+  };
   return (
     <div className="filterdropdown-container">
       <div className="dropdown countries">
@@ -85,10 +93,21 @@ export default function Filterdropdown() {
               showCountriesOptions ? "open" : "hide"
             }`}
           >
+            <li>
+              <button
+                name="clearCountry"
+                id="clearCountry"
+                onClick={() => {
+                  clearFilteredItemsHandler("countries");
+                }}
+              >
+                Remove all
+              </button>
+            </li>
             {showCountriesOptions
               ? countries.map((country) => {
                   return (
-                    <div className="dropdown-option" key={country.name_en}>
+                    <li className="dropdown-option" key={country.name_en}>
                       <input
                         className="option-check"
                         type="checkbox"
@@ -106,8 +125,8 @@ export default function Filterdropdown() {
                           }
                         }}
                       />
-                      <li className="option-title">{country.name_en}</li>
-                    </div>
+                      <p className="option-title">{country.name_en}</p>
+                    </li>
                   );
                 })
               : ""}
@@ -130,6 +149,15 @@ export default function Filterdropdown() {
               showSportsOptions ? "open" : "hide"
             }`}
           >
+            <button
+              name="clearSports"
+              id="clearSports"
+              onClick={() => {
+                clearFilteredItemsHandler("sports");
+              }}
+            >
+              Remove all
+            </button>
             {showSportsOptions
               ? sports.map((sport) => {
                   return (

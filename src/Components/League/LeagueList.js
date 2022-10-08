@@ -32,10 +32,8 @@ export default function LeagueList() {
                 key={league.idLeague}
                 className="underline"
               >
-                <p>
-                  {league.strLeague}
-                  <span>{league.strSport}</span>
-                </p>
+                {league.strLeague}
+                <span>{league.strSport}</span>
               </Link>
             </div>
           ))}

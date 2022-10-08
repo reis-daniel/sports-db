@@ -8,6 +8,7 @@ const useFilterStore = create((set) => ({
       shouldFilter: filtering ? true : false,
     }));
   },
+
   filteredCountries: [],
   addFilteredCountry: (country) => {
     set((state) => ({
@@ -19,6 +20,12 @@ const useFilterStore = create((set) => ({
       filteredCountries: state.filteredCountries.filter((c) => c !== country),
     }));
   },
+  clearFilteredCountries: () => {
+    set((state) => ({
+      filteredCountries: [],
+    }));
+  },
+
   filteredSports: [],
   addFilteredSport: (sport) => {
     set((state) => ({
@@ -28,6 +35,11 @@ const useFilterStore = create((set) => ({
   removeFilteredSport: (sport) => {
     set((state) => ({
       filteredSports: state.filteredSports.filter((s) => s !== sport),
+    }));
+  },
+  clearFilteredSports: () => {
+    set((state) => ({
+      filteredSports: [],
     }));
   },
 }));
