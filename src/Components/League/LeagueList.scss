@@ -56,51 +56,16 @@ $size-headerHome: 10.5rem;    //168px
   .leagues-list{
     word-break: break-word;
     hyphens: auto;
+    &-items{
       a{
         font-size: 6.5vw;
         line-height: 60px;
-        // display: flex;
-        // flex-wrap: wrap;
+        line-height: 160%;
         span{
           font-size: 3.2vw; 
           word-break: keep-all;
         }
       }
+    }
   }
 }
-
-// .leagueRow {
-//     margin-left: 54px;
-//     margin-bottom: 36px;
-//     .league {
-//     padding-left: 20px;
-//     }
-// }
-// .linkLeague {
-    // position: relative;
-    // p {
-    //     display: inline-block;
-        // &:after {
-        //     content: "";
-        //     display: block;
-        //     margin: 0 auto;
-        //     width: 0;
-        //     height: 1.5rem;
-        //     background-color: $red;
-        //     z-index: -10;
-        //     transition: opacity .3s ease,width .3s ease;
-        //     bottom: 0;
-        //     right: 0;
-        //     margin-top: -1.3rem;
-        
-        // }
-      // }
-  
-      // &:hover {
-      //   p {
-          // &:after {
-          //   width: 100%;
-          // }
-        // }
-    // }
-// }
