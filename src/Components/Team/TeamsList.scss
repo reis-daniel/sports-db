@@ -116,11 +116,16 @@ a {
     margin-top: 15%;
     }
     .TeamsList_hover {
-        font-size: $size-forDetail;
+        font-size: 6vw;
+       
     }
     .league {
-       font-size: $size-small; 
+       font-size: 3vw; 
+       hyphens: auto;
+      
+       
     }
    
+  
 }
 

@@ -57,9 +57,11 @@ $size-headerHome: 10.5rem;    //168px
     word-break: break-word;
     hyphens: auto;
       a{
+        font-size: 5.5vw;
         // display: flex;
         // flex-wrap: wrap;
         span{
+          font-size: 3vw; 
           word-break: keep-all;
         }
       }
