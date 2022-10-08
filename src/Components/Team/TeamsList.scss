@@ -87,8 +87,10 @@ $size-headerHome: 10.5rem;    //168px
         font-size: $size-bigLink;
         text-decoration: none;
         text-transform: uppercase;
-        span{
+        .league{
             margin-left: 1rem;
+            font-size: $size-smallLink;
+            font-weight: $small-weight;
         }
     }
 }
@@ -114,12 +116,17 @@ $size-headerHome: 10.5rem;    //168px
     .TeamsList_hover {
         font-size: 6.5vw;
     }
-    .league {
-    font-size: 3.2vw; 
-    hyphens: auto;
-    }
+    .TeamsListRow {
+        a {
+          .league{
+              font-size: 3.2vw; 
+              hyphens: auto;
+          }
+        }
+      }
     .TeamsList {
         margin-left: 5%;
     }
+    
 }
 
