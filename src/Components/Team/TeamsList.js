@@ -46,14 +46,13 @@ export default function TeamsList() {
         />
     <article className="articleTeamslist">
         <h1 className="TeamsList_headline">{params.liga}</h1>
-        <p className="TeamsList_Sportart">{sportOfLeague}</p>
-    </article>
-        
+        <h2 className="TeamsList_Sportart">{sportOfLeague}</h2>
+    </article>  
       </article>
 
-      <section className="homeLeagues">
+      <section className="TeamsList">
         {teams.map((team) => (
-          <article className="leagueRow" key={team.idTeam}>
+          <article className="TeamsListRow" key={team.idTeam}>
             <Link
               to={`/${params.liga}/${team.strTeam}`}
               key={team.idTeam}

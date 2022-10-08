@@ -31,6 +31,7 @@ $size-headerHome: 10.5rem;    //168px
     margin-top: 20%;
 }
 
+//Img and Headline
 .TeamsList_firstArticle {
     display: flex;
     margin-bottom: 7%;
@@ -82,6 +83,27 @@ $size-headerHome: 10.5rem;    //168px
     }
    
 }
+
+// Links
+.TeamsList {
+    margin-left: 3.37rem;
+  
+}
+.TeamsListRow {
+    margin-bottom: 36px;
+}
+a {
+    margin-bottom: 36px;
+    color: $white;
+    font-family: $next-font;
+    font-weight: $bold-weight;
+    font-size: $size-bigLink;
+    text-decoration: none;
+    }
+    span{
+      margin-left: 1rem;
+    }
+  
 //Only Hover on Desktop
 @media (touch-enabled: 0), (pointer: fine) {
     .TeamsList_hover:hover {
