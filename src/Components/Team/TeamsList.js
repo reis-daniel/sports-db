@@ -8,6 +8,7 @@ import "./TeamsList.scss";
 // Zustand
 import useLeaguesStore from "../../Stores/useLeaguesStore";
 import useTeamsStore from "../../Stores/useTeamsStore";
+import useFilterStore from "../../Stores/useFilterStore";
 
 export default function TeamsList() {
   const { sportOfLeague, setSportOfLeague } = useLeaguesStore((state) => ({
@@ -17,6 +18,9 @@ export default function TeamsList() {
   const { teams, fetchTeams } = useTeamsStore((state) => ({
     teams: state.teams,
     fetchTeams: state.fetchTeams,
+  }));
+  const { filteredCountries } = useFilterStore((state) => ({
+    filteredCountries: state.filteredCountries,
   }));
   const [isLoading, setLoading] = useState(true);
   const params = useParams();
@@ -44,10 +48,10 @@ export default function TeamsList() {
           src={`http://source.unsplash.com/1600x900/?${sportOfLeague}`}
           alt=""
         />
-    <article className="articleTeamslist">
-        <h1 className="TeamsList_headline">{params.liga}</h1>
-        <h2 className="TeamsList_Sportart">{sportOfLeague}</h2>
-    </article>  
+        <article className="articleTeamslist">
+          <h1 className="TeamsList_headline">{params.liga}</h1>
+          <h2 className="TeamsList_Sportart">{sportOfLeague}</h2>
+        </article>
       </article>
 
       <section className="TeamsList">
@@ -58,8 +62,10 @@ export default function TeamsList() {
               key={team.idTeam}
               className="linkLeague"
             >
-              <p className="TeamsList_hover">{team.strTeam}<span className="league">{team.strStadiumLocation}</span></p>
-              
+              <p className="TeamsList_hover">
+                {team.strTeam}
+                <span className="league">{team.strStadiumLocation}</span>
+              </p>
             </Link>
           </article>
         ))}

@@ -3,43 +3,43 @@ import { Link } from "react-router-dom";
 
 import "./LeagueList.scss";
 
-export default function LeagueList({ leagues }) {
+// Zustand
+import useLeaguesStore from "../../Stores/useLeaguesStore";
+import useFilterStore from "../../Stores/useFilterStore";
+
+export default function LeagueList() {
+  const { leagues, leaguesOfCountries } = useLeaguesStore((state) => ({
+    leagues: state.leagues,
+    leaguesOfCountries: state.leaguesOfCountries,
+  }));
+  const { filteredSports } = useFilterStore((state) => ({
+    filteredSports: state.filteredSports,
+  }));
+  console.log(leaguesOfCountries);
   return (
     <section className="leagues-list">
       <article className="leagues-list-items">
-        {leagues.map((league) => (
-          <div key={league.idLeague}>
-            <Link
-              to={`/${league.strLeague}`}
-              key={league.idLeague}
-              className="underline"
-            >
-              {league.strLeague}
-              <span>{league.strSport}</span>
-            </Link>
-          </div>
-        ))}
+        {leagues
+          .filter((item) => {
+            if (filteredSports.length > 0)
+              return filteredSports.includes(item.strSport);
+            else return item;
+          })
+          .map((league) => (
+            <div className="leagueRow" key={league.idLeague}>
+              <Link
+                to={`/${league.strLeague}`}
+                key={league.idLeague}
+                className="underline"
+              >
+                <p>
+                  {league.strLeague}
+                  <span>{league.strSport}</span>
+                </p>
+              </Link>
+            </div>
+          ))}
       </article>
     </section>
-    // <div>
-    //   <div className="homeLeagues">
-    //     {leagues.map((league) => (
-    //       <div className="leagueRow" key={league.idLeague}>
-    //         <div>
-    //           <Link
-    //             to={`/${league.strLeague}`}
-    //             key={league.idLeague}
-    //             className="linkLeague underline"
-    //           >
-    //             <p className="hoverLeague">
-    //               {league.strLeague}
-    //               <span className="league">{league.strSport}</span>
-    //             </p>
-    //           </Link>
-    //           </div>
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
   );
 }
