@@ -35,7 +35,10 @@ const useLeaguesStore = create((set) => ({
     console.log(url_leaguesOfCountry + country.toLowerCase());
     axios.get(url_leaguesOfCountry + country).then((response) => {
       set((state) => ({
-        leaguesOfCountries: [response.data.countries],
+        leaguesOfCountries: response.data.countries.map((c) => [
+          ...state.leaguesOfCountries,
+          c.idLeague,
+        ]),
       }));
     });
   },

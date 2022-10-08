@@ -5,32 +5,65 @@ import "./Filter.scss";
 import useFilterStore from "../../Stores/useFilterStore";
 
 const Filter = () => {
-  const { filteredCountries, filteredSports } = useFilterStore((state) => ({
+  const {
+    filteredCountries,
+    filteredSports,
+    removeFilteredCountry,
+    removeFilteredSport,
+  } = useFilterStore((state) => ({
     filteredCountries: state.filteredCountries,
     filteredSports: state.filteredSports,
+    removeFilteredCountry: state.removeFilteredCountry,
+    removeFilteredSport: state.removeFilteredSport,
   }));
 
   return (
     <div className="filterbar">
-      <div className="filteritems-countries">
-        {filteredCountries.length > 0 ? (
-          filteredCountries.map((item, index) => {
-            return <p key={index}>{item}</p>;
-          })
-        ) : (
-          <p>Leer!</p>
-        )}
+      <div className="items">
+        <div className="countries-items">
+          {filteredCountries.length > 0 ? (
+            filteredCountries.map((item, index) => {
+              return (
+                <div className="filteritem">
+                  <button
+                    value={item}
+                    onClick={(e) => {
+                      removeFilteredCountry(e.target.value);
+                    }}
+                  >
+                    X
+                  </button>
+                  <p key={index}>{item}</p>
+                </div>
+              );
+            })
+          ) : (
+            <p>Leer!</p>
+          )}
+        </div>
+        <div className="sports-items">
+          {filteredSports.length > 0 ? (
+            filteredSports.map((item, index) => {
+              return (
+                <div className="filteritem">
+                  <button
+                    value={item}
+                    onClick={(e) => {
+                      removeFilteredSport(e.target.value);
+                    }}
+                  >
+                    X
+                  </button>
+                  <p key={index}>{item}</p>
+                </div>
+              );
+            })
+          ) : (
+            <p>Leer!</p>
+          )}
+        </div>
       </div>
-      <div>
-        {filteredSports.length > 0 ? (
-          filteredSports.map((item, index) => {
-            return <p key={index}>{item}</p>;
-          })
-        ) : (
-          <p>Leer!</p>
-        )}
-      </div>
-      <Filterdropdown />
+      <Filterdropdown className="filterdropdown" />
     </div>
   );
 };
