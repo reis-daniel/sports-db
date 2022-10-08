@@ -47,7 +47,6 @@ const TeamLinks = () => {
       name: "Instagram",
     },
   ];
-  console.log(teamLinks[0].url);
   return (
     <>
       {teamLinks[0].url === "" &&
