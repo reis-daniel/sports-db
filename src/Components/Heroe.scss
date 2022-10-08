@@ -45,8 +45,15 @@ $size-headerHome: 10.5rem;    //168px
         z-index: 5;
         width: 68%;
         object-fit: cover;
-        height: 600px;
+        height: 60vh;
+        max-height: 600px;
         top: 177px;
         margin-bottom: 233px;
     }
   
+    @media (max-width: 750px) {
+        .headerCaption {
+        margin-top: 10%;
+        }
+       
+    }

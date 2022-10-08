@@ -60,7 +60,6 @@ $size-headerHome: 10.5rem;    //168px
     .TeamsList_headline {
         font-family: $next-font;
         font-weight: $bold-weight;
-        // font-size: calc(35px + (150 - 35) * ((100vw - 320px) / (1600 - 320)));
         font-size: 8.5vw;
         color: $red;
         margin-top: 10%;
@@ -90,7 +89,7 @@ $size-headerHome: 10.5rem;    //168px
   
 }
 .TeamsListRow {
-    margin-bottom: 36px;
+    margin-bottom: 35px;
 }
 a {
     margin-bottom: 36px;
@@ -115,6 +114,12 @@ a {
 @media (max-width: 750px) {
     .articleTeamslist {
     margin-top: 15%;
+    }
+    .TeamsList_hover {
+        font-size: $size-forDetail;
+    }
+    .league {
+       font-size: $size-small; 
     }
    
 }
