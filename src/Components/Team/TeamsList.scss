@@ -19,9 +19,6 @@ $size-bigLink: 3rem;          //48px
 $size-headerLeague: 5.25rem;  //84px
 $size-headerDetail: 6.125rem; //98px 
 $size-headerHome: 10.5rem;    //168px
-* {
-    box-sizing: border-box;
-}
 
 //Loading 
 .TeamsList_onload {
@@ -79,9 +76,7 @@ $size-headerHome: 10.5rem;    //168px
         font-size: 4.5vw;
         text-transform: uppercase;
         text-align: end;
-       
     }
-   
 }
 
 // Links
@@ -91,20 +86,21 @@ $size-headerHome: 10.5rem;    //168px
 }
 .TeamsListRow {
     margin-bottom: 35px;
-    
+    a {
+        margin-bottom: 36px;
+        color: $white;
+        font-family: $next-font;
+        font-weight: $bold-weight;
+        font-size: $size-bigLink;
+        text-decoration: none;
+        text-transform: uppercase;
+        span{
+            margin-left: 1rem;
+        }
+    }
 }
-a {
-    margin-bottom: 36px;
-    color: $white;
-    font-family: $next-font;
-    font-weight: $bold-weight;
-    font-size: $size-bigLink;
-    text-decoration: none;
-    text-transform: uppercase;
-    }
-    span{
-      margin-left: 1rem;
-    }
+
+
   
 //Only Hover on Desktop
 @media (touch-enabled: 0), (pointer: fine) {

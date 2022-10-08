@@ -34,6 +34,14 @@ $size-headerHome: 10.5rem;    //168px
             li{
                 list-style: none;
                 margin-bottom: 36px;
+                a{
+                    font-family: $first-font;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: $size-forDetail;
+                    line-height: 49px;
+                    text-transform: uppercase;
+                }
             }
         }
     }
@@ -46,6 +54,11 @@ $size-headerHome: 10.5rem;    //168px
         &-details{
             text-align: center;
             width: 100%;
+            ul{
+                li{
+                    font-size: $size-forDetail;
+                }
+            }
         }
     }
  }
