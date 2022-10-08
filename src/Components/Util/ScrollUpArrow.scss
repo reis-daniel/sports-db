@@ -80,9 +80,15 @@ $size-headerHome: 10.5rem;    //168px
 // MEDIA QUERIES
 @media (max-width: 767px){
     .scroll-up-arrow{
-        height: 80px;
-        width: auto;
         right: 30px;
         bottom: 30px;
+        .scroll-up-arrow-desktop{
+            display: none;
+        }
+        .scroll-up-arrow-mobile{
+            display: block;
+            height: 80px;
+            width: auto;
+        }
     }
 }

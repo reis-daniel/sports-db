@@ -71,7 +71,7 @@ $size-headerHome: 10.5rem;    //168px
 @media (max-width: 767px){
         .team-stadium{
                 display: inline-block;
-                margin-right: $size-bigLink;
+                margin: 0 48px 100px $size-bigLink;
                 > h3{
                         font-size: $size-forDetail;
                         margin-bottom: 2rem;
@@ -81,10 +81,11 @@ $size-headerHome: 10.5rem;    //168px
                         > p{
                                 column-count: 1;
                                 width: 100%;
+                                margin-right: 0;
                         }
                         &-shortfacts{
                                 width: 100%;
-                                margin-top: $size-forDetail;
+                                margin-top: 100px;
                         }
                 }
         }
