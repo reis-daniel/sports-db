@@ -31,6 +31,7 @@ $size-headerHome: 10.5rem;    //168px
 //Img and Headline
 .TeamsList_firstArticle {
     display: flex;
+    align-items: center;
     margin-bottom: 7%;
     margin-top: 7%;
     max-width: 100%;
@@ -44,14 +45,11 @@ $size-headerHome: 10.5rem;    //168px
         margin-top: 7%;
         margin-bottom: 4%;
         filter: grayscale(100%);
-        
     }
     .articleTeamslist {
         position: absolute;
         margin-left: 40%;
         width: 50%;
-       
-       
     }
 
     .TeamsList_headline {
@@ -64,10 +62,6 @@ $size-headerHome: 10.5rem;    //168px
         // hyphens: auto;
         overflow-wrap: break-word;
         text-transform: uppercase;
-        
-     
-     
-    
     }
     .TeamsList_Sportart {
         font-family: $first-font;
@@ -100,32 +94,32 @@ $size-headerHome: 10.5rem;    //168px
     }
 }
 
-
-  
 //Only Hover on Desktop
 @media (touch-enabled: 0), (pointer: fine) {
     .TeamsList_hover:hover {
         font-size: $size-headerLeague;
         transition: 0.7s ease-in-out;
-     }
+    }
 }
 
 @media (max-width: 750px) {
+    .TeamsList_firstArticle {
+        .TeamsList_img {
+            width: 68%;
+        }
+    }
     .articleTeamslist {
     margin-top: 15%;
     }
     .TeamsList_hover {
         font-size: 6.5vw;
-       
     }
     .league {
-       font-size: 3.2vw; 
-       hyphens: auto;
-       
-      
-       
+    font-size: 3.2vw; 
+    hyphens: auto;
     }
-  
-  
+    .TeamsList {
+        margin-left: 0;
+    }
 }
 
