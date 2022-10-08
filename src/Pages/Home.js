@@ -23,10 +23,10 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <>
       <Heroe />
       <Filter />
       <LeagueList leagues={leagues} sports={sports} />
-    </div>
+    </>
   );
 }

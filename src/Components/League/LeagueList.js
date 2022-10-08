@@ -12,10 +12,10 @@ export default function LeagueList({ leagues }) {
             <Link
               to={`/${league.strLeague}`}
               key={league.idLeague}
-              className="linkLeague underline"
+              className="underline"
             >
               {league.strLeague}
-              <span className="league">{league.strSport}</span>
+              <span>{league.strSport}</span>
             </Link>
           </div>
         ))}
