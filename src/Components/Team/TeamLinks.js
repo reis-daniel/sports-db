@@ -48,6 +48,7 @@ const TeamLinks = () => {
     },
   ];
   return (
+    // CHECK FOR SOCIAL MEDIA LINKS AVOID SECTION IF THERE'S NOTHING TO SHOW
     <>
       {teamLinks[0].url === "" &&
       teamLinks[1].url === "" &&

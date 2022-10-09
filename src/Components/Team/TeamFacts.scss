@@ -97,10 +97,15 @@ $size-headerHome: 10.5rem;    //168px
             width: 90%;
             justify-content: center;
             > h2{
-                font-size: 3.5rem;
+                font-size: 2.5rem;
             }
             &-wrapper{
                 width: 100%;
+                &item{
+                    h3{
+                        font-size: 2rem;
+                    }
+                }
             }
         }
     }
