@@ -22,7 +22,7 @@ $size-headerHome: 10.5rem;    //168px
 
 nav{
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     margin: 0 48px;
     .logo{
@@ -64,9 +64,15 @@ nav{
 
 @media(max-width:575px){
         nav{
-        align-items: flex-start;
+                margin: 0 20px;
+                align-items: flex-start;
+                .logo{
+                        h1{
+                                display: none;
+                        }
+                }
          #inputSearch:hover{
-               width: 220px;
+               width: 180px;
         }
 }
 }
