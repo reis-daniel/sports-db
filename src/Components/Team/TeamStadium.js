@@ -17,7 +17,7 @@ const TeamStadium = () => {
 
   useEffect(() => {
     axios.get(url_teams).then((response) => {
-      // Liste aller Teams
+      // LIST OF ALL TEAMS
       let filteredTeam = response.data.teams.filter(
         (team) => team.strTeam === params.team
       )[0];
