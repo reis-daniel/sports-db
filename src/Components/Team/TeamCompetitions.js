@@ -1,6 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
+// CSS
 import "./TeamCompetitions.scss";
+// REACT
+import React from "react";
+// PACKAGES
+import { Link } from "react-router-dom";
 
 export default function TeamCompetitions({ team }) {
   const competitions = [

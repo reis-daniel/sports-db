@@ -1,11 +1,11 @@
+// CSS
 import "./TeamFacts.scss";
-
-import axios from "axios";
-// React
+// REACT
 import { useEffect, useState } from "react";
-// Routing
+// PACKAGES
 import { useLocation, useParams } from "react-router-dom";
-// Components
+import axios from "axios";
+// COMPONENTS
 import TeamCompetitions from "./TeamCompetitions";
 
 export default function TeamFacts() {
@@ -18,7 +18,7 @@ export default function TeamFacts() {
 
   useEffect(() => {
     axios.get(url_teams).then((response) => {
-      // Liste aller Teams
+      // LIST OF ALL TEAMS
       let filteredTeam = response.data.teams.filter(
         (team) => team.strTeam === params.team
       )[0];

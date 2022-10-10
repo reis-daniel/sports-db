@@ -1,11 +1,11 @@
-import React from "react";
+// CSS
 import "./TeamStadium.scss";
-
-import axios from "axios";
-// React
+// REACT
 import { useEffect, useState } from "react";
-// Routing
+import React from "react";
+// PACKAGES
 import { useLocation, useParams } from "react-router-dom";
+import axios from "axios";
 
 const TeamStadium = () => {
   const [team, setTeam] = useState({});
