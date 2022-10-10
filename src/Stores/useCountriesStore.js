@@ -1,3 +1,4 @@
+//? Zustand Package (State Manager) + axios for fetching
 import create from "zustand";
 import axios from "axios";
 

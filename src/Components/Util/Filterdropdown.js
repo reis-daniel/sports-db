@@ -1,81 +1,55 @@
-import React, { useEffect, useRef } from "react";
 // Styling
 import "./Filterdropdown.scss";
 // Zustand
+import useFilterStore from "../../Stores/useFilterStore";
 import useCountriesStore from "../../Stores/useCountriesStore";
 import useSportsStore from "../../Stores/useSportsStore";
-import useFilterStore from "../../Stores/useFilterStore";
 
-import { useState } from "react";
-import useLeaguesStore from "../../Stores/useLeaguesStore";
-
-export default function Filterdropdown() {
-  const [showCountriesOptions, setShowCountriesOptions] = useState(false);
-  const [showSportsOptions, setShowSportsOptions] = useState(false);
-
-  // Zustande
-  const { fetchLeaguesOfCountry } = useLeaguesStore((state) => ({
-    fetchLeaguesOfCountry: state.fetchLeaguesOfCountry,
-  }));
-  const { countries } = useCountriesStore((state) => ({
-    countries: state.countries,
-  }));
-  const { sports } = useSportsStore((state) => ({
-    sports: state.sports,
-  }));
+export default function Dropdown() {
+  // Zustand -> Get all Countries and Sports for the dropdowns, state for opening and closing the dropdowns
   const {
-    setShouldFilter,
-    filteredCountries,
-    addFilteredCountry,
-    removeFilteredCountry,
-    clearFilteredCountries,
-    filteredSports,
+    showCountriesOptions,
+    setShowCountriesOptions,
+    showSportsOptions,
+    setShowSportsOptions,
     addFilteredSport,
     removeFilteredSport,
     clearFilteredSports,
+    addFilteredCountry,
+    removeFilteredCountries,
+    clearFilteredCountries,
+    fetchFilteredLeagues,
+    removeFilteredLeagues,
+    filteredLeagues,
   } = useFilterStore((state) => ({
-    shouldFilter: state.shouldFilter,
-    setShouldFilter: state.setShouldFilter,
-    filteredCountries: state.filteredCountries,
+    filteredLeagues: state.filteredLeagues,
+
+    showCountriesOptions: state.showCountriesOptions,
+    setShowCountriesOptions: state.setShowCountriesOptions,
+
+    showSportsOptions: state.showSportsOptions,
+    setShowSportsOptions: state.setShowSportsOptions,
+
     addFilteredCountry: state.addFilteredCountry,
-    removeFilteredCountry: state.removeFilteredCountry,
+    removeFilteredCountries: state.removeFilteredCountries,
     clearFilteredCountries: state.clearFilteredCountries,
-    filteredSports: state.filteredSports,
+
+    fetchFilteredLeagues: state.fetchFilteredLeagues,
+    removeFilteredLeagues: state.removeFilteredLeagues,
+
     addFilteredSport: state.addFilteredSport,
     removeFilteredSport: state.removeFilteredSport,
     clearFilteredSports: state.clearFilteredSports,
   }));
+  // Countries
+  const { countries } = useCountriesStore((state) => ({
+    countries: state.countries,
+  }));
+  // Sports
+  const { sports } = useSportsStore((state) => ({
+    sports: state.sports,
+  }));
 
-  // Handler
-  const addFilteredItemHandler = async (store, item) => {
-    if (store === "countries") {
-      console.log(item);
-      await fetchLeaguesOfCountry(item);
-      addFilteredCountry(item);
-    } else {
-      addFilteredSport(item);
-    }
-    setShouldFilter(true);
-  };
-  const removeFilteredItemHandler = (store, item) => {
-    if (store === "countries") {
-      removeFilteredCountry(item);
-    } else {
-      removeFilteredSport(item);
-    }
-    if (filteredCountries.length < 0 && filteredSports.length < 0)
-      setShouldFilter(false);
-  };
-
-  const clearFilteredItemsHandler = (store) => {
-    if (store === "countries") {
-      clearFilteredCountries();
-      setShowCountriesOptions(false);
-    } else {
-      clearFilteredSports();
-      setShowSportsOptions(false);
-    }
-  };
   return (
     <div className="filterdropdown-container">
       <div className="dropdown countries">
@@ -99,7 +73,7 @@ export default function Filterdropdown() {
                 id="clearCountry"
                 className="clearBtn"
                 onClick={() => {
-                  clearFilteredItemsHandler("countries");
+                  clearFilteredCountries();
                 }}
               >
                 Remove all
@@ -114,19 +88,27 @@ export default function Filterdropdown() {
                         type="checkbox"
                         name="checkCountry"
                         value={country.name_en}
-                        id="checkCountry"
+                        id={country.name_en.replace(" ", "").toLowerCase()}
                         onChange={(e) => {
                           if (e.target.checked) {
-                            addFilteredItemHandler("countries", e.target.value);
+                            //! Option is selected
+                            console.log("Checked!: " + e.target.value);
+                            fetchFilteredLeagues(e.target.value);
+                            addFilteredCountry(e.target.value);
                           } else {
-                            removeFilteredItemHandler(
-                              "countries",
-                              e.target.value
-                            );
+                            //! Option is unselected
+                            console.log("Unchecked!: " + e.target.value);
+                            removeFilteredLeagues(e.target.value);
+                            removeFilteredCountries(e.target.value);
                           }
                         }}
                       />
-                      <p className="option-title">{country.name_en}</p>
+                      <label
+                        htmlFor={country.name_en.replace(" ", "").toLowerCase()}
+                        className="option-title"
+                      >
+                        {country.name_en}
+                      </label>
                     </li>
                   );
                 })
@@ -155,7 +137,7 @@ export default function Filterdropdown() {
               id="clearSports"
               className="clearBtn option-title"
               onClick={() => {
-                clearFilteredItemsHandler("sports");
+                clearFilteredSports();
               }}
             >
               Remove all
@@ -169,16 +151,25 @@ export default function Filterdropdown() {
                         type="checkbox"
                         name="checkSport"
                         value={sport.strSport}
-                        id="checkSport"
+                        id={sport.strSport.replace(" ", "").toLowerCase()}
                         onChange={(e) => {
                           if (e.target.checked) {
-                            addFilteredItemHandler("sports", e.target.value);
+                            //! Option is selected
+                            console.log("Checked!: " + e.target.value);
+                            addFilteredSport(e.target.value);
                           } else {
-                            removeFilteredItemHandler("sports", e.target.value);
+                            //! Option is unselected
+                            console.log("Unchecked!: " + e.target.value);
+                            removeFilteredSport(e.target.value);
                           }
                         }}
                       />
-                      <li className="option-title">{sport.strSport}</li>
+                      <label
+                        className="option-title"
+                        htmlFor={sport.strSport.replace(" ", "").toLowerCase()}
+                      >
+                        {sport.strSport}
+                      </label>
                     </div>
                   );
                 })

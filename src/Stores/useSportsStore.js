@@ -1,5 +1,5 @@
+//? Zustand Package (State Manager) + axios for fetching.
 import create from "zustand";
-import { devtools } from "zustand/middleware";
 import axios from "axios";
 
 // Creating a hook for our Sports-Store, which contains the state of all sports.

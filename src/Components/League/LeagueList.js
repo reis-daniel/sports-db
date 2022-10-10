@@ -8,35 +8,58 @@ import useLeaguesStore from "../../Stores/useLeaguesStore";
 import useFilterStore from "../../Stores/useFilterStore";
 
 export default function LeagueList() {
-  const { leagues, leaguesOfCountries } = useLeaguesStore((state) => ({
+  const { leagues } = useLeaguesStore((state) => ({
     leagues: state.leagues,
-    leaguesOfCountries: state.leaguesOfCountries,
   }));
-  const { filteredSports } = useFilterStore((state) => ({
+  const { filteredSports, filteredLeagues } = useFilterStore((state) => ({
     filteredSports: state.filteredSports,
+    filteredLeagues: state.filteredLeagues,
   }));
-  console.log(leaguesOfCountries);
+
   return (
     <section className="leagues-list">
       <article className="leagues-list-items">
-        {leagues
-          .filter((item) => {
-            if (filteredSports.length > 0)
-              return filteredSports.includes(item.strSport);
-            else return item;
-          })
-          .map((league) => (
-            <div className="leagueRow" key={league.idLeague}>
-              <Link
-                to={`/${league.strLeague}`}
-                key={league.idLeague}
-                className="underline"
-              >
-                {league.strLeague}
-                <span>{league.strSport}</span>
-              </Link>
-            </div>
-          ))}
+        {filteredLeagues.length > 0
+          ? filteredLeagues
+              .filter((sport) => {
+                if (filteredSports.length > 0)
+                  return filteredSports.includes(sport.strSport);
+                return sport;
+              })
+              .map((league) => (
+                <div className="leagueRow" key={league.idLeague}>
+                  <Link
+                    to={`/${league.strLeague}`}
+                    key={league.idLeague}
+                    className="underline"
+                    title={`Open Link to ${league.strLeague}`}
+                    alt={`Open Link to ${league.strLeague}`}
+                  >
+                    {league.strLeague}
+                    <span>{league.strSport}</span>
+                  </Link>
+                </div>
+              ))
+          : leagues
+              .filter((sport) => {
+                if (filteredSports.length > 0)
+                  return filteredSports.includes(sport.strSport);
+                return sport;
+              })
+              .map((league) => (
+                <div className="leagueRow" key={league.idLeague}>
+                  <Link
+                    to={`/${league.strLeague}`}
+                    key={league.idLeague}
+                    className="underline"
+                    title={`Open Link to ${league.strLeague}`}
+                    alt={`Open Link to ${league.strLeague}`}
+                  >
+                    {league.strLeague}
+                    <span>{league.strSport}</span>
+                  </Link>
+                </div>
+              ))}
       </article>
     </section>
   );

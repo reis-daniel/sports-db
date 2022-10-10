@@ -8,13 +8,15 @@ const Filter = () => {
   const {
     filteredCountries,
     filteredSports,
-    removeFilteredCountry,
+    removeFilteredCountries,
     removeFilteredSport,
+    removeFilteredLeagues,
   } = useFilterStore((state) => ({
     filteredCountries: state.filteredCountries,
     filteredSports: state.filteredSports,
-    removeFilteredCountry: state.removeFilteredCountry,
+    removeFilteredCountries: state.removeFilteredCountries,
     removeFilteredSport: state.removeFilteredSport,
+    removeFilteredLeagues: state.removeFilteredLeagues,
   }));
 
   return (
@@ -24,11 +26,12 @@ const Filter = () => {
           {filteredCountries.length > 0
             ? filteredCountries.map((item, index) => {
                 return (
-                  <div className="filteritem">
+                  <div key={index} className="filteritem">
                     <button
                       value={item}
                       onClick={(e) => {
-                        removeFilteredCountry(e.target.value);
+                        removeFilteredLeagues(e.target.value);
+                        removeFilteredCountries(e.target.value);
                       }}
                     >
                       X
@@ -43,7 +46,7 @@ const Filter = () => {
           {filteredSports.length > 0
             ? filteredSports.map((item, index) => {
                 return (
-                  <div className="filteritem">
+                  <div key={index} className="filteritem">
                     <button
                       value={item}
                       onClick={(e) => {
