@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/reis-daniel/sports-db](https://github.com/reis-daniel/sports-db)
-- Live Site URL: [https://majestic-truffle-de9423.netlify.app/](https://majestic-truffle-de9423.netlify.app/)
+- Live Site URL: [https://supercodes-sportsdb.netlify.app/](https://supercodes-sportsdb.netlify.app/)
 
 ## My process
 
