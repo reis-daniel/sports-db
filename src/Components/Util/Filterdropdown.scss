@@ -40,8 +40,12 @@
     gap: 1rem;
     padding: 0.25rem 0.5rem;
     border-top: 0.2rem solid white;
-    &:first-of-type {
-      border-top: none;
-    }
   }
+}
+.clearBtn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
 }

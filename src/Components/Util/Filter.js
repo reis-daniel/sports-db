@@ -21,46 +21,42 @@ const Filter = () => {
     <div className="filterbar">
       <div className="items">
         <div className="countries-items">
-          {filteredCountries.length > 0 ? (
-            filteredCountries.map((item, index) => {
-              return (
-                <div className="filteritem">
-                  <button
-                    value={item}
-                    onClick={(e) => {
-                      removeFilteredCountry(e.target.value);
-                    }}
-                  >
-                    X
-                  </button>
-                  <p key={index}>{item}</p>
-                </div>
-              );
-            })
-          ) : (
-            <p>Leer!</p>
-          )}
+          {filteredCountries.length > 0
+            ? filteredCountries.map((item, index) => {
+                return (
+                  <div className="filteritem">
+                    <button
+                      value={item}
+                      onClick={(e) => {
+                        removeFilteredCountry(e.target.value);
+                      }}
+                    >
+                      X
+                    </button>
+                    <p key={index}>{item}</p>
+                  </div>
+                );
+              })
+            : null}
         </div>
         <div className="sports-items">
-          {filteredSports.length > 0 ? (
-            filteredSports.map((item, index) => {
-              return (
-                <div className="filteritem">
-                  <button
-                    value={item}
-                    onClick={(e) => {
-                      removeFilteredSport(e.target.value);
-                    }}
-                  >
-                    X
-                  </button>
-                  <p key={index}>{item}</p>
-                </div>
-              );
-            })
-          ) : (
-            <p>Leer!</p>
-          )}
+          {filteredSports.length > 0
+            ? filteredSports.map((item, index) => {
+                return (
+                  <div className="filteritem">
+                    <button
+                      value={item}
+                      onClick={(e) => {
+                        removeFilteredSport(e.target.value);
+                      }}
+                    >
+                      X
+                    </button>
+                    <p key={index}>{item}</p>
+                  </div>
+                );
+              })
+            : null}
         </div>
       </div>
       <Filterdropdown className="filterdropdown" />

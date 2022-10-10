@@ -97,6 +97,7 @@ export default function Filterdropdown() {
               <button
                 name="clearCountry"
                 id="clearCountry"
+                className="clearBtn"
                 onClick={() => {
                   clearFilteredItemsHandler("countries");
                 }}
@@ -152,6 +153,7 @@ export default function Filterdropdown() {
             <button
               name="clearSports"
               id="clearSports"
+              className="clearBtn option-title"
               onClick={() => {
                 clearFilteredItemsHandler("sports");
               }}
