@@ -1,17 +1,16 @@
-//Variablen für die Farben
+// COLORS
 $red: #E83539;
 $white:#FFFFFF;
 $bg: #100f0f;
 
-//Variablen für die Schriften
+// FONTS
 $first-font: 'Open Sans';
 $next-font: 'Montserrat';
 $small-weight: 400;
 $middle-weight: 600;
 $bold-weight: 700;
-// $Montenserrat-weight: 700;
 
-// Variablen für die Schriftgröße
+// SIZES
 $size-small: 1.125rem;        //18px
 $size-smallLink: 1.5rem;      //24px
 $size-forDetail: 2.25rem;     //36px
@@ -20,6 +19,7 @@ $size-headerLeague: 5.25rem;  //84px
 $size-headerDetail: 6.125rem; //98px 
 $size-headerHome: 10.5rem;    //168px
 
+// COMPONENT
 .team-links{
     width: 100%;
     display: flex;
@@ -46,7 +46,6 @@ $size-headerHome: 10.5rem;    //168px
 }
 
 // MEDIA QUERIES
-
 @media (max-width: 767px) { 
     .team-links{
         &-details{
@@ -59,4 +58,4 @@ $size-headerHome: 10.5rem;    //168px
             }
         }
     }
- }
+}
