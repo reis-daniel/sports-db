@@ -1,5 +1,8 @@
+// CSS
 import "./League.scss";
+// REACT
 import { useEffect } from "react";
+// COMPONENTS
 import TeamsList from "../Components/Team/TeamsList";
 
 export default function League() {

@@ -6,8 +6,8 @@ import "./Navbar.scss";
 export default function Navbar() {
   return (
     <nav>
-      <Link to="/" className="logo">
-        <img src={logo} alt="logo" />
+      <Link to="/" className="logo" title="Link to homepage">
+        <img src={logo} alt="SportsDB logo" />
         <h1>sports.db</h1>
       </Link>
       <form action="">

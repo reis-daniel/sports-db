@@ -23,7 +23,11 @@ export default function TeamCompetitions({ team }) {
         {competitions.map((comp, index) => {
           return (
             <li key={index}>
-              <Link to={`../${comp}`} className="underline">
+              <Link
+                to={`../${comp}`}
+                className="underline"
+                title={`open Link to ${comp}`}
+              >
                 {comp}
               </Link>
             </li>

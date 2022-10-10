@@ -60,6 +60,7 @@ export default function TeamsList() {
               to={`/${params.liga}/${team.strTeam}`}
               key={team.idTeam}
               className="linkLeague"
+              title={`Link to ${team.strTeam}`}
             >
               <p className="TeamsList_hover">
                 {team.strTeam}

@@ -1,7 +1,8 @@
+// CSS
 import "./Team.scss";
-import { useEffect } from "react";
-import React from "react";
-// Components
+// REACT
+import { React, useEffect } from "react";
+// COMPONENTS
 import TeamFacts from "../Components/Team/TeamFacts";
 import TeamDescription from "../Components/Team/TeamDescription";
 import TeamStadium from "../Components/Team/TeamStadium";

@@ -1,10 +1,11 @@
+// CSS
 import "./Home.scss";
-import Heroe from "../Components/Heroe";
+// REACT
 import { useEffect } from "react";
-
-// Components
+// COMPONENTS
 import LeagueList from "../Components/League/LeagueList";
 import Filter from "../Components/Util/Filter";
+import Heroe from "../Components/Heroe";
 
 export default function Home() {
   useEffect(() => {

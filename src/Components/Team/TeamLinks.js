@@ -70,7 +70,7 @@ const TeamLinks = () => {
                         <a
                           href={`https://${teamLinksElement.url}`}
                           target="_blank"
-                          alt={`Link to ${teamLinksElement.name}`}
+                          title={`Link to ${teamLinksElement.name}`}
                           rel="noreferrer"
                           className="underline"
                         >
