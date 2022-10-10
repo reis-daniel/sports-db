@@ -36,7 +36,7 @@ export default function TeamFacts() {
             title={`${team.strSport} from unsplash.com`}
           />
         ) : (
-          <img src={team.strStadiumThumb} alt="" />
+          <img src={team.strStadiumThumb} alt={`${team.strTeam}s Stadium`} />
         )}
         <article className="team-facts-details">
           <h2>{team.strTeam}</h2>

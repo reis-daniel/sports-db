@@ -13,7 +13,7 @@ With this app you can find out about all the sports leagues that you can think o
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
-- [Author](#author)
+- [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
 
 ## Overview
