@@ -1,5 +1,3 @@
-// CSS
-import "./League.scss";
 // REACT
 import { useEffect } from "react";
 // COMPONENTS

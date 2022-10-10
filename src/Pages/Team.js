@@ -1,5 +1,3 @@
-// CSS
-import "./Team.scss";
 // REACT
 import { React, useEffect } from "react";
 // COMPONENTS
