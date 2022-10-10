@@ -16,6 +16,8 @@ import useLeaguesStore from "./Stores/useLeaguesStore";
 import useCountriesStore from "./Stores/useCountriesStore";
 import useSportsStore from "./Stores/useSportsStore";
 
+import { LoaderFunction } from "react-router-dom";
+
 function App() {
   const { fetchLeagues } = useLeaguesStore((state) => ({
     fetchLeagues: state.fetchLeagues,
