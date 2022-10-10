@@ -1,9 +1,9 @@
-//Variablen für die Farben
+// COLORS
 $red: #E83539;
 $white:#FFFFFF;
 $bg: #100f0f;
 
-//Variablen für die Schriften
+// FONTS
 $first-font: 'Open Sans';
 $next-font: 'Montserrat';
 $small-weight: 400;
@@ -11,7 +11,7 @@ $middle-weight: 600;
 $bold-weight: 700;
 // $Montenserrat-weight: 700;
 
-// Variablen für die Schriftgröße
+// FONT SIZES
 $size-small: 1.125rem;        //18px
 $size-smallLink: 1.5rem;      //24px
 $size-forDetail: 2.25rem;     //36px
@@ -20,55 +20,53 @@ $size-headerLeague: 5.25rem;  //84px
 $size-headerDetail: 6.125rem; //98px 
 $size-headerHome: 10.5rem;    //168px
 
+// GENERAL STYLES
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+body{
+  background-color: $bg;
+  color: $white;
+  font-family: $first-font;
+  font-size: 16px;
+  margin-bottom: 144px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+a, h2, h3{
+  hyphens: auto;
+  word-break: break-word;
+}
+
+// HEADER
 header{
-    position: -webkit-fixed;
-    position:sticky;
-    top: $size-bigLink;
-    z-index: 101;
-    }
+  position: -webkit-fixed;
+  position:sticky;
+  top: $size-bigLink;
+  z-index: 101;
+}
 
-    body{
-        background-color: $bg;
-        color: $white;
-        font-family: $first-font;
-        font-size: 16px;
-        margin-bottom: 144px;
-    }
-
-    a{
-        text-decoration: none;
-        color: inherit;
-    }
-
-// HOVER FOR LINKS WITH CLASS "UNDERLINE"
-
+// HOVER EFFECT FOR LINKS
 .underline {
-    --s: 0.5em;   /* the thickness of the line */
-    --c: #E83539; /* the color of the line */
-    
-    color: #FFFFFF; /* the color of the a-link */
-    padding-bottom: -1.5rem; /* the position of the line */
-    background: 
-      linear-gradient(90deg,var(--c) 50%,#100f0f 0) calc(100% - var(--_p,0%))/200% 100%,
-      linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
-    -webkit-background-clip: text,padding-box;
-            background-clip: text,padding-box;
-    transition: 0.3s;
-  }
-  .underline:hover {
+  --s: 0.5em;   /* the thickness of the line */
+  --c: #E83539; /* the color of the line */
+  color: #FFFFFF; /* the color of the a-link */
+  padding-bottom: -1.5rem; /* the position of the line */
+  background: 
+    linear-gradient(90deg,var(--c) 50%,#100f0f 0) calc(100% - var(--_p,0%))/200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+  -webkit-background-clip: text,padding-box;
+  background-clip: text,padding-box;
+  transition: 0.3s;
+  &:hover {
     --_p: 100%
   }
-
- a.hover {
-    font-family: system-ui, sans-serif;
-    font-size: 3rem;
-    margin:0;
-    cursor: pointer;
-    padding: 0 .1em;
-  }
+}

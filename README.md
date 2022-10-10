@@ -43,7 +43,6 @@ Users should be able to:
 - Semantic HTML5 markup
 - SCSS
 - CSS Flexbox
-- CSS Grid
 - [React](https://reactjs.org/) - JS library
 - [TheSportsDB API](https://www.thesportsdb.com/api.php)
 
