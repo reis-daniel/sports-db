@@ -27,7 +27,6 @@ $size-headerHome: 10.5rem;    //168px
     font-weight: 700;
     font-size: 36px;
     line-height: 49px;
-    text-transform: uppercase;
     &-details{
         width: 50%;
         ul{
@@ -40,7 +39,6 @@ $size-headerHome: 10.5rem;    //168px
                     font-weight: 700;
                     font-size: $size-forDetail;
                     line-height: 49px;
-                    text-transform: uppercase;
                 }
             }
         }

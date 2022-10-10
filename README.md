@@ -1,6 +1,6 @@
 # super(c)ode Final Project - Sports.DB with TheSportsDB API
 
-This is a solution for blablabla ...
+With this app you can find out about all the sports leagues that you can think of! Whether in golf, football, basketball - here you will find all information about teams, stadions and competitions. This app was set up with react.js and uses the data from [TheSportsDB API](https://www.thesportsdb.com/api.php).
 
 ## Table of contents
 
@@ -20,11 +20,12 @@ This is a solution for blablabla ...
 
 ### The challenge
 
+The overall view of the leagues should be able to be filtered by country and sport. Users can use a search function to find specific information. Clicking on a league takes you to a subpage listing all the clubs (playing in that league). From here you can click on the club and call up a detail page with information about the club.
+
 Users should be able to:
 
 - View the optimal layout for the component depending on their device's screen size
 - See hover states for all interactive elements on the page
-- Hide/Show the answer to a question when the question is clicked
 
 ### Screenshot
 
@@ -40,13 +41,10 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
+- SCSS
+- CSS Flexbox
 - [React](https://reactjs.org/) - JS library
-<!-- - [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles -->
+- [TheSportsDB API](https://www.thesportsdb.com/api.php)
 
 ### What I learned
 

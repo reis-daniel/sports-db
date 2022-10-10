@@ -26,6 +26,7 @@ $size-headerHome: 10.5rem;    //168px
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    min-height: 900px;
     > img{
         position: absolute;
         z-index: -10;
@@ -55,7 +56,6 @@ $size-headerHome: 10.5rem;    //168px
             font-weight: $bold-weight;
             text-transform: uppercase;
             font-family: $next-font;
-            word-break: break-word;
         }
         &-wrapper{
             display: flex;

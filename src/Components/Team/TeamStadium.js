@@ -1,11 +1,11 @@
-import React from "react";
+// CSS
 import "./TeamStadium.scss";
-
-import axios from "axios";
-// React
+// REACT
 import { useEffect, useState } from "react";
-// Routing
+import React from "react";
+// PACKAGES
 import { useLocation, useParams } from "react-router-dom";
+import axios from "axios";
 
 const TeamStadium = () => {
   const [team, setTeam] = useState({});
@@ -17,7 +17,7 @@ const TeamStadium = () => {
 
   useEffect(() => {
     axios.get(url_teams).then((response) => {
-      // Liste aller Teams
+      // LIST OF ALL TEAMS
       let filteredTeam = response.data.teams.filter(
         (team) => team.strTeam === params.team
       )[0];

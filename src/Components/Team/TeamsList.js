@@ -1,11 +1,10 @@
-// React
-import { useEffect, useState } from "react";
-// Routing
-import { Link, useParams } from "react-router-dom";
-// Assets
+// CSS
 import "./TeamsList.scss";
-
-// Zustand
+// REACT
+import { useEffect, useState } from "react";
+// PACKAGES
+import { Link, useParams } from "react-router-dom";
+// STORES
 import useLeaguesStore from "../../Stores/useLeaguesStore";
 import useTeamsStore from "../../Stores/useTeamsStore";
 import useFilterStore from "../../Stores/useFilterStore";
