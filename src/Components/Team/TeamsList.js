@@ -9,6 +9,7 @@ import useLeaguesStore from "../../Stores/useLeaguesStore";
 import useTeamsStore from "../../Stores/useTeamsStore";
 import useFilterStore from "../../Stores/useFilterStore";
 
+//Fetch to show the teams
 export default function TeamsList() {
   const { sportOfLeague, setSportOfLeague } = useLeaguesStore((state) => ({
     sportOfLeague: state.sportOfLeague,
@@ -21,6 +22,9 @@ export default function TeamsList() {
   const { filteredCountries } = useFilterStore((state) => ({
     filteredCountries: state.filteredCountries,
   }));
+
+  // State again to display the image at the same time as the other content, and when it loads a Loading should be displayed
+  
   const [isLoading, setLoading] = useState(true);
   const params = useParams();
 
