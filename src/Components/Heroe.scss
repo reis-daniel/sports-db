@@ -1,17 +1,16 @@
-//Variablen für die Farben
+// COLORS
 $red: #E83539;
 $white:#FFFFFF;
 $bg: #100f0f;
 
-//Variablen für die Schriften
+// FONTS
 $first-font: 'Open Sans';
 $next-font: 'Montserrat';
 $small-weight: 400;
 $middle-weight: 600;
 $bold-weight: 700;
-// $Montenserrat-weight: 700;
 
-// Variablen für die Schriftgröße
+// SIZES
 $size-small: 1.125rem;        //18px
 $size-smallLink: 1.5rem;      //24px
 $size-forDetail: 2.25rem;     //36px
@@ -20,9 +19,9 @@ $size-headerLeague: 5.25rem;  //84px
 $size-headerDetail: 6.125rem; //98px 
 $size-headerHome: 10.5rem;    //168px
 
+// COMPONENT
 .heroe{
     .headerCaption {
-        
         position: absolute;
         z-index: 10;
         left: 26.5%;  
@@ -32,36 +31,33 @@ $size-headerHome: 10.5rem;    //168px
         font-weight: $bold-weight;
         font-size: 10vw;
         text-transform: uppercase;
-      
     }
     .spanHeroe {
         margin-left: 27%;
-      
     }
 }
-  
+
+.headerImg {
+    position: relative;
+    z-index: 5;
+    width: 68%;
+    object-fit: cover;
+    height: 60vh;
+    max-height: 600px;
+    top: 177px;
+    margin-bottom: 233px;
+}
+
+// MEDIA QUERIES
+@media (max-width: 750px) {
+    .heroe {
+        .headerCaption {
+            text-align: center;
+            left: 40%; 
+            }
+    }
     .headerImg {
-        position: relative;
-        z-index: 5;
-        width: 68%;
-        object-fit: cover;
-        height: 60vh;
-        max-height: 600px;
-        top: 177px;
-        margin-bottom: 233px;
+        margin-top: 0;
+        margin-left: 10%;
     }
-  
-    @media (max-width: 750px) {
-        .heroe {
-            .headerCaption {
-                text-align: center;
-                left: 40%; 
-                }
-        }
-        .headerImg {
-            margin-top: 0;
-            margin-left: 10%;
-        }
-      
-       
-    }
+}
