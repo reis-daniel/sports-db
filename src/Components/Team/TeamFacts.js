@@ -14,6 +14,8 @@ export default function TeamFacts() {
   const params = useParams();
   const league = location.pathname.split("/")[1].replaceAll("%20", " ");
 
+  const [isLoading, setLoading] = useState(true);
+
   const url_teams = `https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?l=${league}`;
 
   useEffect(() => {
@@ -23,8 +25,14 @@ export default function TeamFacts() {
         (team) => team.strTeam === params.team
       )[0];
       setTeam(filteredTeam);
+      setLoading(false);
     });
   }, [params.team, url_teams]);
+
+  if (isLoading) {
+    return <div className="TeamsList_onload">Loading...</div>;
+  }
+
   return (
     <>
       <section className="team-facts">
