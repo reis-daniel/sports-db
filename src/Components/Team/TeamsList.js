@@ -45,7 +45,7 @@ export default function TeamsList() {
         <img
           className="TeamsList_img"
           src={`http://source.unsplash.com/1600x900/?${sportOfLeague}`}
-          alt=""
+          alt={`${sportOfLeague} from unsplash.com`}
         />
         <article className="articleTeamslist">
           <h1 className="TeamsList_headline">{params.liga}</h1>
