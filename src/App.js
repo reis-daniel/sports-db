@@ -1,19 +1,17 @@
+// CSS
 import "./Scss/style.scss";
-// Pages
+// PAGES
 import Home from "./Pages/Home";
 import League from "./Pages/League";
 import Team from "./Pages/Team";
-
 // COMPONENTS
 import Navbar from "./Components/Navbar";
 import ScrollUpArrow from "./Components/Util/ScrollUpArrow";
-
-// React
+// REACT
 import { useEffect } from "react";
-// React Router
+// PACKAGES
 import { Route, Routes } from "react-router-dom";
-
-// Zustand
+// STORES
 import useLeaguesStore from "./Stores/useLeaguesStore";
 import useCountriesStore from "./Stores/useCountriesStore";
 import useSportsStore from "./Stores/useSportsStore";
@@ -32,7 +30,8 @@ function App() {
   const url_countries =
     "https://www.thesportsdb.com/api/v1/json/2/all_countries.php";
   const url_sports = "https://www.thesportsdb.com/api/v1/json/2/all_sports.php";
-  const url_leagues ="https://www.thesportsdb.com/api/v1/json/2/all_leagues.php";
+  const url_leagues =
+    "https://www.thesportsdb.com/api/v1/json/2/all_leagues.php";
 
   useEffect(() => {
     fetchLeagues(url_leagues);
