@@ -7,7 +7,6 @@ import { Link, useParams } from "react-router-dom";
 // STORES
 import useLeaguesStore from "../../Stores/useLeaguesStore";
 import useTeamsStore from "../../Stores/useTeamsStore";
-import useFilterStore from "../../Stores/useFilterStore";
 
 //Fetch to show the teams
 export default function TeamsList() {
@@ -15,16 +14,13 @@ export default function TeamsList() {
     sportOfLeague: state.sportOfLeague,
     setSportOfLeague: state.setSportOfLeague,
   }));
-  const { teams, fetchTeams } = useTeamsStore((state) => ({
+  const { teams, setTeam, fetchTeams } = useTeamsStore((state) => ({
     teams: state.teams,
     fetchTeams: state.fetchTeams,
-  }));
-  const { filteredCountries } = useFilterStore((state) => ({
-    filteredCountries: state.filteredCountries,
+    setTeam: state.setTeam,
   }));
 
   // State again to display the image at the same time as the other content, and when it loads a Loading should be displayed
-  
   const [isLoading, setLoading] = useState(true);
   const params = useParams();
 
@@ -58,21 +54,28 @@ export default function TeamsList() {
       </article>
 
       <section className="TeamsList">
-        {teams.map((team) => (
-          <article className="TeamsListRow" key={team.idTeam}>
-            <Link
-              to={`/${params.liga}/${team.strTeam}`}
-              key={team.idTeam}
-              className="linkLeague"
-              title={`Link to ${team.strTeam}`}
-            >
-              <p className="TeamsList_hover">
-                {team.strTeam}
-                <span className="league">{team.strStadiumLocation}</span>
-              </p>
-            </Link>
-          </article>
-        ))}
+        {teams !== null ? (
+          teams.map((team) => (
+            <article className="TeamsListRow" key={team.idTeam}>
+              <Link
+                to={`/${params.liga}/${team.strTeam}`}
+                key={team.idTeam}
+                className="linkLeague"
+                title={`Link to ${team.strTeam}`}
+                onClick={() => {
+                  setTeam(team.strTeam);
+                }}
+              >
+                <p className="TeamsList_hover">
+                  {team.strTeam}
+                  <span className="league">{team.strStadiumLocation}</span>
+                </p>
+              </Link>
+            </article>
+          ))
+        ) : (
+          <h2>Keine Teams in der Liga vorhanden!</h2>
+        )}
       </section>
     </section>
   );

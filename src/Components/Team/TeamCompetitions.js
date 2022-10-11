@@ -2,10 +2,13 @@
 import "./TeamCompetitions.scss";
 // REACT
 import React from "react";
+// ZUSTAND
+import useTeamsStore from "../../Stores/useTeamsStore";
 // PACKAGES
 import { Link } from "react-router-dom";
 
-export default function TeamCompetitions({ team }) {
+export default function TeamCompetitions() {
+  const { team } = useTeamsStore((state) => ({ team: state.team }));
   const competitions = [
     team.strLeague,
     team.strLeague2,

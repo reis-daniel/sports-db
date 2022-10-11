@@ -1,5 +1,6 @@
 // REACT
 import { useEffect } from "react";
+
 // COMPONENTS
 import TeamsList from "../Components/Team/TeamsList";
 
