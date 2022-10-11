@@ -9,6 +9,7 @@ const url_leagueOfCountry =
 //? ====== Filter Store for various filter operations. ====== ?//
 const useFilterStore = create((set) => ({
   //* ====== State Variables ====== *//
+  searchInput: "",
   shouldFilter: false,
   showCountriesOptions: false,
   showSportsOptions: false,
@@ -17,6 +18,9 @@ const useFilterStore = create((set) => ({
   filteredSports: [],
 
   //* ====== Set Methods ====== *//
+  setSearchInput: (searchValue) => {
+    set({ searchInput: searchValue });
+  },
   setShouldFilter: (filtering) => {
     set(() => ({
       shouldFilter: filtering ? true : false,

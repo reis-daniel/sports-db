@@ -1,78 +1,85 @@
 //Variablen für die Farben
-$red: #E83539;
-$white:#FFFFFF;
+$red: #e83539;
+$white: #ffffff;
 $bg: #100f0f;
 
 //Variablen für die Schriften
-$first-font: 'Open Sans';
-$next-font: 'Montserrat';
+$first-font: "Open Sans";
+$next-font: "Montserrat";
 $small-weight: 400;
 $middle-weight: 600;
 $bold-weight: 700;
 // $Montenserrat-weight: 700;
 
 // Variablen für die Schriftgröße
-$size-small: 1.125rem;        //18px
-$size-smallLink: 1.5rem;      //24px
-$size-forDetail: 2.25rem;     //36px
-$size-bigLink: 3rem;          //48px
-$size-headerLeague: 5.25rem;  //84px
-$size-headerDetail: 6.125rem; //98px 
-$size-headerHome: 10.5rem;    //168px
+$size-small: 1.125rem; //18px
+$size-smallLink: 1.5rem; //24px
+$size-forDetail: 2.25rem; //36px
+$size-bigLink: 3rem; //48px
+$size-headerLeague: 5.25rem; //84px
+$size-headerDetail: 6.125rem; //98px
+$size-headerHome: 10.5rem; //168px
 
-nav{
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 48px;
+  .logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 0 48px;
-    .logo{
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        img{
-            width: $size-smallLink;
-            height: $size-smallLink;
-            margin-right: 10px;
-        }
-        h1{
-        font-family: $first-font;
-        font-weight: $bold-weight;
-        font-size: $size-smallLink;
-        line-height: 33px;
-        text-transform: uppercase;
-        color: #FFFFFF;
-        }
+    text-decoration: none;
+    img {
+      width: $size-smallLink;
+      height: $size-smallLink;
+      margin-right: 10px;
     }
-    #inputSearch{
+    h1 {
+      font-family: $first-font;
+      font-weight: $bold-weight;
+      font-size: $size-smallLink;
+      line-height: 33px;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+  }
+  #inputSearch {
     width: 60px;
     height: 39px;
-    border: 4px solid #FFFFFF;
+    border: 4px solid #ffffff;
     background-color: $bg;
-    background: url(../assets/Icons/Icon_Lupe.png)no-repeat left;
+    background: url(../assets/Icons/Icon_Lupe.png) no-repeat left;
     background-size: 19px 19px;
     background-position: 7px center;
     padding: 0 0 0 35px;
-    transition: width .6s linear;
-    }
-    #inputSearch:hover{
+    transition: width 0.6s linear;
+  }
+  #inputSearch:hover {
     width: 300px;
     height: 39px;
     color: $white;
     font-size: $size-smallLink;
-    }
+  }
+  .search {
+    position: relative;
+  }
+  .searchResult {
+    position: absolute;
+    margin-top: 1rem;
+  }
 }
 
-@media(max-width:575px){
-        nav{
-                margin: 0 20px;
-                align-items: flex-start;
-                .logo{
-                        h1{
-                                font-size: .8rem;
-                        }
-                }
-         #inputSearch:hover{
-               width: 130px;
-        }
-}
+@media (max-width: 575px) {
+  nav {
+    margin: 0 20px;
+    align-items: flex-start;
+    .logo {
+      h1 {
+        font-size: 0.8rem;
+      }
+    }
+    #inputSearch:hover {
+      width: 130px;
+    }
+  }
 }
