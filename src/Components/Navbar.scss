@@ -76,11 +76,11 @@ nav {
     align-items: flex-start;
     .logo {
       h1 {
-        font-size: 0.8rem;
+        font-size: $size-small;
       }
     }
     #inputSearch:hover {
-      width: 130px;
+      width: 150px;
     }
   }
 }
