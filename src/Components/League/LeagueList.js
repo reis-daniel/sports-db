@@ -11,12 +11,12 @@ export default function LeagueList() {
   const { leagues } = useLeaguesStore((state) => ({
     leagues: state.leagues,
   }));
-  const { filteredSports, filteredLeagues, searchInput, setSearchInput } =
+  const { filteredSports, filteredLeagues, searchInput, clearFilterValues } =
     useFilterStore((state) => ({
       filteredSports: state.filteredSports,
       filteredLeagues: state.filteredLeagues,
       searchInput: state.searchInput,
-      setSearchInput: state.setSearchInput,
+      clearFilterValues: state.clearFilterValues,
     }));
 
   return (
@@ -37,6 +37,9 @@ export default function LeagueList() {
                     className="underline"
                     title={`Open Link to ${league.strLeague}`}
                     alt={`Open Link to ${league.strLeague}`}
+                    onClick={() => {
+                      clearFilterValues();
+                    }}
                   >
                     {league.strLeague}
                     <span>{league.strSport}</span>
@@ -66,6 +69,9 @@ export default function LeagueList() {
                     className="underline"
                     title={`Open Link to ${league.strLeague}`}
                     alt={`Open Link to ${league.strLeague}`}
+                    onClick={() => {
+                      clearFilterValues();
+                    }}
                   >
                     {league.strLeague}
                     <span>{league.strSport}</span>

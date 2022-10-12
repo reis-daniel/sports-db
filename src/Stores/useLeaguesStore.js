@@ -17,8 +17,10 @@ const useLeaguesStore = create((set) => ({
   sportOfLeague: [],
   setSportOfLeague: (leagueName) => {
     set((state) => ({
-      sportOfLeague: state.leagues.filter((l) => l.strLeague === leagueName)[0]
-        .strSport,
+      sportOfLeague:
+        state.leagues.filter((l) => l.strLeague === leagueName).length > 0
+          ? state.leagues.filter((l) => l.strLeague === leagueName)[0].strSport
+          : "No Sport",
     }));
   },
 

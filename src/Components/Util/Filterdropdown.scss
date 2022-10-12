@@ -1,68 +1,274 @@
 .filterdropdown-container {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 2rem;
+  margin-bottom: 4rem;
 }
 
-.dropdown {
-  width: 15rem;
-}
-
-.dropdown-title {
-  position: relative;
+.dropdown-container {
   display: flex;
   justify-content: space-between;
-  padding: 0.25rem 0.5rem;
-  border: 0.2rem solid white;
-  .title-container {
+  align-items: flex-start;
+
+  .filtered-items {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    .open-icon {
-      transform: rotate(180deg);
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    .item {
+      height: 2.5rem;
+      width: 20rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border: 2px solid white;
+      padding: 0.25rem 0.5rem;
+      button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  .filter-options {
+    width: 20rem;
+    .options-title {
+      position: relative;
+      width: 20rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 2.5rem;
+      padding: 0.5rem 1rem;
+      border: 0.2rem solid white;
       cursor: pointer;
+    }
+    .options-list {
+      position: absolute;
+      width: 20rem;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      border: 0.2rem solid white;
+      border-top: none;
+      z-index: 20;
+      background-color: #100f0f;
+      list-style-type: none;
+      overflow-y: scroll;
+      overflow-x: hidden;
       &.open {
-        transform: rotate(0deg);
+        height: 20rem;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border-top: 0.2rem solid white;
+        border: 2px solid white;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        .option-title,
+        .option-check {
+          cursor: pointer;
+        }
+        .clearBtn {
+          background-color: transparent;
+          color: white;
+          font-size: 1rem;
+          font-style: italic;
+          font-weight: 200;
+          border: none;
+          cursor: pointer;
+          &:hover {
+            color: #e83539;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+    // Input Checkbox from "https://alvarotrigo.com/blog/css-checkbox-styles/" -> 4. Option first option.
+    .item {
+      input[type="checkbox"] {
+        display: none;
+        + label {
+          position: relative;
+          display: flex;
+          display: block;
+          padding-left: 2.5rem;
+          margin-bottom: 20px;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+        }
+        &:hover + label:hover {
+          color: #e83539;
+        }
+        &:hover + label:before {
+          background: #e83539;
+          box-shadow: inset 0px 0px 0px 2px #f7f2f2;
+        }
+        + label:last-child {
+          margin-bottom: 0;
+        }
+        + label:before {
+          content: "";
+          display: block;
+          width: 1.4em;
+          height: 1.4em;
+          border: 1px solid #343a3f;
+          border-radius: 0.2em;
+          position: absolute;
+          left: 0;
+          top: 0;
+          -webkit-transition: all 0.2s, background 0.2s ease-in-out;
+          transition: all 0.2s, background 0.2s ease-in-out;
+          background: #f3f3f3;
+        }
+        &:checked + label:before {
+          width: 1.3em;
+          height: 1.3em;
+          border-radius: 0.2em;
+          border: 2px solid #fff;
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          background: #e83539;
+          box-shadow: 0 0 0 1px #000;
+        }
       }
     }
   }
 }
-.dropdown-optionlist {
-  position: absolute;
-  border: 0.2rem solid white;
-  border-top: none;
-  width: inherit;
-  z-index: 20;
-  background-color: #100f0f;
-  list-style-type: none;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  &.open {
-    height: 15rem;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-  .dropdown-option {
-    display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    gap: 1rem;
-    padding: 0.25rem 0.5rem;
-    border-top: 0.2rem solid white;
-    .option-title,
-    .option-check {
-      cursor: pointer;
-    }
-  }
-}
-.clearBtn {
-  background-color: transparent;
-  color: white;
-  border: none;
-  font-size: 1rem;
-  padding: 0.25rem 0.5rem;
-  cursor: pointer;
-}
+
+// .filterdropdown-container {
+//   display: block;
+//   height: auto;
+//   gap: 2rem;
+// }
+
+// .filterdropdown-container {
+//   width: 100%;
+//   background-color: blue;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   align-items: flex-start;
+//   .countries-container {
+//     background-color: red;
+//     height: fit-content;
+//   }
+//   .sports-container {
+//     background-color: olive;
+//   }
+//   .countries-container,
+//   .sports-container {
+//     width: 100%;
+//     min-height: 3rem;
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: flex-start;
+//   }
+//   .countries-items,
+//   .sports-items {
+//     display: flex;
+//     gap: 1rem;
+//     flex-wrap: wrap;
+//     height: 2.5rem;
+//   }
+// }
+
+// .filteritem {
+//   border: 2px solid white;
+//   padding: 0.5rem 1rem;
+//   display: flex;
+//   align-items: center;
+//   gap: 0.75rem;
+//   button {
+//     background-color: transparent;
+//     border: none;
+//     color: white;
+//     font-size: 1.1rem;
+//   }
+// }
+
+// .dropdown {
+//   width: 15rem;
+// }
+
+// .dropdown-title {
+//   height: 2.5rem;
+//   position: relative;
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 0.25rem 0.5rem;
+//   border: 0.2rem solid white;
+//   .title-container {
+//     display: flex;
+//     width: 100%;
+//     justify-content: space-between;
+//     .open-icon {
+//       transform: rotate(180deg);
+//       cursor: pointer;
+//       &.open {
+//         transform: rotate(0deg);
+//       }
+//     }
+//   }
+// }
+// .dropdown-optionlist {
+//   position: absolute;
+//   border: 0.2rem solid white;
+//   border-top: none;
+//   width: inherit;
+//   z-index: 20;
+//   background-color: #100f0f;
+//   list-style-type: none;
+//   overflow-y: scroll;
+//   overflow-x: hidden;
+//   &.open {
+//     height: 15rem;
+//     -ms-overflow-style: none;
+//     scrollbar-width: none;
+//     &::-webkit-scrollbar {
+//       display: none;
+//     }
+//   }
+//   .dropdown-option {
+//     display: flex;
+//     justify-content: flex-start;
+//     align-items: baseline;
+//     gap: 1rem;
+//     padding: 0.25rem 0.5rem;
+//     border-top: 0.2rem solid white;
+//     .option-title,
+//     .option-check {
+//       cursor: pointer;
+//     }
+//   }
+// }
+// .clearBtn {
+//   background-color: transparent;
+//   color: white;
+//   border: none;
+//   font-size: 1rem;
+//   padding: 0.25rem 0.5rem;
+//   cursor: pointer;
+// }
+
+// @media (max-width: 575px) {
+//   .filterdropdown-container {
+//     display: flex;
+//     flex-wrap: wrap;
+//     gap: 2rem;
+//   }
+// }

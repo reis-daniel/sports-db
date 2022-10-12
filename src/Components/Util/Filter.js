@@ -21,6 +21,15 @@ const Filter = () => {
 
   return (
     <div className="filterbar">
+      {/* <div>
+        <p>ITEMS: COUNTRIES</p>
+        <p>DROPDOWN: COUNTRIES</p>
+      </div>
+      <div>
+        <p>ITEMS: SPORTS</p>
+        <p>DROPDOWN: SPORTS</p>
+      </div>
+
       <div className="items">
         <div className="countries-items">
           {filteredCountries.length > 0
@@ -61,7 +70,7 @@ const Filter = () => {
               })
             : null}
         </div>
-      </div>
+      </div> */}
       <Filterdropdown className="filterdropdown" />
     </div>
   );

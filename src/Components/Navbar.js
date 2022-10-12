@@ -6,13 +6,21 @@ import "./Navbar.scss";
 import useFilterStore from "../Stores/useFilterStore";
 
 export default function Navbar() {
-  const { setSearchInput } = useFilterStore((state) => ({
+  const { setSearchInput, clearFilterValues } = useFilterStore((state) => ({
     setSearchInput: state.setSearchInput,
+    clearFilterValues: state.clearFilterValues,
   }));
 
   return (
     <nav>
-      <Link to="/" className="logo" title="Link to homepage">
+      <Link
+        to="/"
+        className="logo"
+        title="Link to homepage"
+        onClick={() => {
+          clearFilterValues();
+        }}
+      >
         <img src={logo} alt="SportsDB logo" />
         <h1>sports.db</h1>
       </Link>

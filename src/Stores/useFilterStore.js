@@ -26,15 +26,11 @@ const useFilterStore = create((set) => ({
       shouldFilter: filtering ? true : false,
     }));
   },
-  setShowCountriesOptions: () => {
-    set((state) => ({
-      showCountriesOptions: !state.showCountriesOptions,
-    }));
+  toggleCountries: () => {
+    set((state) => ({ showCountriesOptions: !state.showCountriesOptions }));
   },
-  setShowSportsOptions: () => {
-    set((state) => ({
-      showSportsOptions: !state.showSportsOptions,
-    }));
+  toggleSports: () => {
+    set((state) => ({ showSportsOptions: !state.showSportsOptions }));
   },
 
   //* ====== Fetching Methods ====== *//
@@ -57,6 +53,7 @@ const useFilterStore = create((set) => ({
       filteredCountries: [...state.filteredCountries, country],
     }));
   },
+
   addFilteredSport: (sport) => {
     set((state) => ({
       filteredSports: [...state.filteredSports, sport],
@@ -64,6 +61,14 @@ const useFilterStore = create((set) => ({
   },
 
   //* ====== Remove/Cleare Methods ====== *//
+  clearFilterValues: () => {
+    set(() => ({
+      filteredCountries: [],
+      filteredLeagues: [],
+      showCountriesOptions: false,
+      showSportsOptions: false,
+    }));
+  },
   removeFilteredLeagues: (country) => {
     set((state) => ({
       filteredLeagues: state.filteredLeagues.filter(
