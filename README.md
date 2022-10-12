@@ -29,15 +29,15 @@ Users should be able to:
 
 #### Home Screen with all leagues
 
-![](./Screenshot_1.png)
+![](./src/screenshots/Screenshot_1.png)
 
 #### League Screen with all Teams
 
-![](./Screenshot_2.png)
+![](./src/screenshots/Screenshot_2.png)
 
 #### Team Screen with all Details
 
-![](./Screenshot_3.png)
+![](./src/screenshots/Screenshot_3.png)
 
 ### Links
 
