@@ -6,12 +6,10 @@ With this app you can find out about all the sports leagues that you can think o
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Authors](#authors)
 - [Acknowledgments](#acknowledgments)
@@ -27,9 +25,19 @@ Users should be able to:
 - View the optimal layout for the component depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-### Screenshot
+### Screenshots
 
-![](./screenshot.jpg)
+#### Home Screen with all leagues
+
+![](./Screenshot_1.png)
+
+#### League Screen with all Teams
+
+![](./Screenshot_2.png)
+
+#### Team Screen with all Details
+
+![](./Screenshot_3.png)
 
 ### Links
 
@@ -44,15 +52,11 @@ Users should be able to:
 - SCSS
 - CSS Flexbox
 - [React](https://reactjs.org/) - JS library
+  - [nodes sass](https://www.npmjs.com/package/node-sass)
+    - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+  - [axios](https://www.npmjs.com/package/axios)
+  - [zustand](https://www.npmjs.com/package/zustand)
 - [TheSportsDB API](https://www.thesportsdb.com/api.php)
-
-### What I learned
-
-blablablabla ...
-
-### Continued development
-
-blablabla ...
 
 ### Useful resources
 
