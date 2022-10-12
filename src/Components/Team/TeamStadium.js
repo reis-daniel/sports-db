@@ -8,6 +8,7 @@ import useTeamsStore from "../../Stores/useTeamsStore";
 
 const TeamStadium = () => {
   const { team } = useTeamsStore((state) => ({ team: state.team }));
+
   return (
     // CHECK FOR STADIUM DESCRIPTION AND SHORTFACTS AND AVOID SECTION IF THERE'S NOTHING TO SHOW
     <>

@@ -53,14 +53,15 @@ nav {
     background-position: 7px center;
     padding: 0 0 0 35px;
     transition: width 0.6s linear;
+    &:hover,
+    &:focus {
+      width: 300px;
+      height: 39px;
+      color: $white;
+      font-size: $size-smallLink;
+    }
   }
-  #inputSearch:hover {
-    width: 300px;
-    height: 39px;
-    color: $white;
-    font-size: $size-smallLink;
-  }
-  .search {
+  #inputSearch .search {
     position: relative;
   }
   .searchResult {

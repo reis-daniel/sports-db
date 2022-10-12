@@ -59,7 +59,14 @@ export default function Dropdown() {
             setShowCountriesOptions(!showCountriesOptions);
           }}
         >
-          <p>All Countries</p>
+          <div className="title-container">
+            <p>All Countries</p>
+            <p
+              className={`open-icon ${showCountriesOptions ? "open" : "hide"}`}
+            >
+              V
+            </p>
+          </div>
         </div>
         {showCountriesOptions ? (
           <ul
@@ -124,7 +131,12 @@ export default function Dropdown() {
             setShowSportsOptions(!showSportsOptions);
           }}
         >
-          <p>All Sports</p>
+          <div className="title-container">
+            <p>All Sports</p>
+            <p className={`open-icon ${showSportsOptions ? "open" : "hide"}`}>
+              V
+            </p>
+          </div>
         </div>
         {showSportsOptions ? (
           <ul

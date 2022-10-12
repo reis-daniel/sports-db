@@ -4,16 +4,12 @@ import logo from "../assets/Logo/Logo.png";
 import "./Navbar.scss";
 // ZUSTAND
 import useFilterStore from "../Stores/useFilterStore";
-import useLeaguesStore from "../Stores/useLeaguesStore";
 
 export default function Navbar() {
-  const { searchInput, setSearchInput } = useFilterStore((state) => ({
-    searchInput: state.searchInput,
+  const { setSearchInput } = useFilterStore((state) => ({
     setSearchInput: state.setSearchInput,
   }));
-  const { leagues } = useLeaguesStore((state) => ({
-    leagues: state.leagues,
-  }));
+
   return (
     <nav>
       <Link to="/" className="logo" title="Link to homepage">
@@ -33,28 +29,11 @@ export default function Navbar() {
             name="inputSearch"
             id="inputSearch"
             onChange={(e) => {
-              setSearchInput(e.target.value);
+              if (e.target.value.length > 2) setSearchInput(e.target.value);
+              else setSearchInput("");
             }}
           />
         </form>
-        <div className="searchResult">
-          {searchInput.length > 0 ? (
-            <ul>
-              {leagues
-                .filter((league) => {
-                  return league.strLeague
-                    .replace(" ", "")
-                    .toLowerCase()
-                    .includes(searchInput.replace(" ", "").toLowerCase());
-                })
-                .map((result) => {
-                  return <li>{result.strLeague}</li>;
-                })}
-            </ul>
-          ) : (
-            <p>Noch nichts gesucht..</p>
-          )}
-        </div>
       </div>
     </nav>
   );

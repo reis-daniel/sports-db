@@ -11,10 +11,13 @@ export default function LeagueList() {
   const { leagues } = useLeaguesStore((state) => ({
     leagues: state.leagues,
   }));
-  const { filteredSports, filteredLeagues } = useFilterStore((state) => ({
-    filteredSports: state.filteredSports,
-    filteredLeagues: state.filteredLeagues,
-  }));
+  const { filteredSports, filteredLeagues, searchInput, setSearchInput } =
+    useFilterStore((state) => ({
+      filteredSports: state.filteredSports,
+      filteredLeagues: state.filteredLeagues,
+      searchInput: state.searchInput,
+      setSearchInput: state.setSearchInput,
+    }));
 
   return (
     <section className="leagues-list">
@@ -41,6 +44,15 @@ export default function LeagueList() {
                 </div>
               ))
           : leagues
+              .filter((search) => {
+                if (searchInput.length > 2) {
+                  return search.strLeague
+                    .replace(" ", "")
+                    .toLowerCase()
+                    .includes(searchInput.replace(" ", "").toLowerCase());
+                }
+                return search;
+              })
               .filter((sport) => {
                 if (filteredSports.length > 0)
                   return filteredSports.includes(sport.strSport);
