@@ -48,8 +48,8 @@ export default function TeamsList() {
           alt={`${sportOfLeague} from unsplash.com`}
         />
         <article className="articleTeamslist">
-          <h1 className="TeamsList_headline">{params.liga}</h1>
-          <h2 className="TeamsList_Sportart">{sportOfLeague}</h2>
+          <h2 className="TeamsList_headline">{params.liga}</h2>
+          <h3 className="TeamsList_Sportart">{sportOfLeague}</h3>
         </article>
       </article>
 
