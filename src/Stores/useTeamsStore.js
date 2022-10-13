@@ -2,14 +2,17 @@
 import create from "zustand";
 import axios from "axios";
 
+const url_teams =
+  "https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?l=";
+
 // Creating a hook for our Leagues-Store, which contains the state of all leagues.
 const useTeamsStore = create((set) => ({
   teams: [],
   team: {},
   filteredTeams: [],
   teamCompetitions: [],
-  fetchTeams: async (url) => {
-    await axios.get(url).then((response) => {
+  fetchTeams: async (leagueName) => {
+    await axios.get(`${url_teams}${leagueName}`).then((response) => {
       set({ teams: response.data.teams });
     });
   },

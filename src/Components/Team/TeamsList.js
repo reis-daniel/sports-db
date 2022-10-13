@@ -24,16 +24,14 @@ export default function TeamsList() {
   const [isLoading, setLoading] = useState(true);
   const params = useParams();
 
-  const url_teams = `https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?l=${params.liga}`;
-
   useEffect(() => {
     const getTeamsData = async () => {
       setSportOfLeague(params.liga);
-      await fetchTeams(url_teams);
+      await fetchTeams(params.liga);
       setLoading(false);
     };
     getTeamsData();
-  }, [url_teams]);
+  }, []);
 
   if (isLoading) {
     return <div className="TeamsList_onload">Loading...</div>;
