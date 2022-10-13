@@ -1,17 +1,16 @@
-//Variablen für die Farben
+// COLORS
 $red: #e83539;
 $white: #ffffff;
 $bg: #100f0f;
 
-//Variablen für die Schriften
+// FONTS
 $first-font: "Open Sans";
 $next-font: "Montserrat";
 $small-weight: 400;
 $middle-weight: 600;
 $bold-weight: 700;
-// $Montenserrat-weight: 700;
 
-// Variablen für die Schriftgröße
+// SIZES
 $size-small: 1.125rem; //18px
 $size-smallLink: 1.5rem; //24px
 $size-forDetail: 2.25rem; //36px
@@ -20,6 +19,7 @@ $size-headerLeague: 5.25rem; //84px
 $size-headerDetail: 6.125rem; //98px
 $size-headerHome: 10.5rem; //168px
 
+// COMPONENT
 nav {
   display: flex;
   align-items: center;
@@ -40,13 +40,13 @@ nav {
       font-size: $size-smallLink;
       line-height: 33px;
       text-transform: uppercase;
-      color: #ffffff;
+      color: $white;
     }
   }
   #inputSearch {
     width: 60px;
     height: 39px;
-    border: 4px solid #ffffff;
+    border: 4px solid $white;
     background-color: $bg;
     background: url(../assets/Icons/Icon_Lupe.png) no-repeat left;
     background-size: 19px 19px;
@@ -55,7 +55,7 @@ nav {
     transition: width 0.6s linear;
     &:hover,
     &:focus {
-      width: 300px;
+      max-width: 300px;
       height: 39px;
       color: $white;
       font-size: $size-smallLink;
@@ -70,15 +70,16 @@ nav {
   }
 }
 
-@media (max-width: 575px) {
+// MEDIA QUERIES
+@media (max-width: 767px) {
   nav {
     margin: 0 20px;
     align-items: flex-start;
-    .logo {
-      h1 {
-        font-size: $size-small;
-      }
-    }
+    // .logo {
+    //   h1 {
+    //     font-size: $size-small;
+    //   }
+    // }
     #inputSearch:hover {
       width: 150px;
     }
