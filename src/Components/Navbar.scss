@@ -29,6 +29,13 @@ nav {
     display: flex;
     align-items: center;
     text-decoration: none;
+    overflow-wrap: unset;
+    word-wrap: unset;
+    -ms-word-break: unset;
+    word-break: unset;
+    word-break: unset;
+    -webkit-hyphens: unset;
+    hyphens: unset;
     img {
       width: $size-smallLink;
       height: $size-smallLink;
@@ -55,7 +62,7 @@ nav {
     transition: width 0.6s linear;
     &:hover,
     &:focus {
-      max-width: 300px;
+      width: 300px;
       height: 39px;
       color: $white;
       font-size: $size-smallLink;
@@ -75,13 +82,11 @@ nav {
   nav {
     margin: 0 20px;
     align-items: flex-start;
-    // .logo {
-    //   h1 {
-    //     font-size: $size-small;
-    //   }
-    // }
-    #inputSearch:hover {
-      width: 150px;
+    #inputSearch {
+      &:hover,
+      &:focus {
+        width: 35vw;
+      }
     }
   }
 }
