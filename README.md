@@ -53,7 +53,7 @@ Users should be able to:
 - CSS Flexbox
 - [React](https://reactjs.org/) - JS library
   - [nodes sass](https://www.npmjs.com/package/node-sass)
-    - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+  - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
   - [axios](https://www.npmjs.com/package/axios)
   - [zustand](https://www.npmjs.com/package/zustand)
 - [TheSportsDB API](https://www.thesportsdb.com/api.php)

@@ -14,7 +14,7 @@ export default function TeamFacts() {
         {/* CHECK FOR THUMB AND TAKE FALLBACK IF IMG IS NULL */}
         {team.strStadiumThumb === null ? (
           <img
-            src={`http://source.unsplash.com/1600x900/?${team.strSport}`}
+            src={`https://source.unsplash.com/1600x900/?${team.strSport}`}
             alt={`${team.strSport} from unsplash.com`}
             title={`${team.strSport} from unsplash.com`}
           />
