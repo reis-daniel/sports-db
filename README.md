@@ -56,6 +56,10 @@ Users should be able to:
   - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
   - [axios](https://www.npmjs.com/package/axios)
   - [zustand](https://www.npmjs.com/package/zustand)
+  - [fortawesome/fontawesome-svg-core](https://www.npmjs.com/package/@fortawesome/fontawesome-svg-core)
+  - [fortawesome/free-solid-svg-icons](https://www.npmjs.com/package/@fortawesome/free-solid-svg-icons)
+  - [react-fontawesome](https://www.npmjs.com/package/@fortawesome/react-fontawesome)
+  - [react-outside-click-handler](https://www.npmjs.com/package/react-outside-click-handler)
 - [TheSportsDB API](https://www.thesportsdb.com/api.php)
 
 ### Useful resources
