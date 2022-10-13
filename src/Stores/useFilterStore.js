@@ -65,6 +65,7 @@ const useFilterStore = create((set) => ({
     set(() => ({
       filteredCountries: [],
       filteredLeagues: [],
+      filteredSports: [],
       showCountriesOptions: false,
       showSportsOptions: false,
     }));

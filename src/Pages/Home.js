@@ -6,9 +6,9 @@ import Filter from "../Components/Util/Filter";
 import Heroe from "../Components/Heroe";
 
 export default function Home() {
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
