@@ -156,7 +156,9 @@ $size-headerHome: 10.5rem;    //168px
     }
     .TeamsList {
         margin-left: 5%;
+        &.warning{
+            margin-left: 0;
+        }
     }
-    
 }
 
