@@ -10,7 +10,11 @@ const useLeaguesStore = create((set) => ({
   leagues: [],
   fetchLeagues: async (url) => {
     await axios.get(url).then((response) => {
-      set({ leagues: response.data.leagues });
+      set({
+        leagues: response.data.leagues
+          .filter((element) => !element.strLeague.startsWith("_"))
+          .sort((a, b) => a.strLeague.localeCompare(b.strLeague)),
+      });
     });
   },
 
@@ -39,7 +43,9 @@ const useLeaguesStore = create((set) => ({
       set((state) => ({
         leaguesOfCountries: [
           ...state.leaguesOfCountries,
-          response.data.countries,
+          response.data.countries.sort((a, b) =>
+            a.strLeague.localeCompare(b.strLeague)
+          ),
         ],
       }));
     });

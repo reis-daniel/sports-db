@@ -8,7 +8,11 @@ const useCountriesStore = create((set) => ({
   leaguesOfCountries: [],
   fetchCountries: (url) => {
     axios.get(url).then((response) => {
-      set({ countries: response.data.countries });
+      set({
+        countries: response.data.countries.sort((a, b) =>
+          a.name_en.localeCompare(b.name_en)
+        ),
+      });
     });
   },
 }));

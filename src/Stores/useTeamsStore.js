@@ -13,7 +13,11 @@ const useTeamsStore = create((set) => ({
   teamCompetitions: [],
   fetchTeams: async (leagueName) => {
     await axios.get(`${url_teams}${leagueName}`).then((response) => {
-      set({ teams: response.data.teams });
+      set({
+        teams: response.data.teams.sort((a, b) =>
+          a.strLeague.localeCompare(b.strLeague)
+        ),
+      });
     });
   },
   setTeam: (teamName) => {

@@ -39,7 +39,9 @@ const useFilterStore = create((set) => ({
       if (response.data.countries !== null || response.data.countries > 0) {
         set((state) => ({
           filteredLeagues: [
-            ...response.data.countries,
+            ...response.data.countries.sort((a, b) =>
+              a.strLeague.localeCompare(b.strLeague)
+            ),
             ...state.filteredLeagues,
           ],
         }));
