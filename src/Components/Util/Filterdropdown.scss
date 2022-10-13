@@ -203,3 +203,33 @@
     }
   }
 }
+@media (max-width: 500px) {
+  .filterdropdown-container {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .filtered-options-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .dropdown-container {
+    width: 100%;
+    .filter-options {
+      .options-title {
+        width: 15rem;
+      }
+      .options-list {
+        width: 15rem;
+      }
+    }
+  }
+  .filtered-items {
+    .item {
+      width: 15rem;
+    }
+  }
+}
