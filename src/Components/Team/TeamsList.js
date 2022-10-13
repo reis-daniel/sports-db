@@ -53,9 +53,9 @@ export default function TeamsList() {
         </article>
       </article>
 
-      <section className="TeamsList">
-        {teams !== null ? (
-          teams.map((team) => (
+      {teams !== null ? (
+        <section className="TeamsList">
+          {teams.map((team) => (
             <article className="TeamsListRow" key={team.idTeam}>
               <Link
                 to={`/${params.liga}/${team.strTeam}`}
@@ -72,11 +72,21 @@ export default function TeamsList() {
                 </p>
               </Link>
             </article>
-          ))
-        ) : (
-          <h2>We can't find any team in this league!</h2>
-        )}
-      </section>
+          ))}
+        </section>
+      ) : (
+        <section className="TeamsList warning">
+          <h2 className="warning">
+            We couldn't find any matches when searching for teams in this
+            league.
+          </h2>
+          <div className="warning-wrapper">
+            <Link to="/" title="Home">
+              back to all leagues
+            </Link>
+          </div>
+        </section>
+      )}
     </section>
   );
 }

@@ -93,6 +93,36 @@ $size-headerHome: 10.5rem;    //168px
     }
 }
 
+// WARNING
+.warning{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    h2{
+        width: 60%;
+        margin-bottom: 3rem;
+    }
+    &-wrapper{
+        width: 100%;
+        a{  
+            border-bottom: $white 1px solid;
+            &:hover{
+                color: $red;
+                border-bottom: $red 1px solid;
+            }
+        }
+        &::after{
+            content: "\279D";
+            margin-left: 1rem;
+            font-size: 1.5rem;
+            vertical-align: middle;
+        }
+    }
+
+}
+
 // HOVER ON DESKTOP
 @media (touch-enabled: 0), (pointer: fine) {
     .TeamsList_hover:hover {
@@ -102,7 +132,7 @@ $size-headerHome: 10.5rem;    //168px
 }
 
 //Responsive
-@media (max-width: 750px) {
+@media (max-width: 767px) {
     .TeamsList_firstArticle {
         margin-top: 15%;
         .TeamsList_img {
@@ -120,7 +150,7 @@ $size-headerHome: 10.5rem;    //168px
             .league{
                 font-size: 3.2vw; 
                 hyphens: auto;
-        }
+            }
         }
     }
     .TeamsList {
