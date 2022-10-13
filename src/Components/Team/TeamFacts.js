@@ -16,7 +16,6 @@ export default function TeamFacts() {
           <img
             src={`https://source.unsplash.com/1600x900/?${team.strSport}`}
             alt={`${team.strSport} from unsplash.com`}
-            title={`${team.strSport} from unsplash.com`}
           />
         ) : (
           <img src={team.strStadiumThumb} alt={`${team.strTeam}s Stadium`} />

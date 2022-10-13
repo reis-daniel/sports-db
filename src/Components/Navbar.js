@@ -1,9 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import logo from "../assets/Logo/Logo.png";
+// CSS
 import "./Navbar.scss";
-// ZUSTAND
+// REACT
+import React from "react";
+// PACKAGES
+import { Link } from "react-router-dom";
 import useFilterStore from "../Stores/useFilterStore";
+// ASSETS
+import logo from "../assets/Logo/Logo.png";
 
 export default function Navbar() {
   const { setSearchInput, clearFilterValues } = useFilterStore((state) => ({
@@ -16,7 +19,7 @@ export default function Navbar() {
       <Link
         to="/"
         className="logo"
-        title="Link to homepage"
+        title="Home"
         onClick={() => {
           clearFilterValues();
         }}

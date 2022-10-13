@@ -68,7 +68,6 @@ export default function LeagueList() {
                     key={league.idLeague}
                     className="underline"
                     title={`Open Link to ${league.strLeague}`}
-                    alt={`Open Link to ${league.strLeague}`}
                     onClick={() => {
                       clearFilterValues();
                     }}

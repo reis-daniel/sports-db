@@ -15,7 +15,6 @@ const TeamDescription = () => {
           <img
             src={team.strTeamBadge}
             alt={`${team.strTeam}s Team Badge`}
-            title={`Team Badge by ${team.strTeam}`}
             className="centered"
           />
         </section>
@@ -28,7 +27,6 @@ const TeamDescription = () => {
               <img
                 src={team.strTeamBadge}
                 alt={`${team.strTeam}s Team Badge`}
-                title={`Team Badge by ${team.strTeam}`}
               />
             </article>
           </section>

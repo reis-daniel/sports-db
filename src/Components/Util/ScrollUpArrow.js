@@ -1,7 +1,9 @@
-import React from "react";
-import IconArrowFilled from "../../assets/Icons/Icon_Arrow_filled.png";
-import { useState, useEffect } from "react";
+// CSS
 import "./ScrollUpArrow.scss";
+// REACT
+import { React, useState, useEffect } from "react";
+// ASSETS
+import IconArrowFilled from "../../assets/Icons/Icon_Arrow_filled.png";
 
 const ScrollUpArrow = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);

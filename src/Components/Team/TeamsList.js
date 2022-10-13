@@ -74,7 +74,7 @@ export default function TeamsList() {
             </article>
           ))
         ) : (
-          <h2>Keine Teams in der Liga vorhanden!</h2>
+          <h2>We can't find any team in this league!</h2>
         )}
       </section>
     </section>
